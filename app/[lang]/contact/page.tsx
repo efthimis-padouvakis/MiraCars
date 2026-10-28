@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/contact">)
   return pageMetadata({ locale, path: "/contact", title: t.meta.contactTitle, description: t.meta.contactDescription });
 }
 
-// Nea Alikarnassos, next to Heraklion Airport.
-const OFFICE = projectToMap(35.329, 25.165);
+// Petlempouri 6, Heraklion.
+const OFFICE = projectToMap(35.3388, 25.1217);
 
 export default async function ContactPage({ params }: PageProps<"/[lang]/contact">) {
   const locale = await localeFrom(params);
@@ -63,15 +63,21 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
               <span className="block truncate text-lg font-bold text-ink">{COMPANY.email}</span>
             </span>
           </a>
-          <div className="flex items-center gap-3 px-1 pt-2">
-            <span className="text-sm font-semibold text-ink/55">{t.contact.social}</span>
-            <a href={COMPANY.social.facebook} target="_blank" rel="noopener" aria-label="Facebook" className="grid size-10 place-items-center rounded-full bg-white text-lg text-ink ring-1 ring-sand-200 hover:ring-sea-300">
-              <FacebookIcon />
-            </a>
-            <a href={COMPANY.social.instagram} target="_blank" rel="noopener" aria-label="Instagram" className="grid size-10 place-items-center rounded-full bg-white text-lg text-ink ring-1 ring-sand-200 hover:ring-sea-300">
-              <InstagramIcon />
-            </a>
-          </div>
+          {(COMPANY.social.facebook || COMPANY.social.instagram) && (
+            <div className="flex items-center gap-3 px-1 pt-2">
+              <span className="text-sm font-semibold text-ink/55">{t.contact.social}</span>
+              {COMPANY.social.facebook && (
+                <a href={COMPANY.social.facebook} target="_blank" rel="noopener" aria-label="Facebook" className="grid size-10 place-items-center rounded-full bg-white text-lg text-ink ring-1 ring-sand-200 hover:ring-sea-300">
+                  <FacebookIcon />
+                </a>
+              )}
+              {COMPANY.social.instagram && (
+                <a href={COMPANY.social.instagram} target="_blank" rel="noopener" aria-label="Instagram" className="grid size-10 place-items-center rounded-full bg-white text-lg text-ink ring-1 ring-sand-200 hover:ring-sea-300">
+                  <InstagramIcon />
+                </a>
+              )}
+            </div>
+          )}
         </div>
 
         <a href={COMPANY.mapUrl} target="_blank" rel="noopener" className="group flex flex-col overflow-hidden rounded-3xl border border-sand-200 bg-white transition hover:border-sea-300 hover:shadow-soft">

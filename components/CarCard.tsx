@@ -67,7 +67,7 @@ export default function CarCard({
         </div>
 
         <div className="min-w-0 px-4 pb-1 pt-4 sm:px-5 md:py-5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-gold-700">{t.car.sizes[car.size] ?? car.size}</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-sun-700">{t.car.sizes[car.size] ?? car.size}</p>
           <h3 className="mt-1 text-lg font-bold leading-snug text-ink sm:text-xl">
             {car.make} {car.model} <span className="text-sm font-medium text-ink/40">{t.common.orSimilar}</span>
           </h3>
@@ -104,7 +104,7 @@ export default function CarCard({
           </div>
           <Link
             href={href}
-            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gold-400 px-6 py-3.5 text-[15px] font-extrabold text-sea-950 transition after:absolute after:inset-0 hover:bg-gold-300"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-sun-400 px-6 py-3.5 text-[15px] font-extrabold text-sea-950 transition after:absolute after:inset-0 hover:bg-sun-300"
           >
             {t.car.select} <ArrowRightIcon />
           </Link>

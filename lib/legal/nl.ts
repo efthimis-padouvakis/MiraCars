@@ -1,20 +1,20 @@
 import { COMPANY } from "@/lib/site";
 import type { LegalSet } from "./index";
 
-const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.locality}, ${COMPANY.address.postalCode} Heraklion, Kreta, Griekenland`;
+const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.postalCode} ${COMPANY.address.locality}, Kreta, Griekenland`;
 
 const nl: LegalSet = {
   contents: "Op deze pagina",
   terms: {
     updated: "Laatst bijgewerkt: 28 oktober 2026",
     intro:
-      "Deze voorwaarden gelden wanneer u goldyrentacar.gr gebruikt en wanneer u een auto huurt bij Goldy Rent a Car. Lees ze voordat u boekt. Met uw boeking aanvaardt u deze voorwaarden, samen met de huurovereenkomst die u bij het ophalen ondertekent.",
+      "Deze voorwaarden gelden wanneer u miracars.gr gebruikt en wanneer u een auto huurt bij Mira Cars. Lees ze voordat u boekt. Met uw boeking aanvaardt u deze voorwaarden, samen met de huurovereenkomst die u bij het ophalen ondertekent.",
     sections: [
       {
         h: "Wie wij zijn",
         body: [
-          `${COMPANY.name}, ${ADDRESS}. Telefoon en WhatsApp ${COMPANY.phone}, e-mail ${COMPANY.email}.`,
-          "Onze live beschikbaarheid en online boekingen draaien op Karpadu, een Grieks reserveringsplatform voor autoverhuur. Karpadu levert alleen de boekingstechniek. Uw huurovereenkomst sluit u altijd met Goldy Rent a Car.",
+          `${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Telefoon en WhatsApp ${COMPANY.phone}, e-mail ${COMPANY.email}.`,
+          "Onze live beschikbaarheid en online boekingen draaien op Karpadu, een Grieks reserveringsplatform voor autoverhuur. Karpadu levert alleen de boekingstechniek. Uw huurovereenkomst sluit u altijd met Mira Cars.",
         ],
       },
       {
@@ -33,7 +33,7 @@ const nl: LegalSet = {
         h: "Prijs en betaling",
         body: [
           [
-            "De prijs bij het boeken is het totaal voor uw data, ophaal- en inleverpunten, dekking en extra's. Inbegrepen zijn btw, onbeperkt kilometers, dekking voor diefstal en schade en 24/7 pechhulp.",
+            "De prijs bij het boeken is het totaal voor uw data, ophaal- en inleverpunten, dekking en extra's. Inbegrepen zijn btw, onbeperkt kilometers, Volledige dekking en 24/7 pechhulp.",
             "U betaalt het volledige bedrag online met debet- of creditcard via Viva Wallet, een vergunninghoudende betaalprovider. Wij zien en bewaren uw kaartgegevens nooit.",
             "Niet inbegrepen zijn brandstof of laden, tol, parkeren, verkeersboetes en veerboottickets. Kosten die u veroorzaakt, zoals ontbrekende brandstof, te laat inleveren, extra reiniging of schade die de dekking niet vergoedt, worden apart berekend zoals hieronder beschreven.",
             "Alle prijzen zijn in euro (€).",
@@ -44,9 +44,9 @@ const nl: LegalSet = {
         h: "Dekking, eigen risico en borg",
         body: [
           [
-            "Elke huur omvat dekking voor diefstal en schade. Het eigen risico is het maximale bedrag dat u betaalt bij schade aan of diefstal van de auto.",
+            "Elke huur omvat Volledige dekking voor diefstal en schade. Het eigen risico is het maximale bedrag dat u betaalt bij schade aan of diefstal van de auto. Met de optionele Premiumdekking is het eigen risico nul.",
             "Voor elke auto tonen wij vóór het boeken het eigen risico en de borg van elke dekking. De gekozen dekking staat in uw bevestiging.",
-            "Met Volledige dekking of Premiumdekking is de borg €0. Met Basisdekking betaalt u bij het ophalen een borg, die u terugkrijgt wanneer de auto op tijd, zonder nieuwe schade en met het afgesproken brandstof- of laadniveau terugkomt.",
+            "Er is geen borg: die is €0 bij elke dekking.",
             "Voor geen enkele dekking is een creditcard nodig.",
           ],
         ],
@@ -144,7 +144,7 @@ const nl: LegalSet = {
         body: [
           [
             "Wij houden prijzen, beschikbaarheid en andere informatie op deze website zo nauwkeurig mogelijk. De beschikbaarheid is live en kan veranderen tot uw boeking is bevestigd.",
-            "De teksten, foto's en logo's op deze website zijn van Goldy Rent a Car of haar licentiegevers. U mag ze niet zonder onze toestemming kopiëren voor commercieel gebruik.",
+            "De teksten, foto's en logo's op deze website zijn van Mira Cars of haar licentiegevers. U mag ze niet zonder onze toestemming kopiëren voor commercieel gebruik.",
             "Misbruik de website niet, bijvoorbeeld door nepboekingen, automatisch uitlezen of pogingen om de beveiliging te omzeilen.",
             "Links naar andere websites (zoals Karpadu, Viva Wallet, Google of WhatsApp) zijn er voor uw gemak. Wij zijn niet verantwoordelijk voor hun inhoud.",
           ],
@@ -170,12 +170,12 @@ const nl: LegalSet = {
   privacy: {
     updated: "Laatst bijgewerkt: 28 oktober 2026",
     intro:
-      "Dit beleid legt uit welke persoonsgegevens Goldy Rent a Car verzamelt wanneer u goldyrentacar.gr bezoekt, contact met ons opneemt of een auto huurt, waarom wij ze gebruiken en welke rechten u hebt onder de Algemene verordening gegevensbescherming (AVG) en de Griekse wet 4624/2019.",
+      "Dit beleid legt uit welke persoonsgegevens Mira Cars verzamelt wanneer u miracars.gr bezoekt, contact met ons opneemt of een auto huurt, waarom wij ze gebruiken en welke rechten u hebt onder de Algemene verordening gegevensbescherming (AVG) en de Griekse wet 4624/2019.",
     sections: [
       {
         h: "Wie is verantwoordelijk",
         body: [
-          `De verwerkingsverantwoordelijke voor uw persoonsgegevens is ${COMPANY.name}, ${ADDRESS}. Voor vragen over uw gegevens kunt u mailen naar ${COMPANY.email} of bellen naar ${COMPANY.phone}.`,
+          `De verwerkingsverantwoordelijke voor uw persoonsgegevens is ${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Voor vragen over uw gegevens kunt u mailen naar ${COMPANY.email} of bellen naar ${COMPANY.phone}.`,
         ],
       },
       {

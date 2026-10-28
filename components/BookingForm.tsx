@@ -264,7 +264,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
               {car.imageURL && <Image src={car.imageURL} alt={`${car.make} ${car.model}`} fill unoptimized sizes="176px" className="object-contain p-2" />}
             </div>
             <div className="min-w-0">
-              <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-gold-700">{t.car.sizes[car.size] ?? car.size}</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-sun-700">{t.car.sizes[car.size] ?? car.size}</p>
               <h2 className="mt-0.5 text-xl font-bold text-ink sm:text-2xl">
                 {car.make} {car.model} <span className="text-sm font-medium text-ink/40">{t.common.orSimilar}</span>
               </h2>
@@ -436,12 +436,12 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
                   text={t.booking.agree}
                   values={{
                     terms: (
-                      <Link href={`/${locale}/terms`} target="_blank" className="font-semibold text-sea-700 underline decoration-gold-400 underline-offset-2">
+                      <Link href={`/${locale}/terms`} target="_blank" className="font-semibold text-sea-700 underline decoration-sun-400 underline-offset-2">
                         {t.booking.termsLink}
                       </Link>
                     ),
                     privacy: (
-                      <Link href={`/${locale}/privacy`} target="_blank" className="font-semibold text-sea-700 underline decoration-gold-400 underline-offset-2">
+                      <Link href={`/${locale}/privacy`} target="_blank" className="font-semibold text-sea-700 underline decoration-sun-400 underline-offset-2">
                         {t.booking.privacyLink}
                       </Link>
                     ),
@@ -473,7 +473,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
                   </span>
                 </li>
               </ol>
-              <Link href={resultsHref} className="mt-4 inline-block text-xs font-bold text-sea-700 underline decoration-gold-400 underline-offset-2">
+              <Link href={resultsHref} className="mt-4 inline-block text-xs font-bold text-sea-700 underline decoration-sun-400 underline-offset-2">
                 {t.booking.change}
               </Link>
             </div>
@@ -524,7 +524,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
             <button
               type="submit"
               disabled={busy}
-              className="hidden w-full items-center justify-center gap-2 rounded-2xl bg-gold-400 py-4 text-base font-extrabold text-sea-950 shadow-[0_10px_24px_-10px_rgb(207_155_47/0.8)] transition hover:bg-gold-300 disabled:opacity-70 lg:flex"
+              className="hidden w-full items-center justify-center gap-2 rounded-2xl bg-sun-400 py-4 text-base font-extrabold text-sea-950 shadow-[0_10px_24px_-10px_rgb(207_155_47/0.8)] transition hover:bg-sun-300 disabled:opacity-70 lg:flex"
             >
               {submitLabel}
             </button>
@@ -539,7 +539,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
               </p>
               <p className="text-xl font-extrabold tracking-tight text-ink tabular-nums">{money(total)}</p>
             </div>
-            <button type="submit" disabled={busy} className="rounded-2xl bg-gold-400 px-6 py-3.5 text-[15px] font-extrabold text-sea-950 disabled:opacity-70">
+            <button type="submit" disabled={busy} className="rounded-2xl bg-sun-400 px-6 py-3.5 text-[15px] font-extrabold text-sea-950 disabled:opacity-70">
               {submitLabel}
             </button>
           </div>
@@ -585,7 +585,7 @@ function Section({ step, title, subtitle, children }: { step: number; title: str
   return (
     <section className="rounded-3xl border border-sand-200 bg-white p-5 sm:p-7">
       <div className="flex items-start gap-3">
-        <span className="grid size-8 shrink-0 place-items-center rounded-full bg-sea-800 text-sm font-bold text-gold-300">{step}</span>
+        <span className="grid size-8 shrink-0 place-items-center rounded-full bg-sea-800 text-sm font-bold text-sun-300">{step}</span>
         <div>
           <h2 className="text-xl font-bold text-ink">{title}</h2>
           {subtitle && <p className="mt-1 text-sm leading-relaxed text-ink/55">{subtitle}</p>}

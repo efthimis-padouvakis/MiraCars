@@ -67,7 +67,7 @@ async function confirmBooking(transactionId: string) {
     if ("error" in quote) return refund(quote.error);
     if (toCents(quote.price) !== paid) return refund("price changed since payment", { now: quote.price });
 
-    const reservation = await submitReservation(booking, quote, `goldy|${transaction.orderCode}|${transactionId}`);
+    const reservation = await submitReservation(booking, quote, `mira|${transaction.orderCode}|${transactionId}`);
     console.info("[viva-webhook] reserved", context, reservation);
   } catch (error) {
     if (error instanceof BackendError && error.status === 409) return refund("car unavailable");

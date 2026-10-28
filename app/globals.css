@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-sea-50: #effaf9;
-  --color-sea-100: #d6f2ef;
-  --color-sea-200: #ade4df;
-  --color-sea-300: #7ccfca;
-  --color-sea-400: #45b2ae;
-  --color-sea-500: #239693;
-  --color-sea-600: #157877;
-  --color-sea-700: #135f60;
-  --color-sea-800: #124c4e;
-  --color-sea-900: #0f3e41;
-  --color-sea-950: #052427;
+  --color-sea-50: #eff4fa;
+  --color-sea-100: #dae6f3;
+  --color-sea-200: #bcd2ea;
+  --color-sea-300: #8eb4db;
+  --color-sea-400: #5a8fc6;
+  --color-sea-500: #3870ae;
+  --color-sea-600: #275893;
+  --color-sea-700: #1f4479;
+  --color-sea-800: #1c3a65;
+  --color-sea-900: #193254;
+  --color-sea-950: #0e1f37;
 
   --color-sand-50: #fcfaf6;
   --color-sand-100: #f7f2e9;
@@ -19,28 +19,29 @@
   --color-sand-300: #e1d2b5;
   --color-sand-400: #cdb68d;
 
-  --color-gold-50: #fdf8ea;
-  --color-gold-100: #faefcd;
-  --color-gold-200: #f4dd98;
-  --color-gold-300: #edc865;
-  --color-gold-400: #e3b752;
-  --color-gold-500: #cf9b2f;
-  --color-gold-600: #b07d22;
-  --color-gold-700: #8d611d;
-  --color-gold-800: #744e1e;
+  --color-sun-50: #fff5ec;
+  --color-sun-100: #fde8d3;
+  --color-sun-200: #fbcfa6;
+  --color-sun-300: #f8b174;
+  --color-sun-400: #f4934b;
+  --color-sun-500: #ee7726;
+  --color-sun-600: #dc5e1b;
+  --color-sun-700: #b54818;
+  --color-sun-800: #903a1a;
 
-  --color-coral-50: #fdf1ec;
-  --color-coral-500: #e2603b;
-  --color-coral-600: #c84b28;
+  --color-coral-50: #fdf0ef;
+  --color-coral-500: #d9483b;
+  --color-coral-600: #b93a2f;
 
-  --color-ink: #10242a;
+  --color-ink: #0f2135;
+  --color-wave: #6bcbcb;
   --color-whatsapp: #25d366;
 
-  --font-sans: var(--font-commissioner), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-fira-sans), ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-soft: 0 1px 2px rgb(16 36 42 / 0.05), 0 4px 16px -6px rgb(16 36 42 / 0.1);
-  --shadow-lift: 0 2px 4px rgb(16 36 42 / 0.04), 0 18px 40px -16px rgb(16 36 42 / 0.25);
-  --shadow-float: 0 30px 70px -20px rgb(5 36 39 / 0.45);
+  --shadow-soft: 0 1px 2px rgb(15 33 53 / 0.05), 0 4px 16px -6px rgb(15 33 53 / 0.1);
+  --shadow-lift: 0 2px 4px rgb(15 33 53 / 0.04), 0 18px 40px -16px rgb(15 33 53 / 0.25);
+  --shadow-float: 0 30px 70px -20px rgb(8 24 44 / 0.45);
 
   --animate-pop: pop 0.18s ease-out;
   --animate-sheet: sheet 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -86,7 +87,7 @@
   }
 
   ::selection {
-    background: var(--color-gold-200);
+    background: var(--color-sun-200);
     color: var(--color-ink);
   }
 
@@ -112,22 +113,22 @@
 
 .bg-deep {
   background:
-    radial-gradient(900px 420px at 88% 0%, rgb(227 183 82 / 0.16), transparent 65%),
-    radial-gradient(700px 500px at 0% 100%, rgb(35 150 147 / 0.28), transparent 60%),
+    radial-gradient(900px 420px at 88% 0%, rgb(244 147 75 / 0.16), transparent 65%),
+    radial-gradient(700px 500px at 0% 100%, rgb(107 203 203 / 0.2), transparent 60%),
     linear-gradient(165deg, var(--color-sea-900) 0%, var(--color-sea-950) 70%);
 }
 
-.text-gold-shine {
-  background: linear-gradient(100deg, #f4dd98 0%, #e3b752 40%, #cf9b2f 100%);
+.text-sun-shine {
+  background: linear-gradient(100deg, #fbcfa6 0%, #f4934b 40%, #dc5e1b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.prose-goldy {
-  color: rgb(41 60 66);
+.prose-brand {
+  color: rgb(40 56 76);
 }
-.prose-goldy h2 {
+.prose-brand h2 {
   font-size: 1.6rem;
   line-height: 1.2;
   font-weight: 750;
@@ -137,35 +138,35 @@
   color: var(--color-ink);
   scroll-margin-top: 6rem;
 }
-.prose-goldy h3 {
+.prose-brand h3 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-top: 1.75rem;
   margin-bottom: 0.5rem;
   color: var(--color-ink);
 }
-.prose-goldy p {
+.prose-brand p {
   margin-bottom: 1.1rem;
   font-size: 1.0625rem;
   line-height: 1.8;
 }
-.prose-goldy ul {
+.prose-brand ul {
   list-style: disc;
   padding-left: 1.25rem;
   margin-bottom: 1rem;
 }
-.prose-goldy li {
+.prose-brand li {
   margin-bottom: 0.4rem;
   line-height: 1.7;
 }
-.prose-goldy a {
+.prose-brand a {
   color: var(--color-sea-700);
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: var(--color-gold-400);
+  text-decoration-color: var(--color-sun-400);
   text-underline-offset: 3px;
 }
-.prose-goldy > :first-child,
-.prose-goldy > section:first-child > h2:first-child {
+.prose-brand > :first-child,
+.prose-brand > section:first-child > h2:first-child {
   margin-top: 0;
 }

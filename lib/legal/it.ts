@@ -1,20 +1,20 @@
 import { COMPANY } from "@/lib/site";
 import type { LegalSet } from "./index";
 
-const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.locality}, ${COMPANY.address.postalCode} Heraklion, Creta, Grecia`;
+const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.postalCode} ${COMPANY.address.locality}, Creta, Grecia`;
 
 const it: LegalSet = {
   contents: "In questa pagina",
   terms: {
     updated: "Ultimo aggiornamento: 28 ottobre 2026",
     intro:
-      "Queste condizioni si applicano quando utilizzi goldyrentacar.gr e quando noleggi un'auto da Goldy Rent a Car. Leggile prima di prenotare. Con la prenotazione accetti queste condizioni insieme al contratto di noleggio che firmi al ritiro.",
+      "Queste condizioni si applicano quando utilizzi miracars.gr e quando noleggi un'auto da Mira Cars. Leggile prima di prenotare. Con la prenotazione accetti queste condizioni insieme al contratto di noleggio che firmi al ritiro.",
     sections: [
       {
         h: "Chi siamo",
         body: [
-          `${COMPANY.name}, ${ADDRESS}. Telefono e WhatsApp ${COMPANY.phone}, email ${COMPANY.email}.`,
-          "La disponibilità in tempo reale e le prenotazioni online funzionano su Karpadu, una piattaforma greca di prenotazione per autonoleggi. Karpadu fornisce solo la tecnologia di prenotazione. Il tuo contratto di noleggio è sempre con Goldy Rent a Car.",
+          `${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Telefono e WhatsApp ${COMPANY.phone}, email ${COMPANY.email}.`,
+          "La disponibilità in tempo reale e le prenotazioni online funzionano su Karpadu, una piattaforma greca di prenotazione per autonoleggi. Karpadu fornisce solo la tecnologia di prenotazione. Il tuo contratto di noleggio è sempre con Mira Cars.",
         ],
       },
       {
@@ -33,7 +33,7 @@ const it: LegalSet = {
         h: "Prezzo e pagamento",
         body: [
           [
-            "Il prezzo mostrato al momento della prenotazione è il totale per le tue date, i luoghi di ritiro e riconsegna, la copertura e gli extra. Include IVA, chilometraggio illimitato, copertura furto e danni e assistenza stradale 24/7.",
+            "Il prezzo mostrato al momento della prenotazione è il totale per le tue date, i luoghi di ritiro e riconsegna, la copertura e gli extra. Include IVA, chilometraggio illimitato, copertura Completa e assistenza stradale 24/7.",
             "Paghi l'intero importo online con carta di debito o di credito tramite Viva Wallet, un fornitore di pagamenti autorizzato. Non vediamo né conserviamo mai i dati della tua carta.",
             "Il prezzo non include carburante o ricarica, pedaggi, parcheggi, multe e biglietti del traghetto. I costi che causi, come carburante mancante, riconsegna in ritardo, pulizia straordinaria o danni non coperti, sono addebitati a parte come descritto di seguito.",
             "Tutti i prezzi sono in euro (€).",
@@ -44,9 +44,9 @@ const it: LegalSet = {
         h: "Copertura, franchigia e deposito",
         body: [
           [
-            "Ogni noleggio include la copertura furto e danni. La franchigia è l'importo massimo che paghi in caso di danni all'auto o di furto.",
+            "Ogni noleggio include la copertura Completa contro furto e danni. La franchigia è l'importo massimo che paghi in caso di danni all'auto o di furto. La copertura Premium, se la scegli, azzera la franchigia.",
             "Per ogni auto mostriamo franchigia e deposito di ogni copertura prima della prenotazione. La copertura scelta è indicata nella conferma.",
-            "Con la copertura Completa o Premium il deposito è di €0. Con la copertura Base si versa al ritiro un deposito cauzionale, restituito quando l'auto rientra puntuale, senza nuovi danni e con il livello di carburante o di carica concordato.",
+            "Non c'è alcun deposito: è di €0 con ogni copertura.",
             "Nessuna copertura richiede una carta di credito.",
           ],
         ],
@@ -144,7 +144,7 @@ const it: LegalSet = {
         body: [
           [
             "Manteniamo prezzi, disponibilità e altre informazioni del sito il più accurati possibile. La disponibilità è in tempo reale e può cambiare fino alla conferma della prenotazione.",
-            "Testi, foto e loghi di questo sito appartengono a Goldy Rent a Car o ai suoi licenzianti. Non puoi copiarli per uso commerciale senza il nostro permesso.",
+            "Testi, foto e loghi di questo sito appartengono a Mira Cars o ai suoi licenzianti. Non puoi copiarli per uso commerciale senza il nostro permesso.",
             "Non fare un uso improprio del sito, ad esempio con prenotazioni false, estrazione automatica dei contenuti o tentativi di violarne la sicurezza.",
             "I link ad altri siti (come Karpadu, Viva Wallet, Google o WhatsApp) sono forniti per comodità. Non siamo responsabili dei loro contenuti.",
           ],
@@ -170,12 +170,12 @@ const it: LegalSet = {
   privacy: {
     updated: "Ultimo aggiornamento: 28 ottobre 2026",
     intro:
-      "Questa informativa spiega quali dati personali raccoglie Goldy Rent a Car quando visiti goldyrentacar.gr, ci contatti o noleggi un'auto, perché li usiamo e quali diritti hai in base al Regolamento generale sulla protezione dei dati (GDPR) e alla legge greca 4624/2019.",
+      "Questa informativa spiega quali dati personali raccoglie Mira Cars quando visiti miracars.gr, ci contatti o noleggi un'auto, perché li usiamo e quali diritti hai in base al Regolamento generale sulla protezione dei dati (GDPR) e alla legge greca 4624/2019.",
     sections: [
       {
         h: "Titolare del trattamento",
         body: [
-          `Il titolare del trattamento dei tuoi dati personali è ${COMPANY.name}, ${ADDRESS}. Per qualsiasi domanda sui tuoi dati, scrivi a ${COMPANY.email} o chiama il ${COMPANY.phone}.`,
+          `Il titolare del trattamento dei tuoi dati personali è ${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Per qualsiasi domanda sui tuoi dati, scrivi a ${COMPANY.email} o chiama il ${COMPANY.phone}.`,
         ],
       },
       {

@@ -75,7 +75,7 @@ export default function MobileMenu({
               <Link
                 href={bookNow.href}
                 onClick={close}
-                className="mt-6 flex items-center justify-center rounded-2xl bg-gold-400 py-4 text-base font-extrabold text-sea-950 shadow-soft"
+                className="mt-6 flex items-center justify-center rounded-2xl bg-sun-400 py-4 text-base font-extrabold text-sea-950 shadow-soft"
               >
                 {bookNow.label}
               </Link>

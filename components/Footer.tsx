@@ -28,15 +28,19 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
     <footer className="bg-sea-950 text-white/70">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.3fr_1fr] lg:py-16">
         <div>
-          <Image src="/img/brand/logo.svg" alt={COMPANY.name} width={164} height={40} className="h-10 w-auto" />
+          <Image src="/img/brand/logo-light.svg" alt={COMPANY.name} width={148} height={40} className="h-11 w-auto" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed">{t.footer.tagline}</p>
           <div className="mt-6 flex gap-2.5">
-            <a href={COMPANY.social.facebook} rel="noopener" target="_blank" aria-label="Facebook" className={social}>
-              <FacebookIcon />
-            </a>
-            <a href={COMPANY.social.instagram} rel="noopener" target="_blank" aria-label="Instagram" className={social}>
-              <InstagramIcon />
-            </a>
+            {COMPANY.social.facebook && (
+              <a href={COMPANY.social.facebook} rel="noopener" target="_blank" aria-label="Facebook" className={social}>
+                <FacebookIcon />
+              </a>
+            )}
+            {COMPANY.social.instagram && (
+              <a href={COMPANY.social.instagram} rel="noopener" target="_blank" aria-label="Instagram" className={social}>
+                <InstagramIcon />
+              </a>
+            )}
             <a href={whatsappLink()} aria-label="WhatsApp" className={social}>
               <WhatsAppIcon />
             </a>
@@ -47,11 +51,11 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
         <FooterColumn title={t.locations.title} items={pickups} />
 
         <div>
-          <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-gold-300">{t.footer.contact}</h2>
+          <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-sun-300">{t.footer.contact}</h2>
           <ul className="mt-5 space-y-4 text-sm">
             <li>
               <a href={COMPANY.mapUrl} target="_blank" rel="noopener" className="flex gap-3 transition hover:text-white">
-                <PinIcon className="mt-0.5 shrink-0 text-base text-gold-300" />
+                <PinIcon className="mt-0.5 shrink-0 text-base text-sun-300" />
                 <span>
                   {COMPANY.address.street}, {COMPANY.address.locality}
                   <br />
@@ -61,12 +65,12 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
             </li>
             <li>
               <a href={COMPANY.phoneHref} className="flex items-center gap-3 transition hover:text-white">
-                <PhoneIcon className="text-base text-gold-300" /> {COMPANY.phone}
+                <PhoneIcon className="text-base text-sun-300" /> {COMPANY.phone}
               </a>
             </li>
             <li>
               <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-3 transition hover:text-white">
-                <MailIcon className="text-base text-gold-300" /> {COMPANY.email}
+                <MailIcon className="text-base text-sun-300" /> {COMPANY.email}
               </a>
             </li>
           </ul>
@@ -88,13 +92,13 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
           </p>
           <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <span>{t.footer.poweredBy}</span>
-            <a href={karpaduHref("home", locale, "goldyrentacar-footer")} className="font-bold text-gold-300 hover:text-gold-200">
+            <a href={karpaduHref("home", locale, "miracars-footer")} className="font-bold text-sun-300 hover:text-sun-200">
               Karpadu
             </a>
             <span aria-hidden="true" className="text-white/30">
               ·
             </span>
-            <a href={karpaduHref("greece", locale, "goldyrentacar-footer")} className="hover:text-white">
+            <a href={karpaduHref("greece", locale, "miracars-footer")} className="hover:text-white">
               {t.footer.greece}
             </a>
           </p>
@@ -107,7 +111,7 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary })
 function FooterColumn({ title, items }: { title: string; items: { href: string; label: string }[] }) {
   return (
     <div>
-      <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-gold-300">{title}</h2>
+      <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-sun-300">{title}</h2>
       <ul className="mt-5 space-y-2.5 text-sm">
         {items.map((item) => (
           <li key={item.href}>

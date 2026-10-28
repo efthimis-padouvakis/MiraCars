@@ -128,7 +128,7 @@ export default function DateRangeCalendar({ start, end, min, selecting, intl, la
                                     ? "bg-sea-800 font-bold text-white"
                                     : disabled
                                       ? "cursor-not-allowed text-ink/20 line-through decoration-ink/10"
-                                      : `font-semibold text-ink hover:bg-sea-100 ${date === min ? "ring-1 ring-inset ring-gold-400" : ""}`
+                                      : `font-semibold text-ink hover:bg-sea-100 ${date === min ? "ring-1 ring-inset ring-sun-400" : ""}`
                                 }`}
                               >
                                 {Number(date.slice(8))}

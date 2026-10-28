@@ -1,5 +1,5 @@
-export const BOOKING_STORAGE_KEY = "goldy:booking";
-export const CHECKOUT_STORAGE_KEY = "goldy:checkout";
+export const BOOKING_STORAGE_KEY = "mira:booking";
+export const CHECKOUT_STORAGE_KEY = "mira:checkout";
 export const MIN_RENTAL_MS = 60 * 60 * 1000;
 export const DEFAULT_TIME = "10:00";
 export const DEFAULT_AGE = 30;

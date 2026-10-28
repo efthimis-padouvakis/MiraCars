@@ -49,7 +49,7 @@ export default function LegalPage({
             ))}
           </ol>
         </nav>
-        <article className="prose-goldy min-w-0 rounded-4xl border border-sand-200 bg-white p-6 sm:p-12">
+        <article className="prose-brand min-w-0 rounded-4xl border border-sand-200 bg-white p-6 sm:p-12">
           <p className="text-lg">{linkify(doc.intro)}</p>
           {doc.sections.map((section, index) => (
             <section key={section.h}>

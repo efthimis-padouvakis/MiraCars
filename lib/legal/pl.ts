@@ -1,20 +1,20 @@
 import { COMPANY } from "@/lib/site";
 import type { LegalSet } from "./index";
 
-const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.locality}, ${COMPANY.address.postalCode} Heraklion, Kreta, Grecja`;
+const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.postalCode} ${COMPANY.address.locality}, Kreta, Grecja`;
 
 const pl: LegalSet = {
   contents: "Na tej stronie",
   terms: {
     updated: "Ostatnia aktualizacja: 28 października 2026",
     intro:
-      "Niniejsze warunki obowiązują, gdy korzystasz z goldyrentacar.gr oraz gdy wynajmujesz samochód w Goldy Rent a Car. Przeczytaj je przed rezerwacją. Dokonując rezerwacji, akceptujesz te warunki wraz z umową najmu, którą podpisujesz przy odbiorze.",
+      "Niniejsze warunki obowiązują, gdy korzystasz z miracars.gr oraz gdy wynajmujesz samochód w Mira Cars. Przeczytaj je przed rezerwacją. Dokonując rezerwacji, akceptujesz te warunki wraz z umową najmu, którą podpisujesz przy odbiorze.",
     sections: [
       {
         h: "Kim jesteśmy",
         body: [
-          `${COMPANY.name}, ${ADDRESS}. Telefon i WhatsApp ${COMPANY.phone}, e-mail ${COMPANY.email}.`,
-          "Dostępność na żywo i rezerwacje online działają na platformie Karpadu, greckim systemie rezerwacji wynajmu samochodów. Karpadu dostarcza wyłącznie technologię rezerwacji. Umowę najmu zawierasz zawsze z Goldy Rent a Car.",
+          `${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Telefon i WhatsApp ${COMPANY.phone}, e-mail ${COMPANY.email}.`,
+          "Dostępność na żywo i rezerwacje online działają na platformie Karpadu, greckim systemie rezerwacji wynajmu samochodów. Karpadu dostarcza wyłącznie technologię rezerwacji. Umowę najmu zawierasz zawsze z Mira Cars.",
         ],
       },
       {
@@ -33,7 +33,7 @@ const pl: LegalSet = {
         h: "Cena i płatność",
         body: [
           [
-            "Cena widoczna przy rezerwacji to łączna kwota za Twoje daty, miejsca odbioru i zwrotu, ochronę i dodatki. Obejmuje VAT, nielimitowany przebieg, ochronę od kradzieży i uszkodzeń oraz pomoc drogową 24/7.",
+            "Cena widoczna przy rezerwacji to łączna kwota za Twoje daty, miejsca odbioru i zwrotu, ochronę i dodatki. Obejmuje VAT, nielimitowany przebieg, ochronę pełną oraz pomoc drogową 24/7.",
             "Płacisz całą kwotę online kartą debetową lub kredytową przez Viva Wallet, licencjonowanego dostawcę płatności. Nigdy nie widzimy ani nie przechowujemy danych Twojej karty.",
             "Cena nie obejmuje paliwa ani ładowania, opłat drogowych, parkingów, mandatów ani biletów na prom. Koszty, które powodujesz, takie jak brakujące paliwo, spóźniony zwrot, specjalne czyszczenie lub szkody nieobjęte ochroną, są naliczane osobno, jak opisano poniżej.",
             "Wszystkie ceny podane są w euro (€).",
@@ -44,9 +44,9 @@ const pl: LegalSet = {
         h: "Ochrona, udział własny i kaucja",
         body: [
           [
-            "Każdy wynajem obejmuje ochronę od kradzieży i uszkodzeń. Udział własny to maksymalna kwota, jaką płacisz za uszkodzenie lub kradzież samochodu.",
+            "Każdy wynajem obejmuje ochronę pełną od kradzieży i uszkodzeń. Udział własny to maksymalna kwota, jaką płacisz za uszkodzenie lub kradzież samochodu. Ochrona Premium, jeśli ją wybierzesz, obniża udział własny do zera.",
             "Dla każdego samochodu przed rezerwacją pokazujemy udział własny i kaucję każdej ochrony. Wybrana ochrona jest podana w potwierdzeniu.",
-            "Przy ochronie pełnej lub Premium kaucja wynosi 0 €. Przy ochronie podstawowej przy odbiorze wpłacasz zwrotną kaucję, którą oddajemy, gdy samochód wróci na czas, bez nowych uszkodzeń i z uzgodnionym poziomem paliwa lub naładowania.",
+            "Nie ma kaucji: przy każdej ochronie wynosi 0 €.",
             "Żadna ochrona nie wymaga karty kredytowej.",
           ],
         ],
@@ -144,7 +144,7 @@ const pl: LegalSet = {
         body: [
           [
             "Dbamy, aby ceny, dostępność i inne informacje na tej stronie były jak najdokładniejsze. Dostępność jest pokazywana na żywo i może się zmienić do chwili potwierdzenia rezerwacji.",
-            "Teksty, zdjęcia i logotypy na tej stronie należą do Goldy Rent a Car lub jej licencjodawców. Nie wolno ich kopiować do celów komercyjnych bez naszej zgody.",
+            "Teksty, zdjęcia i logotypy na tej stronie należą do Mira Cars lub jej licencjodawców. Nie wolno ich kopiować do celów komercyjnych bez naszej zgody.",
             "Nie nadużywaj strony, na przykład przez fałszywe rezerwacje, automatyczne pobieranie danych lub próby obejścia jej zabezpieczeń.",
             "Linki do innych stron (np. Karpadu, Viva Wallet, Google lub WhatsApp) służą Twojej wygodzie. Nie odpowiadamy za ich treść.",
           ],
@@ -170,12 +170,12 @@ const pl: LegalSet = {
   privacy: {
     updated: "Ostatnia aktualizacja: 28 października 2026",
     intro:
-      "Niniejsza polityka wyjaśnia, jakie dane osobowe zbiera Goldy Rent a Car, gdy odwiedzasz goldyrentacar.gr, kontaktujesz się z nami lub wynajmujesz samochód, w jakim celu je wykorzystujemy oraz jakie prawa przysługują Ci na mocy ogólnego rozporządzenia o ochronie danych (RODO) i greckiej ustawy 4624/2019.",
+      "Niniejsza polityka wyjaśnia, jakie dane osobowe zbiera Mira Cars, gdy odwiedzasz miracars.gr, kontaktujesz się z nami lub wynajmujesz samochód, w jakim celu je wykorzystujemy oraz jakie prawa przysługują Ci na mocy ogólnego rozporządzenia o ochronie danych (RODO) i greckiej ustawy 4624/2019.",
     sections: [
       {
         h: "Administrator danych",
         body: [
-          `Administratorem Twoich danych osobowych jest ${COMPANY.name}, ${ADDRESS}. W sprawach dotyczących Twoich danych napisz na ${COMPANY.email} lub zadzwoń pod ${COMPANY.phone}.`,
+          `Administratorem Twoich danych osobowych jest ${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. W sprawach dotyczących Twoich danych napisz na ${COMPANY.email} lub zadzwoń pod ${COMPANY.phone}.`,
         ],
       },
       {

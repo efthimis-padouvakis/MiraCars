@@ -1,20 +1,20 @@
 import { COMPANY } from "@/lib/site";
 import type { LegalSet } from "./index";
 
-const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.locality}, ${COMPANY.address.postalCode} Heraklion, Kreta, Griechenland`;
+const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.postalCode} ${COMPANY.address.locality}, Kreta, Griechenland`;
 
 const de: LegalSet = {
   contents: "Auf dieser Seite",
   terms: {
     updated: "Zuletzt aktualisiert: 28. Oktober 2026",
     intro:
-      "Diese Bedingungen gelten, wenn Sie goldyrentacar.gr nutzen und wenn Sie ein Auto bei Goldy Rent a Car mieten. Bitte lesen Sie sie vor der Buchung. Mit Ihrer Buchung akzeptieren Sie diese Bedingungen zusammen mit dem Mietvertrag, den Sie bei der Abholung unterschreiben.",
+      "Diese Bedingungen gelten, wenn Sie miracars.gr nutzen und wenn Sie ein Auto bei Mira Cars mieten. Bitte lesen Sie sie vor der Buchung. Mit Ihrer Buchung akzeptieren Sie diese Bedingungen zusammen mit dem Mietvertrag, den Sie bei der Abholung unterschreiben.",
     sections: [
       {
         h: "Wer wir sind",
         body: [
-          `${COMPANY.name}, ${ADDRESS}. Telefon und WhatsApp ${COMPANY.phone}, E-Mail ${COMPANY.email}.`,
-          "Unsere Live-Verfügbarkeit und Online-Buchungen laufen über Karpadu, eine griechische Reservierungsplattform für Mietwagen. Karpadu stellt nur die Buchungstechnik bereit. Ihr Mietvertrag kommt immer mit Goldy Rent a Car zustande.",
+          `${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Telefon und WhatsApp ${COMPANY.phone}, E-Mail ${COMPANY.email}.`,
+          "Unsere Live-Verfügbarkeit und Online-Buchungen laufen über Karpadu, eine griechische Reservierungsplattform für Mietwagen. Karpadu stellt nur die Buchungstechnik bereit. Ihr Mietvertrag kommt immer mit Mira Cars zustande.",
         ],
       },
       {
@@ -33,7 +33,7 @@ const de: LegalSet = {
         h: "Preis und Zahlung",
         body: [
           [
-            "Der bei der Buchung angezeigte Preis ist der Gesamtpreis für Ihre Daten, Abhol- und Rückgabeorte, Ihren Schutz und Ihre Extras. Er enthält Mehrwertsteuer, unbegrenzte Kilometer, Diebstahl- und Schadenschutz sowie 24/7-Pannenhilfe.",
+            "Der bei der Buchung angezeigte Preis ist der Gesamtpreis für Ihre Daten, Abhol- und Rückgabeorte, Ihren Schutz und Ihre Extras. Er enthält Mehrwertsteuer, unbegrenzte Kilometer, Vollschutz sowie 24/7-Pannenhilfe.",
             "Sie zahlen den vollen Betrag online per Debit- oder Kreditkarte über Viva Wallet, einen lizenzierten Zahlungsdienstleister. Wir sehen und speichern Ihre Kartendaten nie.",
             "Nicht im Preis enthalten sind Kraftstoff oder Ladestrom, Maut, Parkgebühren, Bußgelder und Fährtickets. Kosten, die Sie verursachen, etwa fehlender Kraftstoff, eine verspätete Rückgabe, eine Sonderreinigung oder Schäden, die der Schutz nicht übernimmt, werden wie unten beschrieben gesondert berechnet.",
             "Alle Preise verstehen sich in Euro (€).",
@@ -44,9 +44,9 @@ const de: LegalSet = {
         h: "Schutz, Selbstbeteiligung und Kaution",
         body: [
           [
-            "Jede Miete enthält Diebstahl- und Schadenschutz. Die Selbstbeteiligung ist der Höchstbetrag, den Sie bei Schäden am Auto oder Diebstahl zahlen.",
+            "Jede Miete enthält Vollschutz gegen Diebstahl und Schäden. Die Selbstbeteiligung ist der Höchstbetrag, den Sie bei Schäden am Auto oder Diebstahl zahlen. Mit dem optionalen Premiumschutz sinkt sie auf null.",
             "Für jedes Auto zeigen wir Selbstbeteiligung und Kaution jedes Schutzes vor der Buchung an. Der gewählte Schutz steht in Ihrer Bestätigung.",
-            "Mit Vollschutz oder Premiumschutz beträgt die Kaution €0. Beim Basisschutz wird bei der Abholung eine Kaution hinterlegt, die Sie zurückerhalten, wenn das Auto pünktlich, ohne neue Schäden und mit dem vereinbarten Kraftstoff- oder Ladestand zurückkommt.",
+            "Es gibt keine Kaution: Sie beträgt bei jedem Schutz €0.",
             "Für keinen Schutz ist eine Kreditkarte nötig.",
           ],
         ],
@@ -144,7 +144,7 @@ const de: LegalSet = {
         body: [
           [
             "Wir halten Preise, Verfügbarkeit und andere Angaben auf dieser Website so genau wie möglich. Die Verfügbarkeit ist live und kann sich bis zur Bestätigung Ihrer Buchung ändern.",
-            "Texte, Fotos und Logos dieser Website gehören Goldy Rent a Car oder ihren Lizenzgebern. Sie dürfen sie ohne unsere Erlaubnis nicht für kommerzielle Zwecke kopieren.",
+            "Texte, Fotos und Logos dieser Website gehören Mira Cars oder ihren Lizenzgebern. Sie dürfen sie ohne unsere Erlaubnis nicht für kommerzielle Zwecke kopieren.",
             "Missbrauchen Sie die Website nicht, etwa durch Scheinbuchungen, automatisches Auslesen oder Versuche, ihre Sicherheit zu umgehen.",
             "Links zu anderen Websites (etwa Karpadu, Viva Wallet, Google oder WhatsApp) dienen Ihrer Bequemlichkeit. Für deren Inhalte sind wir nicht verantwortlich.",
           ],
@@ -170,12 +170,12 @@ const de: LegalSet = {
   privacy: {
     updated: "Zuletzt aktualisiert: 28. Oktober 2026",
     intro:
-      "Diese Erklärung beschreibt, welche personenbezogenen Daten Goldy Rent a Car erhebt, wenn Sie goldyrentacar.gr besuchen, uns kontaktieren oder ein Auto mieten, wofür wir sie nutzen und welche Rechte Sie nach der Datenschutz-Grundverordnung (DSGVO) und dem griechischen Gesetz 4624/2019 haben.",
+      "Diese Erklärung beschreibt, welche personenbezogenen Daten Mira Cars erhebt, wenn Sie miracars.gr besuchen, uns kontaktieren oder ein Auto mieten, wofür wir sie nutzen und welche Rechte Sie nach der Datenschutz-Grundverordnung (DSGVO) und dem griechischen Gesetz 4624/2019 haben.",
     sections: [
       {
         h: "Verantwortlicher",
         body: [
-          `Verantwortlich für Ihre personenbezogenen Daten ist ${COMPANY.name}, ${ADDRESS}. Bei Fragen zu Ihren Daten schreiben Sie an ${COMPANY.email} oder rufen Sie ${COMPANY.phone} an.`,
+          `Verantwortlich für Ihre personenbezogenen Daten ist ${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Bei Fragen zu Ihren Daten schreiben Sie an ${COMPANY.email} oder rufen Sie ${COMPANY.phone} an.`,
         ],
       },
       {

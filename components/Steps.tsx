@@ -10,7 +10,7 @@ export default function Steps({ steps, current }: { steps: string[]; current: nu
           <li key={step} className="flex min-w-0 items-center gap-2 sm:gap-3" aria-current={active ? "step" : undefined}>
             <span
               className={`grid size-6 shrink-0 place-items-center rounded-full text-[11px] font-bold sm:size-7 sm:text-xs ${
-                done ? "bg-sea-600 text-white" : active ? "bg-gold-400 text-sea-950" : "bg-sand-200 text-ink/50"
+                done ? "bg-sea-600 text-white" : active ? "bg-sun-400 text-sea-950" : "bg-sand-200 text-ink/50"
               }`}
             >
               {done ? <CheckIcon /> : index + 1}

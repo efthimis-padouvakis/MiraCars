@@ -1,6 +1,6 @@
 import "../globals.css";
 import type { Metadata, Viewport } from "next";
-import { Commissioner } from "next/font/google";
+import { Fira_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import Footer from "@/components/Footer";
@@ -12,9 +12,10 @@ import { isLocale, locales } from "@/lib/i18n/config";
 import { businessJsonLd, websiteJsonLd } from "@/lib/seo";
 import { COMPANY, SITE_URL } from "@/lib/site";
 
-const commissioner = Commissioner({
+const firaSans = Fira_Sans({
   subsets: ["latin", "latin-ext", "greek"],
-  variable: "--font-commissioner",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-fira-sans",
   display: "swap",
 });
 
@@ -45,7 +46,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const t = getDictionary(lang);
 
   return (
-    <html lang={lang} className={commissioner.variable} data-scroll-behavior="smooth">
+    <html lang={lang} className={firaSans.variable} data-scroll-behavior="smooth">
       <body className="flex min-h-dvh flex-col font-sans">
         <a href="#main" className="sr-only z-50 rounded-lg bg-white px-4 py-2 font-semibold focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
           {t.common.skipToContent}

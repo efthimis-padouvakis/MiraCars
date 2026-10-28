@@ -100,7 +100,7 @@ export default function BookingConfirmed({
           <ol className="mt-4 space-y-4">
             {t.steps.map((step, index) => (
               <li key={step} className="flex gap-4">
-                <span className="grid size-8 shrink-0 place-items-center rounded-full bg-sea-800 text-sm font-bold text-gold-300">{index + 1}</span>
+                <span className="grid size-8 shrink-0 place-items-center rounded-full bg-sea-800 text-sm font-bold text-sun-300">{index + 1}</span>
                 <span className="pt-1 leading-relaxed text-ink/70">{step}</span>
               </li>
             ))}
@@ -112,12 +112,12 @@ export default function BookingConfirmed({
             text={t.karpadu}
             values={{
               karpadu: (
-                <a href={karpaduHome} className="font-bold text-sea-700 underline decoration-gold-400 underline-offset-2">
+                <a href={karpaduHome} className="font-bold text-sea-700 underline decoration-sun-400 underline-offset-2">
                   Karpadu
                 </a>
               ),
               link: (
-                <a href={karpaduReservation} className="font-bold text-sea-700 underline decoration-gold-400 underline-offset-2">
+                <a href={karpaduReservation} className="font-bold text-sea-700 underline decoration-sun-400 underline-offset-2">
                   {t.karpaduLink}
                 </a>
               ),

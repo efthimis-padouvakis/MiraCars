@@ -84,7 +84,7 @@ export default async function LocationPage({ params }: PageProps<"/[lang]/locati
           />
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-gold-700">
+              <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-sun-700">
                 <Icon className="text-sm" /> {t.search.groups[page.kind]}
               </p>
               <h1 className="mt-3 text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl">{guide?.h1 ?? title}</h1>
@@ -135,7 +135,7 @@ export default async function LocationPage({ params }: PageProps<"/[lang]/locati
             </div>
             <div className="relative overflow-hidden rounded-3xl bg-sea-900 p-6 text-white sm:p-8">
               <CreteOutline tone="dark" className="pointer-events-none absolute -bottom-10 -right-16 w-[30rem] opacity-50" />
-              <p className="relative inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-gold-300">
+              <p className="relative inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-sun-300">
                 <CompassIcon className="text-sm" /> {t.locations.tip}
               </p>
               <p className="relative mt-3 max-w-xl text-lg leading-relaxed text-white/85">{copy.tip}</p>
@@ -200,7 +200,7 @@ function GuideBody({ guide, locale, t }: { guide: PlaceGuide; locale: Locale; t:
         <ul className="mt-6 grid gap-4 md:grid-cols-3">
           {guide.trips.map((trip) => (
             <li key={trip.title} className="rounded-3xl bg-sand-100 p-6 sm:p-7">
-              <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.12em] text-gold-700">
+              <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.12em] text-sun-700">
                 <RoadIcon /> {trip.time}
               </p>
               <h3 className="mt-3 text-xl font-bold text-ink">{trip.title}</h3>
@@ -215,7 +215,7 @@ function GuideBody({ guide, locale, t }: { guide: PlaceGuide; locale: Locale; t:
         <ul className="mt-6 grid gap-x-8 gap-y-6 md:grid-cols-2">
           {guide.tips.map((tip) => (
             <li key={tip.title} className="flex gap-4">
-              <span className="mt-1 grid size-9 shrink-0 place-items-center rounded-xl bg-gold-100 text-gold-700">
+              <span className="mt-1 grid size-9 shrink-0 place-items-center rounded-xl bg-sun-100 text-sun-700">
                 <CompassIcon />
               </span>
               <span>
@@ -242,7 +242,7 @@ function GuideBody({ guide, locale, t }: { guide: PlaceGuide; locale: Locale; t:
             <h2 className="text-3xl font-extrabold tracking-tight">{fill(t.locations.ctaTitle, place)}</h2>
             <p className="mt-3 max-w-lg text-white/70">{t.locations.ctaText}</p>
           </div>
-          <a href="#search" className="shrink-0 rounded-full bg-gold-400 px-8 py-4 text-base font-extrabold text-sea-950 transition hover:bg-gold-300">
+          <a href="#search" className="shrink-0 rounded-full bg-sun-400 px-8 py-4 text-base font-extrabold text-sea-950 transition hover:bg-sun-300">
             {t.home.ctaButton}
           </a>
         </div>

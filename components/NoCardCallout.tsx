@@ -13,13 +13,13 @@ export default function NoCardCallout({ locale, t, className = "" }: { locale: L
       className={`group relative isolate flex flex-col justify-between overflow-hidden rounded-3xl bg-sea-900 p-6 text-white transition hover:bg-sea-800 sm:p-8 ${className}`}
     >
       <CreteOutline tone="dark" className="pointer-events-none absolute -bottom-10 -right-16 -z-10 w-[30rem] opacity-50" />
-      <span className="grid size-12 place-items-center rounded-2xl bg-gold-400 text-2xl text-sea-950">
+      <span className="grid size-12 place-items-center rounded-2xl bg-sun-400 text-2xl text-sea-950">
         <CardIcon />
       </span>
       <span className="mt-6 block">
         <span className="block text-2xl font-extrabold tracking-tight">{t.noCard.calloutTitle}</span>
         <span className="mt-2 block max-w-md leading-relaxed text-white/75">{t.noCard.calloutText}</span>
-        <span className="mt-5 inline-flex items-center gap-2 font-bold text-gold-300">
+        <span className="mt-5 inline-flex items-center gap-2 font-bold text-sun-300">
           {t.noCard.calloutCta} <ArrowRightIcon className="transition group-hover:translate-x-1" />
         </span>
       </span>

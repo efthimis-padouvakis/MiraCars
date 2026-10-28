@@ -92,7 +92,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
   if (!query) {
     return (
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
-        <p className="mb-6 rounded-2xl bg-gold-50 px-5 py-4 font-semibold text-gold-800 ring-1 ring-gold-200">{t.results.invalid}</p>
+        <p className="mb-6 rounded-2xl bg-sun-50 px-5 py-4 font-semibold text-sun-800 ring-1 ring-sun-200">{t.results.invalid}</p>
         <div className="rounded-[1.75rem] bg-white p-3 shadow-lift ring-1 ring-black/5 sm:p-4">
           <SearchForm locale={locale} t={formText} />
         </div>
@@ -205,7 +205,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
                 <CalendarIcon className="shrink-0 text-base text-sea-600" />
                 <span>
                   {formatNaive(query.start, intl)} → {formatNaive(query.end, intl)}
-                  <span className="ml-2 rounded-full bg-gold-100 px-2 py-0.5 text-xs font-bold text-gold-800">{days === 1 ? t.common.day : fill(t.common.days, { n: days })}</span>
+                  <span className="ml-2 rounded-full bg-sun-100 px-2 py-0.5 text-xs font-bold text-sun-800">{days === 1 ? t.common.day : fill(t.common.days, { n: days })}</span>
                 </span>
               </p>
             </div>
@@ -375,7 +375,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
               <button type="button" onClick={() => setFilters(EMPTY)} className="rounded-2xl border border-sand-300 px-5 py-3.5 text-sm font-bold text-ink">
                 {t.results.clear}
               </button>
-              <button type="button" onClick={() => setSheet(false)} className="flex-1 rounded-2xl bg-gold-400 py-3.5 text-sm font-extrabold text-sea-950">
+              <button type="button" onClick={() => setSheet(false)} className="flex-1 rounded-2xl bg-sun-400 py-3.5 text-sm font-extrabold text-sea-950">
                 {fill(t.results.showCars, { n: visible.length })}
               </button>
             </div>

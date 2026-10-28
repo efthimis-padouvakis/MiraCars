@@ -41,13 +41,13 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
         ]}
       />
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-16">
-        <div className="prose-goldy">
+        <div className="prose-brand">
           {t.about.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
         <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-[radial-gradient(110%_90%_at_50%_100%,var(--color-sand-200),var(--color-sand-50)_75%)] ring-1 ring-sand-200">
-          <Image src="/img/brand/cars/jaguar-i-pace-ev400-2022.avif" alt="Jaguar I-Pace EV400, Goldy Rent a Car" fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-contain p-8" />
+          <Image src={fleet[0].image} alt={`${fleet[0].name} ${fleet[0].year}, ${t.meta.siteName}`} fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-contain p-8" />
         </div>
       </section>
 
@@ -80,7 +80,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           })}
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
-          <Link href={`/${locale}#search`} className="rounded-full bg-gold-400 px-7 py-3.5 font-extrabold text-sea-950 transition hover:bg-gold-300">
+          <Link href={`/${locale}#search`} className="rounded-full bg-sun-400 px-7 py-3.5 font-extrabold text-sea-950 transition hover:bg-sun-300">
             {t.home.ctaButton}
           </Link>
           <Link href={`/${locale}/contact`} className="rounded-full border border-sand-300 bg-white px-7 py-3.5 font-bold text-ink hover:border-sea-300">

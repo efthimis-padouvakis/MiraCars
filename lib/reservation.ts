@@ -15,7 +15,7 @@ export interface Driver {
 
 // Travels inside the Viva order (merchantTrns) from checkout to the payment webhook.
 export interface BookingRequest {
-  goldy: 1;
+  mira: 1;
   lang: Locale;
   search: SearchQuery;
   carID: number;
@@ -36,7 +36,7 @@ export function encodeBooking(booking: BookingRequest) {
 export function decodeBooking(text: string): BookingRequest | null {
   try {
     const booking = JSON.parse(text) as BookingRequest;
-    return booking?.goldy === 1 && isLocale(booking.lang) && Number.isInteger(booking.amount) ? booking : null;
+    return booking?.mira === 1 && isLocale(booking.lang) && Number.isInteger(booking.amount) ? booking : null;
   } catch {
     return null;
   }
@@ -111,7 +111,7 @@ export async function submitReservation(booking: BookingRequest, quote: Quote, r
     Price: quote.price,
     Inclusions: extras.map((extra) => ({ ExtraID: extra.extrasID })),
     ExternalReference: reference,
-    TrafficSource: "goldyrentacar.gr",
+    TrafficSource: "miracars.gr",
     WaitForConfirmation: true,
   });
 }

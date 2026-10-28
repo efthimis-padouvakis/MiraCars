@@ -50,7 +50,7 @@ export default function FleetCard({ car, t, href, priority = false }: { car: Fle
         </ul>
         <Link
           href={href}
-          className="mt-auto inline-flex items-center justify-between rounded-2xl bg-sand-100 px-4 py-3 text-sm font-bold text-ink transition after:absolute after:inset-0 group-hover:bg-gold-400 group-hover:text-sea-950"
+          className="mt-auto inline-flex items-center justify-between rounded-2xl bg-sand-100 px-4 py-3 text-sm font-bold text-ink transition after:absolute after:inset-0 group-hover:bg-sun-400 group-hover:text-sea-950"
         >
           {t.fleet.checkPrices}
           <ArrowRightIcon className="transition group-hover:translate-x-0.5" />

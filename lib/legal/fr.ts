@@ -1,20 +1,20 @@
 import { COMPANY } from "@/lib/site";
 import type { LegalSet } from "./index";
 
-const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.locality}, ${COMPANY.address.postalCode} Héraklion, Crète, Grèce`;
+const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.postalCode} Héraklion, Crète, Grèce`;
 
 const fr: LegalSet = {
   contents: "Sur cette page",
   terms: {
     updated: "Dernière mise à jour : 28 octobre 2026",
     intro:
-      "Ces conditions s'appliquent lorsque vous utilisez goldyrentacar.gr et lorsque vous louez une voiture chez Goldy Rent a Car. Lisez-les avant de réserver. En réservant, vous acceptez ces conditions ainsi que le contrat de location que vous signez à la prise en charge.",
+      "Ces conditions s'appliquent lorsque vous utilisez miracars.gr et lorsque vous louez une voiture chez Mira Cars. Lisez-les avant de réserver. En réservant, vous acceptez ces conditions ainsi que le contrat de location que vous signez à la prise en charge.",
     sections: [
       {
         h: "Qui sommes-nous",
         body: [
-          `${COMPANY.name}, ${ADDRESS}. Téléphone et WhatsApp ${COMPANY.phone}, e-mail ${COMPANY.email}.`,
-          "Nos disponibilités en temps réel et nos réservations en ligne fonctionnent sur Karpadu, une plateforme grecque de réservation de voitures de location. Karpadu fournit uniquement la technologie de réservation. Votre contrat de location est toujours conclu avec Goldy Rent a Car.",
+          `${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Téléphone et WhatsApp ${COMPANY.phone}, e-mail ${COMPANY.email}.`,
+          "Nos disponibilités en temps réel et nos réservations en ligne fonctionnent sur Karpadu, une plateforme grecque de réservation de voitures de location. Karpadu fournit uniquement la technologie de réservation. Votre contrat de location est toujours conclu avec Mira Cars.",
         ],
       },
       {
@@ -33,7 +33,7 @@ const fr: LegalSet = {
         h: "Prix et paiement",
         body: [
           [
-            "Le prix affiché lors de la réservation est le total pour vos dates, vos lieux de prise en charge et de restitution, votre protection et vos options. Il comprend la TVA, le kilométrage illimité, la protection vol et dommages et l'assistance routière 24 h/24 et 7 j/7.",
+            "Le prix affiché lors de la réservation est le total pour vos dates, vos lieux de prise en charge et de restitution, votre protection et vos options. Il comprend la TVA, le kilométrage illimité, la protection Complète et l'assistance routière 24 h/24 et 7 j/7.",
             "Vous payez la totalité du montant en ligne par carte de débit ou de crédit via Viva Wallet, un prestataire de paiement agréé. Nous ne voyons ni ne conservons jamais les données de votre carte.",
             "Le prix n'inclut pas le carburant ou la recharge, les péages, le stationnement, les amendes ni les billets de ferry. Les frais que vous occasionnez, comme le carburant manquant, une restitution tardive, un nettoyage spécial ou des dommages non pris en charge par la protection, sont facturés à part comme indiqué ci-dessous.",
             "Tous les prix sont en euros (€).",
@@ -44,9 +44,9 @@ const fr: LegalSet = {
         h: "Protection, franchise et caution",
         body: [
           [
-            "Chaque location comprend une protection vol et dommages. La franchise est le montant maximal que vous payez en cas de dommage ou de vol de la voiture.",
+            "Chaque location comprend la protection Complète contre le vol et les dommages. La franchise est le montant maximal que vous payez en cas de dommage ou de vol de la voiture. La protection Premium, si vous la choisissez, ramène la franchise à zéro.",
             "Pour chaque voiture, nous affichons la franchise et la caution de chaque protection avant la réservation. La protection choisie figure dans votre confirmation.",
-            "Avec la protection Complète ou Premium, la caution est de 0 €. Avec la protection de base, une caution remboursable est versée à la prise en charge et restituée lorsque la voiture revient à l'heure, sans nouveau dommage et avec le niveau de carburant ou de charge convenu.",
+            "Il n'y a pas de caution : elle est de 0 € quelle que soit la protection.",
             "Aucune carte de crédit n'est nécessaire, quelle que soit la protection.",
           ],
         ],
@@ -144,7 +144,7 @@ const fr: LegalSet = {
         body: [
           [
             "Nous veillons à ce que les prix, les disponibilités et les autres informations de ce site soient aussi exacts que possible. Les disponibilités sont en temps réel et peuvent changer jusqu'à la confirmation de votre réservation.",
-            "Les textes, photos et logos de ce site appartiennent à Goldy Rent a Car ou à ses concédants. Vous ne pouvez pas les copier à des fins commerciales sans notre autorisation.",
+            "Les textes, photos et logos de ce site appartiennent à Mira Cars ou à ses concédants. Vous ne pouvez pas les copier à des fins commerciales sans notre autorisation.",
             "N'utilisez pas le site de manière abusive, par exemple en effectuant de fausses réservations, en l'aspirant automatiquement ou en tentant de contourner sa sécurité.",
             "Les liens vers d'autres sites (comme Karpadu, Viva Wallet, Google ou WhatsApp) sont fournis pour votre commodité. Nous ne sommes pas responsables de leur contenu.",
           ],
@@ -170,12 +170,12 @@ const fr: LegalSet = {
   privacy: {
     updated: "Dernière mise à jour : 28 octobre 2026",
     intro:
-      "Cette politique explique quelles données personnelles Goldy Rent a Car collecte lorsque vous visitez goldyrentacar.gr, nous contactez ou louez une voiture, pourquoi nous les utilisons et quels sont vos droits selon le Règlement général sur la protection des données (RGPD) et la loi grecque 4624/2019.",
+      "Cette politique explique quelles données personnelles Mira Cars collecte lorsque vous visitez miracars.gr, nous contactez ou louez une voiture, pourquoi nous les utilisons et quels sont vos droits selon le Règlement général sur la protection des données (RGPD) et la loi grecque 4624/2019.",
     sections: [
       {
         h: "Responsable du traitement",
         body: [
-          `Le responsable du traitement de vos données personnelles est ${COMPANY.name}, ${ADDRESS}. Pour toute question sur vos données, écrivez à ${COMPANY.email} ou appelez le ${COMPANY.phone}.`,
+          `Le responsable du traitement de vos données personnelles est ${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Pour toute question sur vos données, écrivez à ${COMPANY.email} ou appelez le ${COMPANY.phone}.`,
         ],
       },
       {

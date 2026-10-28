@@ -27,7 +27,7 @@ export default function BeyondCrete({ locale, t, creteLink = "crete" }: { locale
               text={t.beyond.text}
               values={{
                 karpadu: (
-                  <a href={karpaduHref("home", locale, "goldyrentacar-beyond")} className="font-bold text-sea-700 underline decoration-gold-400 underline-offset-4">
+                  <a href={karpaduHref("home", locale, "miracars-beyond")} className="font-bold text-sea-700 underline decoration-sun-400 underline-offset-4">
                     Karpadu
                   </a>
                 ),
@@ -35,7 +35,7 @@ export default function BeyondCrete({ locale, t, creteLink = "crete" }: { locale
             />
           </p>
           <a
-            href={karpaduHref(creteLink, locale, "goldyrentacar-beyond")}
+            href={karpaduHref(creteLink, locale, "miracars-beyond")}
             className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sea-700 hover:text-sea-900"
           >
             {t.beyond.crete} <ArrowRightIcon />
@@ -45,7 +45,7 @@ export default function BeyondCrete({ locale, t, creteLink = "crete" }: { locale
           {ISLAND_LINKS.map((page) => (
             <li key={page}>
               <a
-                href={karpaduHref(page, locale, "goldyrentacar-beyond")}
+                href={karpaduHref(page, locale, "miracars-beyond")}
                 className="group flex items-center justify-between gap-2 rounded-2xl border border-sand-200 bg-sand-50 px-4 py-3.5 text-sm font-semibold text-ink transition hover:border-sea-300 hover:bg-sea-50"
               >
                 {NAMES[page][locale] ?? NAMES[page].en}

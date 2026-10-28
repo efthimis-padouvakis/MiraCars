@@ -32,7 +32,7 @@ export default async function FleetPage({ params }: PageProps<"/[lang]/fleet">) 
         "@type": "Car",
         name: `${car.name} ${car.year}`,
         brand: { "@type": "Brand", name: car.name.split(" ")[0] },
-        image: `${SITE_URL}${car.image}`,
+        image: car.image.startsWith("/") ? `${SITE_URL}${car.image}` : car.image,
         vehicleModelDate: String(car.year),
         vehicleTransmission: car.transmission,
         fuelType: car.fuel,

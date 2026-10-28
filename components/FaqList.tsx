@@ -35,7 +35,7 @@ export default function FaqList({
               text={item.a}
               values={{
                 karpadu: (
-                  <a href={karpaduHref("home", locale, "goldyrentacar-faq")} className="font-semibold text-sea-700 underline decoration-gold-400 underline-offset-4">
+                  <a href={karpaduHref("home", locale, "miracars-faq")} className="font-semibold text-sea-700 underline decoration-sun-400 underline-offset-4">
                     Karpadu
                   </a>
                 ),

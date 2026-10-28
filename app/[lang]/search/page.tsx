@@ -30,7 +30,7 @@ export default async function SearchPage({ params }: PageProps<"/[lang]/search">
         <SearchResults
           locale={locale}
           t={{ search: t.search, car: t.car, common: t.common, results: t.results }}
-          karpaduHref={karpaduHref("crete", locale, "goldyrentacar-results")}
+          karpaduHref={karpaduHref("crete", locale, "miracars-results")}
         />
       </Suspense>
     </>

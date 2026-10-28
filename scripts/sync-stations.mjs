@@ -12,7 +12,7 @@ if (!backend || !key) {
 }
 
 // Same list as the availability filter. The backend takes one companyId per call, so several are merged.
-const companies = (process.env.GOLDY_COMPANY_IDS ?? "")
+const companies = (process.env.COMPANY_IDS ?? "")
   .split(",")
   .map((value) => value.trim())
   .filter(Boolean);

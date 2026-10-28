@@ -3,875 +3,396 @@ import type { GuideSet } from "./index";
 const it: GuideSet = {
   "heraklion-airport": {
     place: "Aeroporto di Heraklion",
-    title: "Noleggio auto aeroporto Heraklion senza carta di credito",
+    title: "Noleggio auto aeroporto Heraklion senza carta | Mira Cars",
     description:
-      "Noleggio auto all'aeroporto di Heraklion (HER) senza carta di credito e senza deposito con la Copertura completa. Consegna agli arrivi, ufficio a 2 km.",
-    h1: "Noleggio auto all'aeroporto di Heraklion senza carta di credito né deposito",
+      "Noleggia un'auto nuova all'aeroporto di Heraklion (HER) senza carta di credito e con deposito €0. Consegna agli arrivi, copertura completa inclusa.",
+    h1: "Noleggio auto all'aeroporto di Heraklion, senza carta di credito",
     lead:
-      "Goldy è un noleggiatore locale di Nea Alikarnassos, a circa 2 km dal terminal Nikos Kazantzakis. Ti aspettiamo agli arrivi con l'auto, paghi con carta di debito e con la Copertura completa il deposito è 0 €.",
+      "Mira Cars è un autonoleggio di famiglia di Heraklion, a circa 15 minuti dal terminal Nikos Kazantzakis. Ti consegniamo l'auto agli arrivi, la copertura completa è già nel prezzo e non ti servono mai né carta di credito né deposito.",
     points: [
-      "Consegna agli arrivi di HER: niente navetta, niente coda al banco",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa, franchigia zero con la Copertura premium su auto selezionate",
-      "Chilometri illimitati e assistenza 24 ore su 24",
+      "Consegna agli arrivi di HER, niente navetta",
+      "Niente carta di credito e deposito €0 con ogni copertura",
+      "Copertura completa inclusa, franchigia zero con la Premium",
+      "Secondo conducente e seggiolini gratis",
     ],
     pickup: {
-      title: "Come funziona il ritiro all'aeroporto di Heraklion",
-      text: "Inserisci il numero di volo quando prenoti: organizziamo la consegna in base all'orario di atterraggio reale, ritardi compresi. Ti incontriamo all'uscita degli arrivi, controlliamo l'auto insieme e firmi sul posto. La strada nazionale (VOAK) parte appena fuori dall'aeroporto: il centro è 5 km a ovest, Hersonissos 25 minuti a est.",
+      title: "Ritiro all'aeroporto di Heraklion",
+      text: "Inserisci il numero di volo quando prenoti e organizziamo la consegna sull'orario di atterraggio reale, ritardi compresi. Una persona della famiglia ti aspetta all'uscita degli arrivi, ti accompagna all'auto e la controlla con te prima della firma. Dal parcheggio sei sulla strada del nord (VOAK) in un minuto: a ovest per la città, a est per le località di mare.",
     },
     nearby: [
       {
-        name: "Centro storico e porto veneziano di Heraklion",
+        name: "Spiaggia di Amnissos",
+        time: "10 min",
+        text: "Una lunga spiaggia di sabbia appena a est della pista, con taverne sulla sabbia. Ottima per il primo bagno prima del check-in.",
+      },
+      {
+        name: "Museo archeologico di Heraklion",
         time: "15 min",
-        text: "La fortezza di Koules all'ingresso del porto, la fontana Morosini in piazza dei Leoni e il Museo archeologico con i reperti di Cnosso.",
+        text: "La più bella collezione minoica al mondo, con il disco di Festo e gli affreschi di Cnosso. Da vedere prima dei palazzi.",
       },
       {
         name: "Palazzo di Cnosso",
         time: "20 min",
-        text: "Il sito minoico più famoso di Creta, a 10 km dall'aeroporto. D'estate arriva all'apertura, prima dei pullman.",
+        text: "Il grande palazzo minoico a sud della città. A luglio e agosto arriva all'apertura, prima del caldo e dei pullman.",
       },
       {
-        name: "Cretaquarium, Gournes",
+        name: "Cretaquarium",
         time: "20 min",
-        text: "Uno dei più grandi acquari del Mediterraneo, sulla costa a est dell'aeroporto. Una prima gita facile con i bambini.",
-      },
-      {
-        name: "Spiaggia di Ammoudara",
-        time: "20 min",
-        text: "La lunga spiaggia sabbiosa a ovest di Heraklion, comoda per un ultimo bagno prima di un volo serale.",
+        text: "Un grande acquario del Mediterraneo a Gournes, verso est lungo la costa. Comodo e climatizzato in un pomeriggio caldo con i bambini.",
       },
     ],
     trips: [
       {
-        title: "Spinalonga via Elounda",
-        time: "1 h 10 min solo andata",
-        text: "Segui la VOAK verso est oltre Agios Nikolaos fino al villaggio di Plaka, poi prendi la barchetta per l'isola-fortezza veneziana di Spinalonga.",
+        title: "Altopiano di Lassithi e grotta di Psychro",
+        time: "1 h 15 a tratta",
+        text: "Sali tra i villaggi fino a un altopiano verde circondato da vette, poi scendi nella grotta dove si dice sia nato Zeus.",
       },
       {
-        title: "Festo e le grotte di Matala",
-        time: "1 h 15 min solo andata",
-        text: "Attraversa l'isola verso sud passando per Agia Varvara fino al palazzo minoico di Festo, poi prosegui verso le grotte di arenaria e la spiaggia del tramonto di Matala.",
+        title: "Elounda e Spinalonga",
+        time: "1 h 10 a tratta",
+        text: "Verso est oltre Agios Nikolaos fino a Plaka, da dove piccole barche raggiungono in circa dieci minuti l'isola fortezza veneziana di Spinalonga.",
       },
       {
-        title: "Centro storico di Rethymno",
-        time: "1 h 10 min solo andata",
-        text: "Un tragitto facile verso ovest lungo la costa fino alla Fortezza, al porto veneziano e a un labirinto di vicoli pieni di taverne.",
+        title: "Festo e Matala",
+        time: "1 h 15 a tratta",
+        text: "Attraversa l'isola fino alla costa sud: il palazzo minoico di Festo al mattino, un bagno sotto le grotte scavate di Matala nel pomeriggio.",
       },
     ],
     tips: [
       {
-        title: "La corsia d'emergenza, come i cretesi",
-        text: "Sulla VOAK le auto più lente si spostano sulla corsia d'emergenza per farsi sorpassare. Fallo anche tu quando qualcuno ti segue, solo se la corsia è libera.",
+        title: "Riconsegna l'auto due ore prima del volo",
+        text: "In alta stagione il terminal è affollato. Organizza l'incontro con noi circa due ore prima del volo, un po' prima il sabato.",
       },
       {
-        title: "Tieniti tempo l'ultimo giorno",
-        text: "D'estate la strada per l'aeroporto e i controlli di sicurezza sono affollati. Riconsegna l'auto circa due ore prima della partenza.",
+        title: "Fai rifornimento al ritorno",
+        text: "Riconsegna l'auto con lo stesso livello di carburante che hai ricevuto. Ci sono distributori sulla VOAK su entrambi i lati dell'aeroporto.",
       },
       {
-        title: "Fai il pieno prima della montagna",
-        text: "I distributori sono ovunque lungo la VOAK e a Heraklion, ma nei villaggi spesso chiudono la sera e la domenica.",
+        title: "Evita il centro città",
+        text: "Per Rethymno o Chania resta sulla tangenziale VOAK. Il centro di Heraklion è lento, con molti sensi unici.",
       },
       {
-        title: "Evita il centro nelle ore di punta",
-        text: "Il centro di Heraklion è una rete di sensi unici. Per attraversare la città resta sulla tangenziale della VOAK.",
+        title: "Attenzione al sole basso",
+        text: "Guidando verso ovest nel tardo pomeriggio, sulla strada costiera hai il sole davanti. Tieni gli occhiali da sole a portata di mano.",
       },
     ],
     faq: [
       {
         q: "Serve la carta di credito per noleggiare all'aeroporto di Heraklion?",
-        a: "No. Goldy non chiede la carta di credito con nessuna copertura. Prenoti e paghi con carta di debito, e alla consegna agli arrivi non viene bloccato nulla su nessuna carta.",
+        a: "No. Mira Cars non chiede la carta di credito con nessuna copertura. Prenoti e paghi con carta di debito, e al ritiro non viene bloccato nulla su una carta.",
       },
       {
         q: "C'è un deposito all'aeroporto di Heraklion?",
-        a: "Non con la Copertura completa o premium: il deposito è 0 €. Con la Copertura base si applica un deposito rimborsabile, indicato su ogni auto prima della prenotazione.",
+        a: "No. Il deposito è di €0 con ogni copertura. La copertura completa è inclusa nel prezzo e la Premium porta la franchigia a zero.",
       },
       {
-        q: "Quanto dista il vostro ufficio dall'aeroporto di Heraklion?",
-        a: "Circa 2 km. L'ufficio è in via Irodotou 96 a Nea Alikarnassos, a ovest del terminal. La maggior parte dei clienti non lo vede mai, perché portiamo l'auto agli arrivi.",
+        q: "Dove ci incontriamo esattamente in aeroporto?",
+        a: "All'uscita degli arrivi. Ti mandiamo i dettagli prima del viaggio e seguiamo il tuo volo per essere lì quando esci.",
       },
       {
-        q: "Cosa succede se il mio volo per Heraklion è in ritardo?",
-        a: "Per te non cambia nulla. Inserisci il numero di volo quando prenoti e scrivici su WhatsApp se qualcosa cambia; ti consegniamo l'auto all'atterraggio reale.",
+        q: "E se il volo è in ritardo?",
+        a: "Per te non cambia nulla. Inserisci il numero di volo quando prenoti e spostiamo la consegna sull'orario di arrivo reale, anche a tarda sera.",
       },
       {
-        q: "Posso ritirare l'auto all'aeroporto di Heraklion e riconsegnarla a Chania?",
-        a: "Sì. Spunta «Riconsegna in un altro luogo» nella ricerca e scegli l'aeroporto di Chania o un altro punto. Il prezzo mostrato include già la sola andata.",
-      },
-      {
-        q: "Posso portare l'auto a noleggio sul traghetto per Santorini?",
-        a: "Solo con il nostro consenso scritto, perché l'auto è assicurata per Creta. Chiedici prima di prenotare il traghetto e ti diremo cosa è possibile nelle tue date.",
+        q: "Posso riconsegnare l'auto all'aeroporto di Chania?",
+        a: "Sì. Spunta «Riconsegna in un altro luogo» nella ricerca e scegli l'aeroporto di Chania. Il prezzo che vedi include già la tratta di sola andata.",
       },
     ],
   },
 
   heraklion: {
     place: "Heraklion",
-    title: "Noleggio auto Heraklion senza carta di credito né deposito",
+    title: "Noleggio auto Heraklion centro senza deposito | Mira Cars",
     description:
-      "Noleggio auto a Heraklion senza carta di credito e senza deposito con la Copertura completa. Consegna in hotel, chilometri illimitati, Cnosso a 15 minuti.",
-    h1: "Noleggio auto a Heraklion senza carta di credito né deposito",
+      "Noleggia un'auto in centro a Heraklion da un'azienda di famiglia locale. Senza carta di credito, deposito €0, copertura completa inclusa.",
+    h1: "Noleggio auto in centro a Heraklion",
     lead:
-      "Alloggi nel capoluogo di Creta? Portiamo l'auto al tuo hotel o appartamento a Heraklion, senza code al banco. Paghi con carta di debito e, con la Copertura completa, non viene bloccato nulla su nessuna carta.",
+      "Il nostro ufficio è in via Petlempouri 6, a Heraklion: la città è casa nostra. Ritira l'auto in centro o chiedici di portarla al tuo hotel, e scopri Creta partendo dal suo capoluogo.",
     points: [
-      "Consegna al tuo hotel o appartamento a Heraklion",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa",
-      "Ufficio locale a Nea Alikarnassos, a 10 minuti dal centro",
+      "Consegna in centro, o al tuo hotel su richiesta",
+      "Niente carta di credito e deposito €0 con ogni copertura",
+      "Copertura completa in ogni prezzo",
+      "Riconsegna all'aeroporto o al porto di Heraklion quando riparti",
     ],
     pickup: {
-      title: "Consegna a Heraklion",
-      text: "Indicaci l'indirizzo dell'hotel o dell'appartamento quando prenoti e ti aspettiamo davanti con l'auto all'orario concordato. Dentro le mura veneziane molte strade sono pedonali o a senso unico; per alcuni indirizzi ti proporremo l'angolo più vicino dove un'auto può fermarsi in sicurezza.",
+      title: "Ritiro a Heraklion",
+      text: "Scegli Heraklion nella ricerca e dicci dove alloggi. Ti incontriamo in centro all'ora concordata o, su richiesta, davanti al tuo hotel o appartamento. Il controllo dell'auto e la firma richiedono una decina di minuti, poi parti. Se riparti in aereo, riconsegna semplicemente l'auto in aeroporto.",
     },
     nearby: [
       {
-        name: "Museo archeologico di Heraklion",
-        time: "In centro",
-        text: "La più importante collezione di arte minoica al mondo, con gli affreschi e il disco di Festo. Visitalo prima di Cnosso per capire meglio il sito.",
+        name: "Piazza dei Leoni e via 25 Agosto",
+        time: "5 min a piedi",
+        text: "La fontana Morosini, la Loggia veneziana e la via pedonale che scende al porto: il cuore della città vecchia.",
       },
       {
-        name: "Palazzo di Cnosso",
-        time: "15 min",
-        text: "Solo 5 km a sud del centro. I parcheggi a pagamento lungo la strada d'accesso d'estate sono pieni a metà mattina.",
+        name: "Porto veneziano e Koules",
+        time: "10 min a piedi",
+        text: "Cammina lungo il molo fino alla fortezza di Koules, soprattutto la sera quando rientrano i pescherecci.",
       },
       {
-        name: "Archanes",
-        time: "25 min",
-        text: "Un villaggio restaurato con case neoclassiche e taverne in piazza, nel cuore della zona vinicola di Archanes.",
+        name: "Museo archeologico",
+        time: "5 min a piedi",
+        text: "Vicino a piazza Eleftherias, con i tesori della Creta minoica. Calcola almeno due ore.",
       },
       {
-        name: "Spiaggia di Ammoudara",
-        time: "15 min",
-        text: "Chilometri di sabbia a ovest della città, con bar sulla spiaggia e spazio per parcheggiare lungo la strada costiera.",
+        name: "Tomba di Kazantzakis, bastione Martinengo",
+        time: "15 min a piedi",
+        text: "La tomba sobria dello scrittore sulle mura veneziane, con vista sulla città fino al monte Giouchtas.",
       },
     ],
     trips: [
       {
-        title: "Agia Pelagia e Fodele",
-        time: "35 min solo andata",
-        text: "Verso ovest lungo la costa fino alle calette riparate di Agia Pelagia, poi nell'entroterra fino a Fodele, villaggio di aranceti legato al pittore El Greco.",
+        title: "Cnosso e i villaggi del vino",
+        time: "20–30 min a tratta",
+        text: "Cnosso di prima mattina, poi verso sud ad Archanes e Peza per pranzo e una degustazione in una cantina di famiglia.",
       },
       {
-        title: "Zaros e la gola di Rouvas",
-        time: "1 h solo andata",
-        text: "Verso sud ai piedi del monte Psiloritis: il lago Votomos, taverne con le trote e una passeggiata all'ombra nella gola di Rouvas.",
+        title: "Agios Nikolaos",
+        time: "1 h a tratta",
+        text: "Una piccola e vivace città di porto intorno a un lago, con il golfo di Mirabello e le spiagge di Elounda a due passi.",
       },
       {
-        title: "Peza e le strade del vino",
-        time: "30 min solo andata",
-        text: "Vigneti e cantine di famiglia a sud della città, dove crescono vidiano e kotsifali. Per le degustazioni scegliete chi guida.",
+        title: "Rethymno",
+        time: "1 h 10 a tratta",
+        text: "Verso ovest lungo la costa fino alla Fortezza, al porto veneziano e a una città vecchia di vicoli, con una lunga spiaggia accanto al centro.",
       },
     ],
     tips: [
       {
-        title: "Nel centro storico segui il navigatore",
-        text: "Dentro le mura sensi unici e zone pedonali cambiano spesso. Fidati del navigatore ed evita i vicoli intorno al mercato.",
+        title: "Lascia l'auto fuori dalla città vecchia",
+        text: "Dentro le mura i posti sono pochi e molte strade sono pedonali. Usa un parcheggio vicino alle mura o al porto e prosegui a piedi.",
       },
       {
-        title: "I colori delle strisce",
-        text: "Strisce blu: parcheggio a pagamento, bianche: gratuito, gialle: divieto di sosta. I parcheggi vicino al porto e alle mura fanno risparmiare tempo.",
+        title: "Usa la tangenziale VOAK",
+        text: "Per attraversare la città da un lato all'altro, la tangenziale è quasi sempre più veloce del centro.",
       },
       {
-        title: "Attraversa la città sulla tangenziale",
-        text: "La VOAK aggira Heraklion a sud. Per passare da un lato all'altro della città è più veloce di qualsiasi percorso dal centro.",
+        title: "Evita le ore di punta",
+        text: "Il traffico è più intenso nei giorni feriali la mattina e nel primo pomeriggio. Parti per le gite prima delle 8 o dopo le 9:30.",
       },
       {
         title: "Attenzione agli scooter",
-        text: "Gli scooter passano tra le file e sbucano da entrambi i lati agli incroci. Controlla gli specchietti prima di svoltare o aprire la portiera.",
+        text: "In città motorini e scooter si infilano tra le file. Guarda gli specchietti prima di svoltare o cambiare corsia.",
       },
     ],
     faq: [
       {
-        q: "Consegnate le auto a noleggio negli hotel di Heraklion?",
-        a: "Sì. Indica l'indirizzo dell'hotel o dell'appartamento quando prenoti e portiamo l'auto all'orario concordato. Nel centro storico pedonale ti incontriamo nella strada accessibile più vicina.",
+        q: "Dove consegnate l'auto a Heraklion?",
+        a: "In centro città, all'ora che preferisci. Su richiesta possiamo anche portarla al tuo hotel o appartamento a Heraklion. Il nostro ufficio è in via Petlempouri 6.",
       },
       {
-        q: "Servono carta di credito o deposito a Heraklion?",
-        a: "Nessuna copertura richiede la carta di credito: paghi con carta di debito. Con la Copertura completa o premium il deposito è 0 €. Con la Copertura base si applica un deposito rimborsabile.",
+        q: "Serve la carta di credito per noleggiare a Heraklion?",
+        a: "No. Non serve la carta di credito con nessuna copertura e il deposito è di €0. Paghi con carta di debito al momento della prenotazione.",
       },
       {
-        q: "Posso ritirare l'auto a Heraklion e riconsegnarla in aeroporto?",
-        a: "Sì. Spunta «Riconsegna in un altro luogo» e scegli l'aeroporto di Heraklion. È una scelta comune per chi passa l'ultima notte in città prima di un volo al mattino presto.",
+        q: "Posso ritirare l'auto in città e riconsegnarla in aeroporto?",
+        a: "Sì. Spunta «Riconsegna in un altro luogo» e scegli l'aeroporto di Heraklion. È il modo più semplice per chiudere il viaggio se riparti in aereo.",
       },
       {
-        q: "Dove parcheggiare nel centro storico di Heraklion?",
-        a: "Nei parcheggi a pagamento vicino al porto e lungo le mura veneziane, poi a piedi. Le strisce blu sono a pagamento; le gialle indicano divieto di sosta.",
+        q: "Gli hotel di Heraklion hanno il parcheggio?",
+        a: "Pochi hotel della città vecchia hanno un parcheggio proprio. Chiedi prima all'hotel; altrimenti, i parcheggi vicino alle mura e al porto sono la scelta migliore.",
       },
       {
-        q: "Quanto ci vuole da Heraklion a Cnosso?",
-        a: "Circa 15 minuti per 5 km. D'estate parti presto: il palazzo apre al mattino e i parcheggi all'ingresso si riempiono entro metà mattina.",
+        q: "A che ora posso ritirare l'auto?",
+        a: "Lavoriamo 24 ore su 24, tutti i giorni. Scegli l'orario nella ricerca e scrivici se ti serve una consegna molto presto o molto tardi.",
       },
     ],
   },
 
   "heraklion-port": {
     place: "Porto di Heraklion",
-    title: "Noleggio auto porto di Heraklion senza carta di credito",
+    title: "Noleggio auto porto di Heraklion, consegna al traghetto | Mira Cars",
     description:
-      "Noleggio auto al porto di Heraklion senza carta di credito e senza deposito con la Copertura completa. Ti aspettiamo ai traghetti dal Pireo e da Santorini.",
-    h1: "Noleggio auto al porto di Heraklion senza carta di credito",
+      "Noleggia un'auto al porto di Heraklion, pronta all'arrivo del traghetto dal Pireo o da Santorini. Senza carta di credito, deposito €0, copertura completa inclusa.",
+    h1: "Noleggio auto al porto di Heraklion, pronta quando attracca il traghetto",
     lead:
-      "Arrivi in traghetto dal Pireo, da Santorini o dalle Cicladi? Ti aspettiamo al porto con l'auto, a due passi dalla fortezza di Koules e dal centro storico. Paghi con carta di debito e scegli la Copertura completa per un deposito di 0 €.",
+      "Il nostro ufficio è a pochi minuti dal porto di Heraklion, e accogliere i traghetti fa parte della nostra giornata. Dicci quale traghetto prendi e ti aspettiamo con l'auto all'uscita passeggeri, a qualsiasi ora arrivi.",
     points: [
-      "Consegna al terminal traghetti, all'orario della tua nave",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa",
-      "Riconsegna all'aeroporto di Heraklion per il volo di ritorno",
+      "Consegna all'uscita passeggeri, sull'orario del tuo traghetto",
+      "Niente carta di credito e deposito €0 con ogni copertura",
+      "Copertura completa, secondo conducente e seggiolini gratis",
+      "Riconsegna all'aeroporto di Heraklion per il volo",
     ],
     pickup: {
-      title: "Come funziona il ritiro al porto",
-      text: "I traghetti notturni dal Pireo attraccano di solito al mattino presto, i veloci da Santorini arrivano più tardi nel corso della giornata. Indica nave e orario di arrivo quando prenoti e ti aspettiamo all'uscita passeggeri appena sbarchi. La strada del porto porta direttamente al lungomare e alla VOAK.",
+      title: "Ritiro al porto",
+      text: "I traghetti notturni dal Pireo attraccano di solito all'alba, mentre le navi veloci da Santorini e dalle Cicladi arrivano più tardi in giornata. Dicci nome della nave e orario di arrivo quando prenoti, e ti aspettiamo dove i passeggeri a piedi escono dal terminal. Dal porto, il lungomare ti porta sulla VOAK in pochi minuti.",
     },
     nearby: [
       {
         name: "Fortezza di Koules",
         time: "5 min a piedi",
-        text: "La fortezza veneziana sul mare in fondo al vecchio molo, con vista sulla città dal tetto.",
+        text: "Il castello veneziano che sorveglia il porto vecchio. Sali sul tetto per la vista sulla città e sui traghetti in arrivo.",
+      },
+      {
+        name: "Città vecchia e piazza dei Leoni",
+        time: "10 min a piedi",
+        text: "Risali via 25 Agosto, passa la Loggia e arriva alla fontana Morosini per una colazione dopo la traversata notturna.",
       },
       {
         name: "Museo archeologico",
-        time: "5 min",
-        text: "In salita dal porto, vicino a piazza Eleftherias. La migliore introduzione alla Creta minoica prima di qualsiasi palazzo.",
+        time: "10 min a piedi",
+        text: "In piazza Eleftherias sopra il porto, con affreschi e reperti di Cnosso e Festo.",
       },
       {
         name: "Palazzo di Cnosso",
         time: "15 min",
-        text: "6 km a sud del porto. Se il traghetto attracca all'alba, sei all'ingresso all'apertura, prima della folla.",
-      },
-      {
-        name: "Spiaggia di Ammoudara",
-        time: "15 min",
-        text: "Sulla strada costiera verso ovest: una lunga spiaggia di sabbia per un bagno dopo una notte in traghetto.",
+        text: "Solo 6 km. Con un traghetto all'alba puoi essere tra i primi all'ingresso all'apertura.",
       },
     ],
     trips: [
       {
-        title: "Archanes e il monte Giouchtas",
-        time: "25 min solo andata",
-        text: "Un villaggio del vino con case restaurate, poi la strada sul monte Giouchtas, il cui profilo ricorda il volto di Zeus addormentato, con vista sull'isola.",
+        title: "Spiagge di Hersonissos e Malia",
+        time: "35 min a tratta",
+        text: "Verso est sulla VOAK fino alle spiagge vivaci di Hersonissos e Malia, e al palazzo minoico di Malia in riva al mare.",
       },
       {
-        title: "Agios Nikolaos ed Elounda",
-        time: "1 h solo andata",
-        text: "Verso est sulla VOAK fino al lago nel centro di Agios Nikolaos, poi la strada costiera fino a Elounda e alla sua baia.",
+        title: "Altopiano di Lassithi",
+        time: "1 h 15 a tratta",
+        text: "Una strada di montagna verso l'altopiano verde con i vecchi mulini, la grotta di Psychro e villaggi dove il tempo scorre lento.",
       },
       {
-        title: "Rethymno",
-        time: "1 h 10 min solo andata",
-        text: "Verso ovest lungo la costa nord fino alla Fortezza e al centro storico veneziano di Rethymno, con la spiaggia proprio accanto al centro.",
+        title: "Matala",
+        time: "1 h 15 a tratta",
+        text: "Attraversa l'isola fino alla costa sud per un bagno sotto le grotte di arenaria e un tramonto sul mare Libico.",
       },
     ],
     tips: [
       {
-        title: "Lascia che il navigatore eviti il centro storico",
-        text: "Le strade sopra il porto sono ripide, strette e spesso a senso unico. Il lungomare è l'uscita più semplice in entrambe le direzioni.",
+        title: "Riposa prima di un lungo viaggio",
+        text: "Dopo una notte in traghetto, prenditi la prima mattina con calma. Colazione in città vecchia, poi la strada.",
       },
       {
-        title: "Pianifica un arrivo all'alba",
-        text: "La maggior parte dei siti apre verso le 8. Fai colazione in piazza dei Leoni, poi guida fino a Cnosso per l'apertura.",
+        title: "Segui il lungomare",
+        text: "Le strade sopra il porto sono ripide e a senso unico. Il viale sul lungomare è il modo più semplice per uscire dalla città.",
       },
       {
-        title: "Parcheggia fuori dal centro",
-        text: "Se resti in città, usa i parcheggi a pagamento vicino al porto e sali a piedi. Il centro storico non ha quasi posti.",
+        title: "Riparti in nave? Arriva presto",
+        text: "Se lasci Creta in traghetto, riconsegna l'auto al porto circa un'ora prima della partenza, così hai tempo per imbarcarti.",
       },
       {
-        title: "Un altro traghetto? Chiedi prima",
-        text: "Portare l'auto su un'altra isola richiede il nostro consenso scritto, perché è assicurata per Creta. Chiedi prima di prenotare la traversata.",
+        title: "L'auto su un'altra isola",
+        text: "L'auto è assicurata per Creta. Imbarcarla su un traghetto richiede il nostro consenso scritto: chiedici prima di prenotare la traversata.",
       },
     ],
     faq: [
       {
-        q: "Potete aspettarmi all'arrivo del traghetto a Heraklion?",
-        a: "Sì. Indica nave e orario di arrivo quando prenoti. Ti aspettiamo con l'auto all'uscita passeggeri: non serve un taxi per andare in città.",
+        q: "Potete accogliermi all'alba al traghetto notturno?",
+        a: "Sì. Lavoriamo 24 ore su 24. Dicci nave e orario di arrivo quando prenoti e ti aspettiamo all'uscita passeggeri.",
       },
       {
-        q: "E se il mio traghetto è in ritardo?",
-        a: "Con vento forte i traghetti arrivano davvero in ritardo. Scrivici su WhatsApp e adattiamo la consegna all'orario di arrivo reale.",
+        q: "E se il traghetto arriva in ritardo?",
+        a: "I traghetti possono ritardare per il vento. Scrivici su WhatsApp e spostiamo la consegna sull'orario di arrivo reale, senza costi.",
       },
       {
-        q: "Serve la carta di credito al porto di Heraklion?",
-        a: "No. Nessuna copertura richiede la carta di credito, e con la Copertura completa o premium il deposito è 0 €. Paghi online con carta di debito.",
+        q: "Serve la carta di credito per noleggiare al porto di Heraklion?",
+        a: "No. Non serve la carta di credito con nessuna copertura e il deposito è di €0. Paghi con carta di debito al momento della prenotazione.",
       },
       {
-        q: "Posso ritirare l'auto al porto e riconsegnarla all'aeroporto di Heraklion?",
-        a: "Sì. L'aeroporto è circa 4 km a est del porto. Spunta «Riconsegna in un altro luogo» nella ricerca e scegli l'aeroporto di Heraklion.",
+        q: "Posso ritirare l'auto al porto e riconsegnarla in aeroporto?",
+        a: "Sì. L'aeroporto di Heraklion è circa 5 km a est del porto. Spunta «Riconsegna in un altro luogo» e scegli l'aeroporto.",
+      },
+      {
+        q: "Posso portare l'auto a noleggio in traghetto a Santorini?",
+        a: "Solo con il nostro consenso scritto, perché l'auto è assicurata per Creta. Chiedici prima di prenotare la traversata.",
       },
     ],
   },
 
   "chania-airport": {
     place: "Aeroporto di Chania",
-    title: "Noleggio auto aeroporto Chania senza carta di credito",
+    title: "Noleggio auto aeroporto di Chania senza carta | Mira Cars",
     description:
-      "Noleggio auto all'aeroporto di Chania (CHQ) senza carta di credito e senza deposito con la Copertura completa. Consegna agli arrivi, porto a 25 minuti.",
+      "Noleggia un'auto all'aeroporto di Chania (CHQ) senza carta di credito e con deposito €0. Consegna agli arrivi, copertura completa, riconsegna a Heraklion.",
     h1: "Noleggio auto all'aeroporto di Chania senza carta di credito né deposito",
     lead:
-      "L'aeroporto internazionale di Chania si trova sulla penisola di Akrotiri, a circa 15 km dal porto vecchio. Ti aspettiamo agli arrivi con l'auto. Paghi con carta di debito e, con la Copertura completa, non c'è deposito.",
+      "Atterri nella Creta occidentale? Ti consegniamo la tua auto Mira agli arrivi dell'aeroporto di Chania, con la copertura completa nel prezzo e senza carta di credito né deposito. Riconsegnala qui, oppure guida verso est e lasciala a Heraklion.",
     points: [
       "Consegna agli arrivi di CHQ",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa",
-      "Riconsegna possibile all'aeroporto di Heraklion",
+      "Niente carta di credito e deposito €0 con ogni copertura",
+      "Sola andata verso l'aeroporto o il porto di Heraklion",
+      "Secondo conducente e seggiolini gratis",
     ],
     pickup: {
-      title: "Come funziona il ritiro all'aeroporto di Chania",
-      text: "Chania ha un solo piccolo terminal, quindi la consegna è rapida: ti incontriamo appena esci dagli arrivi. Inserisci il numero di volo quando prenoti, così seguiamo l'orario di atterraggio. Dall'aeroporto la strada scende verso sud attraverso Akrotiri fino a Chania e alla strada nazionale verso est e ovest.",
+      title: "Ritiro all'aeroporto di Chania",
+      text: "Inserisci il numero di volo quando prenoti e seguiamo il tuo arrivo. Ti incontriamo all'uscita della piccola sala arrivi e ti consegniamo l'auto nel parcheggio di fronte. L'aeroporto è sulla penisola di Akrotiri: Chania è a circa 25 minuti, e la VOAK verso Rethymno e Heraklion parte da Souda.",
     },
     nearby: [
       {
-        name: "Centro storico e porto veneziano di Chania",
+        name: "Città vecchia e porto veneziano di Chania",
         time: "25 min",
-        text: "Il faro, la moschea del porto e i vicoli dei vecchi quartieri. Parcheggia fuori dalle mura ed entra a piedi.",
+        text: "Il faro, le banchine e i vicoli della città vecchia. Parcheggia fuori dalle mura e prosegui a piedi.",
       },
       {
         name: "Spiaggia di Stavros",
         time: "15 min",
-        text: "Una baia riparata e poco profonda in fondo ad Akrotiri, dove fu girata la danza finale di Zorba il greco.",
-      },
-      {
-        name: "Seitan Limania",
-        time: "15 min",
-        text: "Una caletta stretta come un fiordo, raggiungibile con un sentiero ripido dalla strada. Servono scarpe vere, non infradito.",
+        text: "Una baia calma e riparata in fondo ad Akrotiri, sotto la montagna del film «Zorba il greco». Acqua bassa, ideale per i bambini.",
       },
       {
         name: "Monastero di Agia Triada",
         time: "10 min",
-        text: "Un monastero del XVII secolo tra gli uliveti di Akrotiri, che produce ancora olio e vino.",
+        text: "Un monastero del XVII secolo tra gli uliveti, che produce ancora il proprio olio e il proprio vino.",
+      },
+      {
+        name: "Spiaggia di Marathi",
+        time: "15 min",
+        text: "Due piccole spiagge di sabbia sulla baia di Souda, con taverne di pesce in riva al mare.",
       },
     ],
     trips: [
       {
-        title: "Laguna di Balos e Gramvousa",
-        time: "1 h 30 min solo andata",
-        text: "Guida verso ovest fino al porto di Kissamos e prendi la barca per Balos e Gramvousa. La strada per la laguna è una lunga sterrata che richiede il nostro consenso scritto.",
+        title: "Balos e Gramvousa in barca da Kissamos",
+        time: "1 h fino al porto di Kissamos",
+        text: "La strada per Balos finisce con una lunga sterrata: parcheggia al porto di Kissamos e prendi la barca giornaliera per il castello di Gramvousa e la laguna.",
       },
       {
         title: "Elafonissi",
-        time: "1 h 45 min solo andata",
-        text: "Sabbia dai riflessi rosa e laguna bassa all'estremo sud-ovest. L'ultimo tratto si snoda nella gola di Topolia: calcola tempo in abbondanza.",
+        time: "1 h 50 a tratta",
+        text: "Tra i villaggi dei castagni dell'ovest fino alla famosa spiaggia di sabbia rosa con la sua laguna bassa. In estate parti presto.",
       },
       {
         title: "Falassarna",
-        time: "1 h 15 min solo andata",
-        text: "Una lunga spiaggia di sabbia sul mare aperto della costa ovest, famosa per i tramonti. Resta a cena e rientra con il fresco.",
+        time: "1 h a tratta",
+        text: "Una lunga spiaggia rivolta a ovest, con acqua limpida e uno dei tramonti più belli di Creta.",
       },
     ],
     tips: [
       {
-        title: "Strade sterrate: solo con il nostro consenso",
-        text: "Balos e alcune spiagge isolate si raggiungono solo su strade non asfaltate. Chiedici prima; la barca da Kissamos è l'alternativa semplice.",
+        title: "Pianifica una sola andata",
+        text: "Molti viaggiatori arrivano a Chania e ripartono da Heraklion. Scegli un altro luogo di riconsegna nella ricerca e attraversa l'isola da ovest a est.",
       },
       {
-        title: "Attenzione alle capre in montagna",
-        text: "Sulle strade per Elafonissi e la costa sud capre e sassi dopo le curve sono frequenti. Guida piano.",
+        title: "Parcheggia fuori dalla città vecchia",
+        text: "La città vecchia di Chania è in gran parte pedonale. I parcheggi vicino al mercato coperto e alle mura sono i più comodi.",
       },
       {
-        title: "Fai il pieno a Souda o Chania",
-        text: "Su Akrotiri ci sono pochi distributori. Fai il pieno in città prima di tornare in aeroporto.",
+        title: "Resta sull'asfalto",
+        text: "Le strade sterrate, come l'ultimo tratto verso Balos, non sono coperte dall'assicurazione. Prendi la barca o chiedici prima.",
       },
       {
-        title: "Verso ovest di giorno",
-        text: "Le strade per Falassarna ed Elafonissi sono strette e non illuminate. Organizza i tragitti lunghi per rientrare prima del buio.",
+        title: "Fai il pieno prima dell'estremo ovest",
+        text: "Dopo Kissamos e sulla strada per Elafonissi i distributori sono pochi. Fai il pieno a Chania o a Kissamos.",
       },
     ],
     faq: [
       {
-        q: "Serve la carta di credito all'aeroporto di Chania?",
-        a: "No. Nessuna delle nostre coperture richiede la carta di credito. Paghi con carta di debito e, con la Copertura completa o premium, il deposito è 0 €.",
+        q: "Serve la carta di credito per noleggiare all'aeroporto di Chania?",
+        a: "No. Mira Cars non chiede la carta di credito con nessuna copertura. Paghi con carta di debito, e al ritiro non viene bloccato nulla su una carta.",
       },
       {
-        q: "Dove vi trovo all'aeroporto di Chania?",
-        a: "Agli arrivi. Il terminal è piccolo, ci vedi appena esci. Inserisci il numero di volo quando prenoti e saremo lì al tuo atterraggio.",
+        q: "C'è un deposito all'aeroporto di Chania?",
+        a: "No. Il deposito è di €0 con ogni copertura. La copertura completa è inclusa e la Premium porta la franchigia a zero.",
       },
       {
         q: "Posso ritirare l'auto a Chania e riconsegnarla a Heraklion?",
-        a: "Sì, i noleggi di sola andata sono possibili in tutta Creta. Scegli l'aeroporto di Heraklion o un altro punto di riconsegna: il prezzo lo include.",
+        a: "Sì. Spunta «Riconsegna in un altro luogo» e scegli l'aeroporto o il porto di Heraklion. Il prezzo che vedi include già la tratta di sola andata.",
       },
       {
-        q: "Si può andare a Balos con l'auto a noleggio?",
-        a: "Gli ultimi 8 km per Balos sono sterrati, e le strade non asfaltate richiedono il nostro consenso scritto. La maggior parte dei clienti va al porto di Kissamos e prende la barca.",
+        q: "Quanto ci vuole da Chania a Heraklion?",
+        a: "Circa 140 km, cioè due ore sulla VOAK senza soste. Rethymno, a metà strada, è una buona tappa per una pausa.",
       },
       {
-        q: "Quanto dista l'aeroporto di Chania dal centro storico?",
-        a: "Circa 15 km, cioè 25 minuti in auto. Il centro storico è quasi tutto pedonale: parcheggia in uno dei parcheggi appena fuori dalle mura.",
-      },
-    ],
-  },
-
-  chania: {
-    place: "Chania",
-    title: "Noleggio auto Chania senza carta di credito né deposito",
-    description:
-      "Noleggio auto a Chania senza carta di credito e senza deposito con la Copertura completa. Consegna in hotel, poi Sfakia, il lago di Kournas e Balos.",
-    h1: "Noleggio auto a Chania senza carta di credito né deposito",
-    lead:
-      "Consegniamo negli hotel e negli appartamenti di Chania e delle località balneari a ovest della città. Paghi con carta di debito e, con la Copertura completa, non viene bloccato alcun deposito.",
-    points: [
-      "Consegna al tuo hotel a Chania o nelle località a ovest",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa",
-      "Riconsegna a Chania, in aeroporto o a Heraklion",
-    ],
-    pickup: {
-      title: "Consegna a Chania",
-      text: "Dicci dove alloggi quando prenoti e portiamo l'auto alla tua porta, o nella strada accessibile più vicina: il centro storico dentro le mura veneziane è in gran parte pedonale. Una nostra cliente su Google ha ritirato l'auto alla stazione degli autobus di Chania e l'ha riconsegnata a Heraklion.",
-    },
-    nearby: [
-      {
-        name: "Porto veneziano e faro",
-        time: "Centro storico",
-        text: "Le banchine, la passeggiata fino al faro e i vicoli dei pellettieri di via Skridlof, da scoprire a piedi.",
-      },
-      {
-        name: "Spiaggia di Nea Chora",
-        time: "5 min",
-        text: "La spiaggia della città, appena a ovest del porto vecchio, con taverne di pesce e parcheggio facile.",
-      },
-      {
-        name: "Platanias e Agia Marina",
-        time: "20 min",
-        text: "Le località balneari a ovest della città, con lunghe spiagge di fronte all'isolotto di Thodorou.",
-      },
-      {
-        name: "Gola di Theriso",
-        time: "25 min",
-        text: "Una strada ombreggiata in una gola fino al villaggio di montagna di Theriso, noto per le sue taverne.",
-      },
-    ],
-    trips: [
-      {
-        title: "Sfakia e Loutro",
-        time: "1 h 30 min solo andata",
-        text: "Attraversa i Monti Bianchi passando per l'altopiano di Askyfou fino a Chora Sfakion, poi prendi la barca per Loutro, un villaggio senza strade.",
-      },
-      {
-        title: "Lago di Kournas e Georgioupoli",
-        time: "45 min solo andata",
-        text: "L'unico lago naturale d'acqua dolce di Creta, con pedalò e tartarughe, poi la lunga spiaggia e la foce del fiume a Georgioupoli.",
-      },
-      {
-        title: "Kissamos e la barca per Balos",
-        time: "45 min fino a Kissamos",
-        text: "Guida fino al porto di Kissamos e prendi la barca giornaliera per Gramvousa e la laguna di Balos, senza strade sterrate.",
-      },
-    ],
-    tips: [
-      {
-        title: "Parcheggia fuori dalle mura",
-        text: "Il centro storico di Chania è in gran parte pedonale. D'estate i parcheggi intorno alle mura sono pieni a metà mattina: arriva presto.",
-      },
-      {
-        title: "Traffico lento verso Platanias",
-        text: "La strada costiera a ovest della città è trafficata nelle sere d'estate. La strada nazionale è il rientro più veloce dalle località.",
-      },
-      {
-        title: "Marcia bassa verso Sfakia",
-        text: "La discesa da Askyfou a Chora Sfakion è tutta tornanti. Scendi in marcia bassa per risparmiare i freni.",
-      },
-      {
-        title: "Acqua e contanti in montagna",
-        text: "I villaggi di montagna spesso non hanno bancomat, e le piccole taverne a volte accettano solo contanti.",
-      },
-    ],
-    faq: [
-      {
-        q: "Consegnate le auto a noleggio negli hotel di Chania?",
-        a: "Sì, a Chania e nelle località a ovest della città. Per un indirizzo nel centro storico pedonale ti incontriamo nella strada accessibile più vicina.",
-      },
-      {
-        q: "Serve la carta di credito per noleggiare a Chania?",
-        a: "No. Nessuna copertura richiede la carta di credito, e con la Copertura completa o premium il deposito è 0 €. Paghi online con carta di debito.",
-      },
-      {
-        q: "Dove parcheggiare a Chania?",
-        a: "Nei parcheggi appena fuori dalle mura del centro storico, poi a piedi. A luglio e agosto sono pieni a metà mattina.",
-      },
-      {
-        q: "Posso riconsegnare l'auto a Heraklion?",
-        a: "Sì. Scegli l'aeroporto, il porto o la città di Heraklion come luogo di riconsegna: il prezzo della sola andata è incluso nel preventivo.",
-      },
-      {
-        q: "Serve un'auto a Chania?",
-        a: "Per la sola città no. Per Balos, Elafonissi, Sfakia e i villaggi di montagna sì: gli autobus sono rari e molte spiagge non sono servite.",
-      },
-    ],
-  },
-
-  rethymno: {
-    place: "Rethymno",
-    title: "Noleggio auto Rethymno senza carta di credito né deposito",
-    description:
-      "Noleggio auto a Rethymno senza carta di credito e senza deposito con la Copertura completa. Ritiro al porto vecchio, Arkadi, Preveli e la costa sud in 1 ora.",
-    h1: "Noleggio auto a Rethymno senza carta di credito né deposito",
-    lead:
-      "Rethymno è a metà strada tra Heraklion e Chania: la base migliore per esplorare entrambe le estremità di Creta. Consegniamo l'auto al porto, accanto al centro storico. Paghi con carta di debito e scegli la Copertura completa per un deposito di 0 €.",
-    points: [
-      "Consegna al porto di Rethymno, accanto al centro storico",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa",
-      "Riconsegna a Rethymno, Heraklion o Chania",
-    ],
-    pickup: {
-      title: "Come funziona il ritiro a Rethymno",
-      text: "Ti incontriamo al porto di Rethymno, vicino al porto veneziano e a pochi minuti a piedi dalla Fortezza. Indica l'orario di arrivo quando prenoti. Dal porto il lungomare porta alla VOAK in pochi minuti, verso est per Heraklion o verso ovest per Chania.",
-    },
-    nearby: [
-      {
-        name: "Fortezza",
-        time: "5 min a piedi",
-        text: "La fortezza veneziana sopra il centro storico, con una moschea dentro le mura e vista sul porto.",
-      },
-      {
-        name: "Monastero di Arkadi",
-        time: "30 min",
-        text: "Il monastero al centro della rivolta del 1866 contro il dominio ottomano, simbolo della lotta di Creta per la libertà.",
-      },
-      {
-        name: "Margarites",
-        time: "35 min",
-        text: "Un villaggio di vasai sulle colline, dove le botteghe lavorano ancora l'argilla locale nei forni a legna.",
-      },
-      {
-        name: "Lago di Kournas",
-        time: "25 min",
-        text: "L'unico lago naturale d'acqua dolce di Creta, appena oltre il confine con la regione di Chania, con taverne sulla riva.",
-      },
-    ],
-    trips: [
-      {
-        title: "Spiaggia delle palme di Preveli",
-        time: "50 min solo andata",
-        text: "Verso sud attraverso la gola di Kourtaliotiko, parcheggia sopra la spiaggia e scendi a piedi fino a un fiume bordato di palme.",
-      },
-      {
-        title: "Plakias attraverso la gola di Kotsifou",
-        time: "45 min solo andata",
-        text: "Una strada stretta tra pareti di roccia fino al villaggio di Plakias sulla costa sud e alle sue spiagge.",
-      },
-      {
-        title: "La valle di Amari",
-        time: "40 min fino alla valle",
-        text: "Villaggi tranquilli, chiese bizantine e uliveti ai piedi dello Psiloritis, la vetta più alta di Creta.",
-      },
-    ],
-    tips: [
-      {
-        title: "Parcheggia al porto turistico, non nei vicoli",
-        text: "Il centro storico è un labirinto di vicoli stretti. Usa i parcheggi sul lungomare e vicino al porto.",
-      },
-      {
-        title: "Le strade verso sud sono più lente",
-        text: "Le strade di montagna sono asfaltate ma tortuose. Calcola più tempo di quanto suggerisca la distanza.",
-      },
-      {
-        title: "Fai il pieno prima delle gole",
-        text: "Tra Rethymno e la costa sud ci sono pochi distributori. Parti con il serbatoio pieno.",
-      },
-      {
-        title: "Attenzione al sole della sera",
-        text: "Guidare verso ovest sulla VOAK nel tardo pomeriggio significa avere il sole basso negli occhi. Tieni gli occhiali da sole in auto.",
-      },
-    ],
-    faq: [
-      {
-        q: "Serve la carta di credito per noleggiare a Rethymno?",
-        a: "No. Nessuna delle nostre coperture richiede la carta di credito. Paghi con carta di debito e, con la Copertura completa o premium, il deposito è 0 €.",
-      },
-      {
-        q: "Dove ritiro l'auto a Rethymno?",
-        a: "Al porto di Rethymno, accanto al porto veneziano. Indica l'orario di arrivo quando prenoti e ti aspettiamo lì con l'auto.",
-      },
-      {
-        q: "Rethymno è una buona base per un viaggio in auto a Creta?",
-        a: "Sì. Heraklion e Chania sono ciascuna a circa un'ora sulla VOAK, e la costa sud a Plakias o Preveli a meno di un'ora.",
-      },
-      {
-        q: "Posso riconsegnare l'auto a Heraklion o Chania?",
-        a: "Sì. Scegli il punto di riconsegna nella ricerca: aeroporto di Heraklion, aeroporto di Chania o altro. Il preventivo include il prezzo della sola andata.",
-      },
-    ],
-  },
-
-  hersonissos: {
-    place: "Hersonissos",
-    title: "Noleggio auto Hersonissos senza carta di credito né deposito",
-    description:
-      "Noleggio auto a Hersonissos senza carta di credito e senza deposito con la Copertura completa. Consegna in hotel, a 25 minuti dall'aeroporto di Heraklion.",
-    h1: "Noleggio auto a Hersonissos senza carta di credito né deposito",
-    lead:
-      "Hersonissos è una delle località più vivaci di Creta, circa 25 km a est dell'aeroporto di Heraklion. Portiamo l'auto al tuo hotel, così puoi lasciare la spiaggia per l'altopiano di Lassithi, Elounda o i villaggi in collina. Paghi con carta di debito, senza deposito con la Copertura completa.",
-    points: [
-      "Consegna al tuo hotel a Hersonissos",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa",
-      "Aeroporto di Heraklion a 25 minuti per la riconsegna",
-    ],
-    pickup: {
-      title: "Consegna a Hersonissos",
-      text: "Indica l'indirizzo dell'hotel quando prenoti e portiamo l'auto all'ingresso all'orario concordato. Non ti serve l'auto nei primi giorni a bordo piscina? Prenota dal giorno in cui vuoi iniziare a esplorare e la consegniamo quel giorno.",
-    },
-    nearby: [
-      {
-        name: "Koutouloufari e Piskopiano",
-        time: "5 min",
-        text: "I villaggi in collina sopra la località, con taverne, terrazze e vista sulla baia.",
-      },
-      {
-        name: "Museo all'aperto di Lychnostatis",
-        time: "5 min",
-        text: "Case cretesi tradizionali, laboratori e giardini di erbe e alberi da frutto sul mare, un'ora piacevole lontano dalla spiaggia.",
-      },
-      {
-        name: "Palazzo di Malia",
-        time: "15 min",
-        text: "Un palazzo minoico sul mare, più tranquillo di Cnosso e facile da visitare in un'ora.",
-      },
-      {
-        name: "Palazzo di Cnosso",
-        time: "30 min",
-        text: "Verso ovest sulla VOAK, poi a sud di Heraklion. D'estate conviene andarci al mattino presto.",
-      },
-    ],
-    trips: [
-      {
-        title: "Altopiano di Lassithi e grotta di Dikti",
-        time: "1 h solo andata",
-        text: "Sali passando per Kera fino a un altopiano di campi e vecchi mulini a vento, poi raggiungi a piedi la grotta dove, secondo il mito, nacque Zeus.",
-      },
-      {
-        title: "Elounda e Spinalonga",
-        time: "50 min solo andata",
-        text: "Verso est lungo la costa fino ad Agios Nikolaos, poi Elounda e Plaka, da dove le barche portano all'isola-fortezza di Spinalonga.",
-      },
-      {
-        title: "Kritsa e Lato",
-        time: "45 min solo andata",
-        text: "Un villaggio di tessitrici sopra Agios Nikolaos, la chiesa affrescata di Panagia Kera e le rovine dell'antica Lato su un crinale.",
-      },
-    ],
-    tips: [
-      {
-        title: "La VOAK invece della vecchia strada",
-        text: "La vecchia strada costiera che attraversa la località è lenta e piena di pedoni. Prendi la VOAK per tutto ciò che va oltre il villaggio vicino.",
-      },
-      {
-        title: "Tornanti verso il Lassithi",
-        text: "La strada per l'altopiano è asfaltata e ben segnalata, ma con curve strette. Scendi in marcia bassa.",
-      },
-      {
-        title: "Parcheggia all'ingresso del villaggio",
-        text: "Koutouloufari e Piskopiano hanno strade strette. Lascia l'auto all'ingresso e sali a piedi per la cena.",
-      },
-      {
-        title: "Attenzione ai pedoni la sera",
-        text: "D'estate la via principale è animata fino a tardi e la gente attraversa ovunque. Guida piano in centro.",
-      },
-    ],
-    faq: [
-      {
-        q: "Consegnate le auto a noleggio negli hotel di Hersonissos?",
-        a: "Sì. Indica l'hotel quando prenoti e portiamo l'auto all'ingresso all'orario concordato, dal primo giorno di noleggio.",
-      },
-      {
-        q: "Serve la carta di credito per noleggiare a Hersonissos?",
-        a: "No. Nessuna copertura richiede la carta di credito, e con la Copertura completa o premium il deposito è 0 €. Paghi online con carta di debito.",
-      },
-      {
-        q: "Quanto dista Hersonissos dall'aeroporto di Heraklion?",
-        a: "Circa 25 km, cioè 25 minuti sulla VOAK. Puoi anche ritirare l'auto in aeroporto all'arrivo e guidare tu fino all'hotel.",
-      },
-      {
-        q: "Posso noleggiare un'auto solo per una parte della vacanza?",
-        a: "Sì. Cerca le date in cui ti serve l'auto, per esempio tre giorni a metà soggiorno, e la consegniamo al tuo hotel il primo giorno.",
-      },
-    ],
-  },
-
-  malia: {
-    place: "Malia",
-    title: "Noleggio auto Malia senza carta di credito né deposito",
-    description:
-      "Noleggio auto a Malia senza carta di credito e senza deposito con la Copertura completa. Consegna in hotel, palazzo minoico a 5 minuti, Lassithi in un'ora.",
-    h1: "Noleggio auto a Malia senza carta di credito né deposito",
-    lead:
-      "Malia è nota per la lunga spiaggia di sabbia e il palazzo minoico appena fuori città. Con un'auto consegnata in hotel lasci la via affollata per calette tranquille, l'altopiano di Lassithi e la Creta orientale. Paghi con carta di debito, senza deposito con la Copertura completa.",
-    points: [
-      "Consegna al tuo hotel a Malia o Stalida",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa",
-      "Agios Nikolaos 30 minuti a est, aeroporto di Heraklion 35 minuti a ovest",
-    ],
-    pickup: {
-      title: "Consegna a Malia",
-      text: "Indicaci l'indirizzo dell'hotel quando prenoti e portiamo l'auto all'ingresso. Il centro di Malia e la strada della spiaggia la sera sono pieni di pedoni; per alcuni hotel ti incontriamo quindi sulla strada principale più vicina.",
-    },
-    nearby: [
-      {
-        name: "Palazzo di Malia",
-        time: "5 min",
-        text: "Un palazzo minoico sul mare, 3 km a est della città. Vacci al mattino presto, prima del caldo.",
-      },
-      {
-        name: "Sissi",
-        time: "15 min",
-        text: "Un piccolo porto di pescatori in un'insenatura stretta, con taverne sull'acqua e un'atmosfera più tranquilla di Malia.",
-      },
-      {
-        name: "Paese vecchio di Malia",
-        time: "Centro",
-        text: "Il paese vecchio a sud della strada principale: vicoli imbiancati a calce, la piazza della chiesa e taverne di famiglia.",
-      },
-      {
-        name: "Spiaggia di Potamos",
-        time: "10 min",
-        text: "L'estremità est, più tranquilla, della spiaggia di Malia, vicino al palazzo e alla zona umida.",
-      },
-    ],
-    trips: [
-      {
-        title: "Altopiano di Lassithi via Mochos",
-        time: "1 h solo andata",
-        text: "Sali passando per il villaggio di Mochos fino all'altopiano, ai suoi mulini a vento e alla grotta di Dikti a Psychro.",
-      },
-      {
-        title: "Agios Nikolaos e Kritsa",
-        time: "35 min solo andata",
-        text: "Il lago e il porto di Agios Nikolaos, poi la salita a Kritsa per gli affreschi di Panagia Kera.",
-      },
-      {
-        title: "Spinalonga da Plaka",
-        time: "50 min solo andata",
-        text: "La VOAK verso est fino a Elounda e Plaka, poi la barchetta fino all'isola-fortezza.",
-      },
-    ],
-    tips: [
-      {
-        title: "Evita la strada della spiaggia la sera",
-        text: "D'estate la via dei bar si riempie di pedoni fino a tarda notte. Organizza il rientro evitandola.",
-      },
-      {
-        title: "Una sosta a Selinari",
-        text: "Verso est la VOAK sale nella gola di Selinari. La cappella di Agios Georgios Selinaris è una sosta tradizionale per chi guida.",
-      },
-      {
-        title: "Parti presto per l'altopiano",
-        text: "Al Lassithi fa più fresco che sulla costa, ma la strada è lenta. Parti al mattino e pranza lassù.",
-      },
-      {
-        title: "Parcheggia all'ombra",
-        text: "Al sole di mezzogiorno le auto si scaldano molto. Parcheggia all'ombra quando puoi e usa un parasole.",
-      },
-    ],
-    faq: [
-      {
-        q: "Consegnate le auto a noleggio negli hotel di Malia?",
-        a: "Sì, a Malia e nella vicina Stalida. Per gli hotel in strade pedonali ti incontriamo sulla strada principale più vicina all'orario concordato.",
-      },
-      {
-        q: "Serve la carta di credito per noleggiare a Malia?",
-        a: "No. Nessuna delle nostre coperture richiede la carta di credito. Paghi con carta di debito e, con la Copertura completa o premium, il deposito è 0 €.",
-      },
-      {
-        q: "Quanto dista Malia dall'aeroporto di Heraklion?",
-        a: "Circa 35 km, cioè 35 minuti sulla VOAK. Puoi ritirare l'auto in aeroporto all'arrivo o fartela consegnare più tardi in hotel.",
-      },
-      {
-        q: "Malia è una buona base per la Creta orientale?",
-        a: "Sì. Agios Nikolaos è a 30 minuti, Elounda a 45 minuti e l'altopiano di Lassithi a circa un'ora, su strade asfaltate.",
-      },
-    ],
-  },
-
-  "agios-nikolaos": {
-    place: "Agios Nikolaos",
-    title: "Noleggio auto Agios Nikolaos senza carta di credito",
-    description:
-      "Noleggio auto ad Agios Nikolaos senza carta di credito e senza deposito con la Copertura completa. Ritiro al porto, Elounda, Spinalonga e Kritsa vicinissime.",
-    h1: "Noleggio auto ad Agios Nikolaos senza carta di credito",
-    lead:
-      "Agios Nikolaos, sulla baia di Mirabello, è la porta della Creta orientale. Ritira l'auto al porto e parti per Elounda, Spinalonga o il palmeto di Vai. Paghi con carta di debito e scegli la Copertura completa per un deposito di 0 €.",
-    points: [
-      "Consegna al porto di Agios Nikolaos",
-      "Nessuna copertura richiede la carta di credito: paghi con carta di debito",
-      "Deposito 0 € con la Copertura completa",
-      "Riconsegna all'aeroporto di Heraklion, a 50 minuti",
-    ],
-    pickup: {
-      title: "Come funziona il ritiro ad Agios Nikolaos",
-      text: "Ti incontriamo al porto, a pochi minuti a piedi dal lago Voulismeni e dal centro. Indica l'orario di arrivo quando prenoti. Molti clienti ritirano l'auto qui e la riconsegnano all'aeroporto di Heraklion a fine vacanza, come una nostra cliente su Google.",
-    },
-    nearby: [
-      {
-        name: "Lago Voulismeni",
-        time: "Centro",
-        text: "Il piccolo lago profondo collegato al porto da un canale e circondato da caffè. Una buona prima sosta per un caffè.",
-      },
-      {
-        name: "Elounda",
-        time: "15 min",
-        text: "Un villaggio di pescatori diventato località balneare su una baia riparata, con la città sommersa di Olous vicino all'istmo.",
-      },
-      {
-        name: "Kritsa e Panagia Kera",
-        time: "15 min",
-        text: "Un villaggio in collina noto per la tessitura e, poco sotto, una chiesa bizantina coperta di affreschi del XIV secolo.",
-      },
-      {
-        name: "Spiaggia di Voulisma, Istro",
-        time: "15 min",
-        text: "Una caletta di sabbia fine con acqua limpida e bassa, sulla strada costiera verso Ierapetra.",
-      },
-    ],
-    trips: [
-      {
-        title: "Spinalonga da Plaka",
-        time: "25 min solo andata",
-        text: "Supera Elounda fino a Plaka e prendi la barchetta per Spinalonga, fortezza veneziana ed ex lebbrosario.",
-      },
-      {
-        title: "Ierapetra e l'isola di Chrissi",
-        time: "40 min solo andata",
-        text: "Raggiungi la costa sud a Ierapetra e prendi una barca per Chrissi, un'isola di cedri e sabbia bianca.",
-      },
-      {
-        title: "Palmeto di Vai",
-        time: "1 h 40 min solo andata",
-        text: "Via Sitia fino all'estremo est di Creta e al più grande palmeto naturale d'Europa, dietro una baia di sabbia.",
-      },
-    ],
-    tips: [
-      {
-        title: "Parcheggia sopra il centro",
-        text: "Le strade intorno al lago e al porto sono strette e trafficate. Usa i parcheggi un po' più in alto e scendi a piedi.",
-      },
-      {
-        title: "La strada costiera per Sitia è tortuosa",
-        text: "A est di Agios Nikolaos la strada segue le scogliere. È bella e asfaltata, ma più lenta della VOAK.",
-      },
-      {
-        title: "A Spinalonga presto",
-        text: "Le barche da Plaka partono tutto il giorno, ma a mezzogiorno l'isola è calda e affollata. Prendi una delle prime corse.",
-      },
-      {
-        title: "Fai il pieno in città",
-        text: "Tra Agios Nikolaos e Sitia i distributori sono rari. Fai il pieno prima di partire verso est.",
-      },
-    ],
-    faq: [
-      {
-        q: "Serve la carta di credito per noleggiare ad Agios Nikolaos?",
-        a: "No. Nessuna delle nostre coperture richiede la carta di credito. Paghi con carta di debito e, con la Copertura completa o premium, il deposito è 0 €.",
-      },
-      {
-        q: "Dove ritiro l'auto ad Agios Nikolaos?",
-        a: "Al porto, a pochi minuti a piedi dal lago Voulismeni. Indica l'orario di arrivo quando prenoti e saremo lì con l'auto.",
-      },
-      {
-        q: "Posso riconsegnare l'auto all'aeroporto di Heraklion?",
-        a: "Sì. L'aeroporto di Heraklion è a circa 50 minuti sulla VOAK. Sceglilo come luogo di riconsegna: il prezzo della sola andata è nel preventivo.",
-      },
-      {
-        q: "Come si arriva a Spinalonga in auto?",
-        a: "Guida fino a Plaka, a 25 minuti da Agios Nikolaos passando per Elounda, e prendi una delle barchette che vanno sull'isola tutto il giorno.",
+        q: "Posso andare a Balos con l'auto a noleggio?",
+        a: "Gli ultimi 8 km fino a Balos sono una sterrata non coperta dall'assicurazione. Meglio prendere la barca giornaliera dal porto di Kissamos, o chiedici prima.",
       },
     ],
   },

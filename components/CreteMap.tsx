@@ -47,12 +47,12 @@ export default function CreteMap({ locale, t, tone = "light", highlight, labels 
   return (
     <div className={`relative ${className}`} style={{ aspectRatio: `${CRETE_MAP.width} / ${CRETE_MAP.height}` }}>
       <svg viewBox={`0 0 ${CRETE_MAP.width} ${CRETE_MAP.height}`} className="absolute inset-0 size-full overflow-visible" aria-hidden="true">
-        <path d={CRETE_MAP.path} fill="none" stroke={dark ? "#239693" : "#7ccfca"} strokeOpacity={dark ? 0.12 : 0.18} strokeWidth={56} strokeLinejoin="round" />
-        <path d={CRETE_MAP.path} fill="none" stroke={dark ? "#239693" : "#7ccfca"} strokeOpacity={dark ? 0.2 : 0.3} strokeWidth={28} strokeLinejoin="round" />
+        <path d={CRETE_MAP.path} fill="none" stroke={dark ? "#6bcbcb" : "#9adcdc"} strokeOpacity={dark ? 0.12 : 0.18} strokeWidth={56} strokeLinejoin="round" />
+        <path d={CRETE_MAP.path} fill="none" stroke={dark ? "#6bcbcb" : "#9adcdc"} strokeOpacity={dark ? 0.2 : 0.3} strokeWidth={28} strokeLinejoin="round" />
         <path
           d={CRETE_MAP.path}
-          fill={dark ? "#124c4e" : "#f7f2e9"}
-          stroke={dark ? "#239693" : "#cdb68d"}
+          fill={dark ? "#1c3a65" : "#f7f2e9"}
+          stroke={dark ? "#6bcbcb" : "#cdb68d"}
           strokeOpacity={dark ? 0.7 : 0.9}
           strokeWidth={1.4}
           strokeLinejoin="round"
@@ -89,11 +89,11 @@ export default function CreteMap({ locale, t, tone = "light", highlight, labels 
             style={{ left: `${x}%`, top: `${y}%` }}
           >
             {(station.type === "Airport" || isHighlight) && (
-              <span aria-hidden="true" className="absolute inset-1.5 rounded-full bg-gold-400/60 animate-ping-slow" />
+              <span aria-hidden="true" className="absolute inset-1.5 rounded-full bg-sun-400/60 animate-ping-slow" />
             )}
             <span
               aria-hidden="true"
-              className={`relative block rounded-full ring-2 transition group-hover:scale-125 ${isHighlight ? "size-4 bg-coral-500" : "size-3 bg-gold-400"} ${
+              className={`relative block rounded-full ring-2 transition group-hover:scale-125 ${isHighlight ? "size-4 bg-coral-500" : "size-3 bg-sun-400"} ${
                 dark ? "ring-sea-950" : "ring-white"
               }`}
             />
@@ -120,12 +120,12 @@ export default function CreteMap({ locale, t, tone = "light", highlight, labels 
 
 /** The island outline alone, for decoration. */
 export function CreteOutline({ className = "", tone = "light" }: { className?: string; tone?: "light" | "dark" }) {
-  const stroke = tone === "dark" ? "#45b2ae" : "#cdb68d";
+  const stroke = tone === "dark" ? "#6bcbcb" : "#cdb68d";
   return (
     <svg viewBox={`0 0 ${CRETE_MAP.width} ${CRETE_MAP.height}`} className={className} aria-hidden="true" fill="none">
       <path d={CRETE_MAP.path} stroke={stroke} strokeOpacity={0.14} strokeWidth={60} strokeLinejoin="round" />
       <path d={CRETE_MAP.path} stroke={stroke} strokeOpacity={0.22} strokeWidth={26} strokeLinejoin="round" />
-      <path d={CRETE_MAP.path} stroke={stroke} strokeOpacity={0.6} strokeWidth={1.5} strokeLinejoin="round" fill={tone === "dark" ? "#0f3e41" : "#f7f2e9"} />
+      <path d={CRETE_MAP.path} stroke={stroke} strokeOpacity={0.6} strokeWidth={1.5} strokeLinejoin="round" fill={tone === "dark" ? "#193254" : "#f7f2e9"} />
     </svg>
   );
 }

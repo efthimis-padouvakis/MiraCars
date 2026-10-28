@@ -12,10 +12,10 @@ export default function ContactCard({ t, className = "" }: { t: Dictionary; clas
           <WhatsAppIcon className="text-lg" /> {t.contact.whatsappCta}
         </a>
         <a href={COMPANY.phoneHref} className="flex items-center gap-3 rounded-2xl bg-white/5 px-4 py-3 text-sm font-semibold ring-1 ring-white/10 hover:bg-white/10">
-          <PhoneIcon className="text-gold-300" /> {COMPANY.phone}
+          <PhoneIcon className="text-sun-300" /> {COMPANY.phone}
         </a>
         <a href={`mailto:${COMPANY.email}`} className="flex items-center gap-3 rounded-2xl bg-white/5 px-4 py-3 text-sm font-semibold ring-1 ring-white/10 hover:bg-white/10">
-          <MailIcon className="text-gold-300" /> {COMPANY.email}
+          <MailIcon className="text-sun-300" /> {COMPANY.email}
         </a>
       </div>
     </div>

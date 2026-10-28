@@ -70,7 +70,7 @@ export async function POST(request: Request) {
 
     const lang = isLocale(body.lang) ? body.lang : "en";
     const booking: BookingRequest = {
-      goldy: 1,
+      mira: 1,
       lang,
       search: query,
       carID,

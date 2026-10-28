@@ -60,7 +60,7 @@ export default function PageHero({
       <div className={`relative mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 sm:pb-16 ${aside ? "lg:grid lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-12" : ""}`}>
         <div>
           <Breadcrumbs crumbs={crumbs} />
-          {eyebrow && <p className="mt-8 text-xs font-bold uppercase tracking-[0.16em] text-gold-700">{eyebrow}</p>}
+          {eyebrow && <p className="mt-8 text-xs font-bold uppercase tracking-[0.16em] text-sun-700">{eyebrow}</p>}
           <h1 className={`${eyebrow ? "mt-3" : "mt-8"} max-w-3xl text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl`}>{title}</h1>
           {lead && <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-ink/65">{lead}</p>}
         </div>

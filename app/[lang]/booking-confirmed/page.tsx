@@ -27,8 +27,8 @@ export default async function BookingConfirmedPage({ params }: PageProps<"/[lang
         <BookingConfirmed
           locale={locale}
           t={t.confirmed}
-          karpaduHome={karpaduHref("home", locale, "goldyrentacar-confirmation")}
-          karpaduReservation={karpaduHref("myReservation", locale, "goldyrentacar-confirmation")}
+          karpaduHome={karpaduHref("home", locale, "miracars-confirmation")}
+          karpaduReservation={karpaduHref("myReservation", locale, "miracars-confirmation")}
         />
       </Suspense>
     </>

@@ -23,7 +23,7 @@ export default function Header({ locale, t }: { locale: Locale; t: Dictionary })
     <header className="sticky top-0 z-40 border-b border-sand-200/80 bg-sand-50/95 backdrop-blur-md supports-[backdrop-filter]:bg-sand-50/85">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:h-[4.5rem] sm:px-6">
         <Link href={`/${locale}`} className="shrink-0 rounded-lg" aria-label={`${COMPANY.name}, ${t.nav.home}`}>
-          <Image src="/img/brand/logo.svg" alt={COMPANY.name} width={164} height={40} priority className="h-9 w-auto sm:h-10" />
+          <Image src="/img/brand/logo.svg" alt={COMPANY.name} width={148} height={40} priority className="h-10 w-auto sm:h-11" />
         </Link>
 
         <nav className="hidden xl:block" aria-label={t.nav.menu}>

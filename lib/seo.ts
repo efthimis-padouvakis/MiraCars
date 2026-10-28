@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { localeMeta, locales, type Locale } from "@/lib/i18n/config";
+import { fleet } from "@/lib/fleet";
 import { GOOGLE_REVIEWS } from "@/lib/reviews";
 import { COMPANY, SITE_URL } from "@/lib/site";
 
-export const CONTENT_UPDATED = "2026-10-27";
+export const CONTENT_UPDATED = "2026-10-28";
 
 export function localizedUrl(locale: Locale, path = "") {
   return `${SITE_URL}/${locale}${path}`;
@@ -53,7 +54,7 @@ export function businessJsonLd(locale: Locale, description: string) {
     name: COMPANY.name,
     url: localizedUrl(locale),
     logo: `${SITE_URL}/img/brand/logo.svg`,
-    image: `${SITE_URL}/img/brand/cars/citroen-c3-aircross-2026.avif`,
+    image: fleet[0].image,
     description,
     telephone: COMPANY.phone.replace(/\s/g, ""),
     email: COMPANY.email,
@@ -69,10 +70,10 @@ export function businessJsonLd(locale: Locale, description: string) {
       addressCountry: COMPANY.address.country,
     },
     areaServed: { "@type": "AdministrativeArea", name: "Crete" },
-    sameAs: [COMPANY.social.facebook, COMPANY.social.instagram, GOOGLE_REVIEWS.mapsUrl],
+    sameAs: [COMPANY.social.facebook, COMPANY.social.instagram, GOOGLE_REVIEWS?.mapsUrl].filter(Boolean),
     availableLanguage: locales.map((l) => localeMeta[l].name),
     brand: { "@type": "Brand", name: COMPANY.name },
-    knowsAbout: ["Car rental in Crete", "Heraklion Airport car hire", "Chania Airport car hire", "Airport transfers"],
+    knowsAbout: ["Car rental in Crete", "Heraklion Airport car hire", "Heraklion Port car hire", "Chania Airport car hire"],
   };
 }
 

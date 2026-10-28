@@ -41,7 +41,7 @@ export default async function LocationsPage({ params }: PageProps<"/[lang]/locat
           <CreteMap locale={locale} t={t} className="mx-auto max-w-5xl" />
           <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-semibold text-ink/60">
             <li className="flex items-center gap-2">
-              <span className="size-3 rounded-full bg-gold-400 ring-2 ring-white" /> {t.locations.popular}
+              <span className="size-3 rounded-full bg-sun-400 ring-2 ring-white" /> {t.locations.popular}
             </li>
             <li className="flex items-center gap-2">
               <span className="size-1.5 rounded-full bg-sea-600/60" /> {t.locations.others}
@@ -61,7 +61,7 @@ export default async function LocationsPage({ params }: PageProps<"/[lang]/locat
                 href={`/${locale}/locations/${page.slug}`}
                 className="group flex flex-col rounded-3xl border border-sand-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-sand-300 hover:shadow-lift"
               >
-                <span className="grid size-12 place-items-center rounded-2xl bg-sea-50 text-2xl text-sea-700 transition group-hover:bg-sea-800 group-hover:text-gold-300">
+                <span className="grid size-12 place-items-center rounded-2xl bg-sea-50 text-2xl text-sea-700 transition group-hover:bg-sea-800 group-hover:text-sun-300">
                   <Icon />
                 </span>
                 <h3 className="mt-5 text-lg font-bold text-ink">{fill(t.locations.rentIn, { place: page.copy[locale].name })}</h3>

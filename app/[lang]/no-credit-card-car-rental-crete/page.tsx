@@ -12,7 +12,8 @@ import { pageMetadata } from "@/lib/seo";
 import { NO_CARD_PATH } from "@/lib/site";
 
 const KIND_ICONS = { Airport: PlaneIcon, Port: ShipIcon, Downtown: TownIcon };
-const PLAN_CODES = ["BASIC", "FULL", "PREMIUM"] as const;
+// Mira sells Full (included) and Premium (zero excess); both have a €0 deposit.
+const PLAN_CODES = ["FULL", "PREMIUM"] as const;
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/no-credit-card-car-rental-crete">): Promise<Metadata> {
   const locale = await localeFrom(params);
@@ -63,7 +64,7 @@ export default async function NoCardPage({ params }: PageProps<"/[lang]/no-credi
         <ol className="mt-8 grid gap-4 md:grid-cols-3">
           {n.how.map((step, index) => (
             <li key={step.title} className="rounded-3xl border border-sand-200 bg-white p-6 sm:p-7">
-              <span className="grid size-11 place-items-center rounded-full bg-sea-800 text-lg font-extrabold text-gold-300">{index + 1}</span>
+              <span className="grid size-11 place-items-center rounded-full bg-sea-800 text-lg font-extrabold text-sun-300">{index + 1}</span>
               <h3 className="mt-5 text-xl font-bold text-ink">{step.title}</h3>
               <p className="mt-2 leading-relaxed text-ink/65">{step.text}</p>
             </li>
@@ -90,16 +91,15 @@ export default async function NoCardPage({ params }: PageProps<"/[lang]/no-credi
             <tbody className="divide-y divide-sand-100">
               {PLAN_CODES.map((code, index) => {
                 const row = n.covers[index];
-                const noDeposit = code !== "BASIC";
                 return (
-                  <tr key={code} className={noDeposit ? "bg-sea-50/50" : ""}>
+                  <tr key={code}>
                     <th scope="row" className="px-5 py-4 font-bold text-ink sm:px-6">{t.car.plans[code]}</th>
                     <td className="px-5 py-4 text-ink/75 sm:px-6">
                       <span className="inline-flex items-center gap-2">
                         <CheckIcon className="text-sea-600" /> {row.card}
                       </span>
                     </td>
-                    <td className={`px-5 py-4 sm:px-6 ${noDeposit ? "font-extrabold text-sea-700" : "text-ink/75"}`}>{row.deposit}</td>
+                    <td className="px-5 py-4 font-extrabold text-sea-700 sm:px-6">{row.deposit}</td>
                     <td className="px-5 py-4 text-ink/75 sm:px-6">{row.excess}</td>
                   </tr>
                 );
@@ -177,7 +177,7 @@ export default async function NoCardPage({ params }: PageProps<"/[lang]/no-credi
             <h2 className="text-3xl font-extrabold tracking-tight">{n.ctaTitle}</h2>
             <p className="mt-3 max-w-lg text-white/70">{n.ctaText}</p>
           </div>
-          <a href="#search" className="shrink-0 rounded-full bg-gold-400 px-8 py-4 text-base font-extrabold text-sea-950 transition hover:bg-gold-300">
+          <a href="#search" className="shrink-0 rounded-full bg-sun-400 px-8 py-4 text-base font-extrabold text-sea-950 transition hover:bg-sun-300">
             {n.ctaButton}
           </a>
         </div>

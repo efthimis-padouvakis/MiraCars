@@ -149,7 +149,7 @@ export default function SearchForm({ locale, t, initial, variant = "bar", id: fo
               <div className="mb-4 flex items-center justify-between gap-3">
                 <p className="text-sm font-bold text-ink">{calendar === "start" ? t.search.selectStart : t.search.selectEnd}</p>
                 {days > 0 && (
-                  <span className="rounded-full bg-gold-100 px-3 py-1 text-xs font-bold text-gold-800">
+                  <span className="rounded-full bg-sun-100 px-3 py-1 text-xs font-bold text-sun-800">
                     {days === 1 ? t.common.day : fill(t.common.days, { n: days })}
                   </span>
                 )}
@@ -175,7 +175,7 @@ export default function SearchForm({ locale, t, initial, variant = "bar", id: fo
         <button
           type="submit"
           disabled={pending || !start}
-          className={`flex h-16 items-center justify-center gap-2.5 rounded-2xl bg-gold-400 px-8 text-base font-extrabold text-sea-950 shadow-[0_10px_24px_-10px_rgb(207_155_47/0.8)] transition hover:bg-gold-300 active:scale-[0.99] disabled:opacity-70 ${
+          className={`flex h-16 items-center justify-center gap-2.5 rounded-2xl bg-sun-400 px-8 text-base font-extrabold text-sea-950 shadow-[0_10px_24px_-10px_rgb(207_155_47/0.8)] transition hover:bg-sun-300 active:scale-[0.99] disabled:opacity-70 ${
             bar ? (twoLocations ? "@3xl:col-span-2 @6xl:col-span-1" : "@3xl:col-span-2 @5xl:col-span-1") : ""
           }`}
         >

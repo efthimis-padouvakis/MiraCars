@@ -1,20 +1,20 @@
 import { COMPANY } from "@/lib/site";
 import type { LegalSet } from "./index";
 
-const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.locality}, ${COMPANY.address.postalCode} Heraklion, Crete, Greece`;
+const ADDRESS = `${COMPANY.address.street}, ${COMPANY.address.postalCode} ${COMPANY.address.locality}, Crete, Greece`;
 
 const en: LegalSet = {
   contents: "On this page",
   terms: {
     updated: "Last updated: 28 October 2026",
     intro:
-      "These terms apply when you use goldyrentacar.gr and when you rent a car from Goldy Rent a Car. Please read them before you book. When you book, you accept these terms together with the rental agreement you sign at pick-up.",
+      "These terms apply when you use miracars.gr and when you rent a car from Mira Cars. Please read them before you book. When you book, you accept these terms together with the rental agreement you sign at pick-up.",
     sections: [
       {
         h: "Who we are",
         body: [
-          `${COMPANY.name}, ${ADDRESS}. Phone and WhatsApp ${COMPANY.phone}, email ${COMPANY.email}.`,
-          "Our live availability and online bookings run on Karpadu, a Greek car rental reservation platform. Karpadu provides the booking technology only. Your rental contract is always with Goldy Rent a Car.",
+          `${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. Phone and WhatsApp ${COMPANY.phone}, email ${COMPANY.email}.`,
+          "Our live availability and online bookings run on Karpadu, a Greek car rental reservation platform. Karpadu provides the booking technology only. Your rental contract is always with Mira Cars.",
         ],
       },
       {
@@ -33,7 +33,7 @@ const en: LegalSet = {
         h: "Price and payment",
         body: [
           [
-            "The price shown when you book is the total for your dates, pick-up and return points, cover and extras. It includes VAT, unlimited kilometres, theft and damage cover and 24/7 road assistance.",
+            "The price shown when you book is the total for your dates, pick-up and return points, cover and extras. It includes VAT, unlimited kilometres, Full cover and 24/7 road assistance.",
             "You pay the full amount online by debit or credit card through Viva Wallet, a licensed payment provider. We never see or store your card details.",
             "The price does not include fuel or charging, tolls, parking, traffic fines or ferry tickets. Costs you cause, such as missing fuel, a late return, special cleaning or damage the cover does not pay for, are charged separately as described below.",
             "All prices are in euros (€).",
@@ -44,9 +44,9 @@ const en: LegalSet = {
         h: "Cover, excess and deposit",
         body: [
           [
-            "Every rental includes theft and damage cover. The excess is the most you pay towards damage to the car or its theft.",
+            "Every rental includes Full cover against theft and damage. The excess is the most you pay towards damage to the car or its theft. Premium cover, if you choose it, brings the excess to zero.",
             "For each car we show the excess and the deposit of every cover before you book. The cover you choose is stated in your confirmation.",
-            "With Full or Premium cover the deposit is €0. With Basic cover a refundable deposit is paid at pick-up and returned when the car comes back on time, without new damage and with the agreed fuel or charge level.",
+            "There is no deposit: it is €0 on every cover.",
             "No credit card is needed for any cover.",
           ],
         ],
@@ -144,7 +144,7 @@ const en: LegalSet = {
         body: [
           [
             "We keep prices, availability and other information on this website as accurate as we can. Availability is live and can change until your booking is confirmed.",
-            "The text, photos and logos on this website belong to Goldy Rent a Car or its licensors. You may not copy them for commercial use without our permission.",
+            "The text, photos and logos on this website belong to Mira Cars or its licensors. You may not copy them for commercial use without our permission.",
             "Do not misuse the website, for example by making fake bookings, scraping it automatically or trying to break its security.",
             "Links to other websites (such as Karpadu, Viva Wallet, Google or WhatsApp) are for your convenience. We are not responsible for their content.",
           ],
@@ -170,12 +170,12 @@ const en: LegalSet = {
   privacy: {
     updated: "Last updated: 28 October 2026",
     intro:
-      "This policy explains which personal data Goldy Rent a Car collects when you visit goldyrentacar.gr, contact us or rent a car, why we use it, and your rights under the EU General Data Protection Regulation (GDPR) and Greek Law 4624/2019.",
+      "This policy explains which personal data Mira Cars collects when you visit miracars.gr, contact us or rent a car, why we use it, and your rights under the EU General Data Protection Regulation (GDPR) and Greek Law 4624/2019.",
     sections: [
       {
         h: "Who is responsible",
         body: [
-          `The controller of your personal data is ${COMPANY.name}, ${ADDRESS}. For any question about your data, email ${COMPANY.email} or call ${COMPANY.phone}.`,
+          `The controller of your personal data is ${COMPANY.name} (${COMPANY.legalName}), ${ADDRESS}. For any question about your data, email ${COMPANY.email} or call ${COMPANY.phone}.`,
         ],
       },
       {

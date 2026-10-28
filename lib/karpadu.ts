@@ -101,7 +101,7 @@ async function requestWithRetry(path: string, init?: RequestInit) {
 }
 
 function allowedCompanies() {
-  const ids = (process.env.GOLDY_COMPANY_IDS ?? "")
+  const ids = (process.env.COMPANY_IDS ?? "")
     .split(",")
     .map((value) => value.trim())
     .filter(Boolean);
@@ -129,7 +129,7 @@ export async function fetchRawAvailability(query: SearchQuery, carID?: number): 
 }
 
 export function toPublicCar(raw: RawCar, currency: string): Car {
-  // Goldy's photos carry Goldy plates, so other suppliers keep their backend image.
+  // Mira's own photos (lib/carImages.ts) only replace Mira's cars; other suppliers keep their backend image.
   const ownPhoto = allowedCompanies()?.has(String(raw.companyId)) ? carImage(raw.make, raw.model, raw.year) : null;
   return {
     carID: raw.carID,
