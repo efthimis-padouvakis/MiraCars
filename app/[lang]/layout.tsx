@@ -1,6 +1,6 @@
 import "../globals.css";
 import type { Metadata, Viewport } from "next";
-import { Fira_Sans } from "next/font/google";
+import { Fira_Sans, Fira_Sans_Extra_Condensed } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import Footer from "@/components/Footer";
@@ -19,12 +19,20 @@ const firaSans = Fira_Sans({
   display: "swap",
 });
 
+// Display face for headings, buttons and nav: condensed like the logo, and it has Greek
+const firaCondensed = Fira_Sans_Extra_Condensed({
+  subsets: ["latin", "latin-ext", "greek"],
+  weight: ["600", "700", "800"],
+  variable: "--font-fira-condensed",
+  display: "swap",
+});
+
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
 export const viewport: Viewport = {
-  themeColor: "#fcfaf6",
+  themeColor: "#ffffff",
 };
 
 export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Promise<Metadata> {
@@ -46,7 +54,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const t = getDictionary(lang);
 
   return (
-    <html lang={lang} className={firaSans.variable} data-scroll-behavior="smooth">
+    <html lang={lang} className={`${firaSans.variable} ${firaCondensed.variable}`} data-scroll-behavior="smooth">
       <body className="flex min-h-dvh flex-col font-sans">
         <a href="#main" className="sr-only z-50 rounded-lg bg-white px-4 py-2 font-semibold focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
           {t.common.skipToContent}

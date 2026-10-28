@@ -99,7 +99,7 @@ export default function CreteMap({ locale, t, tone = "light", highlight, labels 
             />
             <span
               aria-hidden="true"
-              className={`pointer-events-none absolute whitespace-nowrap rounded-full px-2 py-0.5 text-[11px] font-bold shadow-soft sm:text-xs ${SIDE_CLASS[label?.side ?? "top"]} ${
+              className={`pointer-events-none absolute whitespace-nowrap rounded-sm px-2 py-0.5 text-[11px] font-bold shadow-soft sm:text-xs ${SIDE_CLASS[label?.side ?? "top"]} ${
                 dark ? "bg-sea-950/80 text-white ring-1 ring-white/10" : "bg-white/95 text-ink ring-1 ring-sand-200"
               } ${
                 isHighlight || label?.always

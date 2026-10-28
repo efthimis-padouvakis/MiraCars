@@ -14,7 +14,9 @@ export const COMPANY = {
     postalCode: "71303",
     country: "GR",
   },
-  mapUrl: "https://www.google.com/maps/search/?api=1&query=Petlempouri+6%2C+Iraklio+713+03",
+  // The Google Maps listing (CID 11653869704885118187, see lib/reviews.ts) and its pin
+  mapUrl: "https://www.google.com/maps?cid=11653869704885118187",
+  geo: { lat: 35.3388158, lng: 25.1216923 },
   // Add the Facebook / Instagram URLs here when Mira has them; the icons only render for set links.
   social: {} as { facebook?: string; instagram?: string },
   priceFrom: 20,

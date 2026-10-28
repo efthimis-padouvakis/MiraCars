@@ -155,6 +155,7 @@ const en = {
     protection: "Protection",
     protectionHelp: "Choose your cover. The excess is the most you pay if the car is damaged.",
     included: "Included",
+    free: "Free",
     extras: "Extras",
     driver: "Main driver",
     firstName: "First name",

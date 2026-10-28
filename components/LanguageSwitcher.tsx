@@ -26,14 +26,14 @@ export function LanguageMenu({ locale, label, hrefFor }: { locale: Locale; label
   return (
     <details ref={ref} className="group relative">
       <summary
-        className="flex h-10 cursor-pointer items-center gap-1.5 rounded-full border border-sand-300 bg-white px-3 text-sm font-semibold text-ink transition hover:border-sea-300"
+        className="flex h-10 cursor-pointer items-center gap-1.5 leaf-sm border border-sand-300 bg-white px-3 text-sm font-semibold text-ink transition hover:border-sea-300"
         aria-label={`${label}: ${localeMeta[locale].nativeName}`}
       >
         <GlobeIcon className="text-base text-sea-600" />
         {locale.toUpperCase()}
         <ChevronDownIcon className="text-xs text-ink/50 transition group-open:rotate-180" />
       </summary>
-      <ul className="absolute right-0 z-50 mt-2 w-48 overflow-hidden rounded-2xl border border-sand-200 bg-white p-1.5 shadow-lift animate-pop">
+      <ul className="absolute right-0 z-50 mt-2 w-48 overflow-hidden leaf-sm border border-sand-200 bg-white p-1.5 shadow-lift animate-pop">
         {locales.map((l) => (
           <li key={l}>
             <Link

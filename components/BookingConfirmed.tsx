@@ -58,18 +58,18 @@ export default function BookingConfirmed({
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-      <div className="rounded-[2rem] border border-sand-200 bg-white p-6 text-center sm:p-12">
+      <div className="leaf-lg border border-sand-200 bg-white p-6 text-center sm:p-12">
         <div className="relative mx-auto grid size-20 place-items-center">
           <span className="absolute inset-0 rounded-full bg-sea-100 animate-ping-slow" aria-hidden="true" />
           <span className="relative grid size-20 place-items-center rounded-full bg-sea-600 text-4xl text-white">
             <CheckIcon />
           </span>
         </div>
-        <h1 className="mt-8 text-balance text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">{pending ? t.pendingTitle : t.title}</h1>
+        <h1 className="mt-8 text-balance font-display text-4xl font-extrabold uppercase leading-[0.95] text-sea-800 sm:text-5xl">{pending ? t.pendingTitle : t.title}</h1>
         <p className="mx-auto mt-4 max-w-lg leading-relaxed text-ink/65">{pending ? t.pendingText : t.text}</p>
 
         {booking ? (
-          <dl className="mt-8 grid gap-4 rounded-3xl bg-sand-50 p-5 text-left ring-1 ring-sand-200 sm:grid-cols-2 sm:p-6">
+          <dl className="mt-8 grid gap-4 leaf bg-sand-50 p-5 text-left ring-1 ring-sand-200 sm:grid-cols-2 sm:p-6">
             <div>
               <dt className="text-xs font-bold uppercase tracking-[0.12em] text-ink/50">{t.reference}</dt>
               <dd className="mt-1 font-mono text-lg font-bold text-ink">{reference}</dd>
@@ -107,7 +107,7 @@ export default function BookingConfirmed({
           </ol>
         </div>
 
-        <p className="mt-10 rounded-2xl bg-sea-50 p-5 text-left text-sm leading-relaxed text-ink/70 ring-1 ring-sea-100">
+        <p className="mt-10 leaf-sm bg-sea-50 p-5 text-left text-sm leading-relaxed text-ink/70 ring-1 ring-sea-100">
           <Rich
             text={t.karpadu}
             values={{
@@ -125,7 +125,7 @@ export default function BookingConfirmed({
           />
         </p>
 
-        <Link href={`/${locale}`} className="mt-8 inline-block rounded-full bg-sea-800 px-7 py-3.5 text-sm font-bold text-white hover:bg-sea-700">
+        <Link href={`/${locale}`} className="font-display uppercase tracking-wide mt-8 inline-block leaf-sm bg-sea-800 px-7 py-3.5 text-base font-bold text-white hover:bg-sea-700">
           {t.backHome}
         </Link>
       </div>

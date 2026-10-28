@@ -14,19 +14,23 @@ function isActive(pathname: string, href: string) {
 
 function Links({ items, pathname }: { items: Item[]; pathname: string }) {
   return (
-    <ul className="flex items-center gap-1">
+    <ul className="flex h-full items-stretch gap-1">
       {items.map((item) => {
         const active = isActive(pathname, item.href);
         return (
-          <li key={item.href}>
+          <li key={item.href} className="flex">
             <Link
               href={item.href}
               aria-current={active ? "page" : undefined}
-              className={`relative whitespace-nowrap rounded-full px-3.5 py-2 text-[15px] font-semibold transition ${
-                active ? "bg-sea-50 text-sea-800" : "text-ink/70 hover:bg-sand-100 hover:text-ink"
+              className={`group relative flex items-center whitespace-nowrap px-3.5 font-display text-[17px] font-semibold uppercase tracking-wide transition ${
+                active ? "text-sea-800" : "text-ink/65 hover:text-sea-800"
               }`}
             >
               {item.label}
+              <span
+                aria-hidden="true"
+                className={`absolute inset-x-3.5 bottom-0 h-[3px] rounded-t-full bg-sun-400 transition ${active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+              />
             </Link>
           </li>
         );

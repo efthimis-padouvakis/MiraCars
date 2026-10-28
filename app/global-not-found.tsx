@@ -12,12 +12,12 @@ export default function GlobalNotFound() {
     <html lang="en">
       <body className="bg-deep grid min-h-dvh place-items-center px-4 font-sans text-white">
         <main className="max-w-lg text-center">
-          <p className="text-sun-shine text-8xl font-extrabold">404</p>
+          <p className="text-sun-shine font-display text-9xl font-extrabold">404</p>
           <h1 className="mt-4 text-2xl font-extrabold">Page not found</h1>
           <ul className="mt-8 flex flex-wrap justify-center gap-2">
             {locales.map((locale) => (
               <li key={locale}>
-                <a href={`/${locale}`} lang={locale} className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold transition hover:border-sun-400 hover:bg-white/5">
+                <a href={`/${locale}`} lang={locale} className="leaf-sm border border-white/20 px-4 py-2 text-sm font-semibold transition hover:border-sun-400 hover:bg-white/5">
                   {localeMeta[locale].nativeName}
                 </a>
               </li>

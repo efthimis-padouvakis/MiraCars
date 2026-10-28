@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BeyondCrete from "@/components/BeyondCrete";
-import { CreteOutline } from "@/components/CreteMap";
+import { SunDisc, Wave } from "@/components/Decor";
 import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import { ArrowRightIcon } from "@/components/icons";
@@ -51,7 +51,7 @@ export default async function GuidePage({ params }: PageProps<"/[lang]/crete-dri
       />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[240px_1fr] lg:gap-16">
         <aside className="lg:order-none">
-          <nav aria-label={t.guide.toc} className="rounded-3xl border border-sand-200 bg-white p-5 lg:sticky lg:top-24">
+          <nav aria-label={t.guide.toc} className="leaf border border-sand-200 bg-white p-5 lg:sticky lg:top-24">
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-ink/50">{t.guide.toc}</p>
             <ol className="mt-3 space-y-1">
               {sections.map((section, index) => (
@@ -76,15 +76,16 @@ export default async function GuidePage({ params }: PageProps<"/[lang]/crete-dri
               </section>
             ))}
           </article>
-          <div className="relative isolate mt-12 max-w-3xl overflow-hidden rounded-[2rem] bg-deep p-8 text-white sm:p-10">
-            <CreteOutline tone="dark" className="pointer-events-none absolute -bottom-16 -right-24 -z-10 w-[36rem] opacity-60" />
-            <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">{t.home.ctaTitle}</h2>
+          <div className="relative isolate mt-12 max-w-3xl overflow-hidden leaf-lg bg-deep p-8 text-white sm:p-10">
+            <SunDisc className="-bottom-24 right-[6%] -z-10 size-56" />
+            <Wave className="absolute inset-x-0 bottom-0 -z-10 text-sea-900" back="fill-wave/30" />
+            <h2 className="text-3xl font-extrabold uppercase leading-[0.95] sm:text-4xl">{t.home.ctaTitle}</h2>
             <p className="mt-2 max-w-md text-white/70">{t.home.ctaText}</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href={`/${locale}#search`} className="rounded-full bg-sun-400 px-6 py-3 font-extrabold text-sea-950 transition hover:bg-sun-300">
+              <Link href={`/${locale}#search`} className="font-display uppercase tracking-wide leaf-sm bg-sun-400 px-6 py-3 font-bold text-sea-950 transition hover:bg-sun-300">
                 {t.home.ctaButton}
               </Link>
-              <Link href={`/${locale}/locations`} className="inline-flex items-center gap-2 rounded-full px-5 py-3 font-bold text-white ring-1 ring-white/25 hover:bg-white/10">
+              <Link href={`/${locale}/locations`} className="inline-flex items-center gap-2 leaf-sm px-5 py-3 font-bold text-white ring-1 ring-white/25 hover:bg-white/10">
                 {t.nav.locations} <ArrowRightIcon />
               </Link>
             </div>

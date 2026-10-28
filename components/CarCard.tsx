@@ -47,8 +47,8 @@ export default function CarCard({
 
   return (
     <li>
-      <article className="group relative grid grid-cols-[7.5rem_1fr] overflow-hidden rounded-3xl border border-sand-200 bg-white transition duration-300 hover:border-sand-300 hover:shadow-lift sm:grid-cols-[11rem_1fr] md:grid-cols-[250px_1fr_minmax(200px,auto)]">
-        <div className="relative ml-3 mt-4 aspect-[4/3] self-start rounded-2xl bg-[radial-gradient(110%_90%_at_50%_100%,var(--color-sand-100),white_70%)] md:m-0 md:aspect-auto md:h-full md:min-h-48 md:rounded-none">
+      <article className="group relative grid grid-cols-[7.5rem_1fr] overflow-hidden leaf border border-sand-200 bg-white transition duration-300 hover:border-sand-300 hover:shadow-lift sm:grid-cols-[11rem_1fr] md:grid-cols-[250px_1fr_minmax(200px,auto)]">
+        <div className="relative ml-3 mt-4 aspect-[4/3] self-start leaf-sm bg-[radial-gradient(110%_90%_at_50%_100%,var(--color-wave-50),white_70%)] md:m-0 md:aspect-auto md:h-full md:min-h-48 md:rounded-none">
           {car.imageURL && (
             <Image
               src={car.imageURL}
@@ -61,8 +61,8 @@ export default function CarCard({
             />
           )}
           <div className="absolute -top-2 left-0 flex flex-wrap gap-1.5 md:left-4 md:top-4">
-            {cheapest && <span className="rounded-full bg-sea-800 px-2.5 py-1 text-[11px] font-bold text-white">{t.results.lowestPrice}</span>}
-            {discount >= 5 && <span className="rounded-full bg-coral-500 px-2.5 py-1 text-[11px] font-bold text-white">−{discount}%</span>}
+            {cheapest && <span className="rounded-sm bg-sea-800 px-2.5 py-1 text-[11px] font-bold text-white">{t.results.lowestPrice}</span>}
+            {discount >= 5 && <span className="rounded-sm bg-coral-500 px-2.5 py-1 text-[11px] font-bold text-white">−{discount}%</span>}
           </div>
         </div>
 
@@ -104,7 +104,7 @@ export default function CarCard({
           </div>
           <Link
             href={href}
-            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-sun-400 px-6 py-3.5 text-[15px] font-extrabold text-sea-950 transition after:absolute after:inset-0 hover:bg-sun-300"
+            className="font-display uppercase tracking-wide inline-flex items-center justify-center gap-2 leaf-sm bg-sun-400 px-6 py-3.5 text-lg font-bold text-sea-950 transition after:absolute after:inset-0 hover:bg-sun-300"
           >
             {t.car.select} <ArrowRightIcon />
           </Link>

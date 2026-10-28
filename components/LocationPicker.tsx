@@ -112,11 +112,11 @@ export default function LocationPicker({ label, value, onChange, locale, t }: Pr
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-controls={`${id}-list`}
-        className={`group flex h-16 w-full items-center gap-3 rounded-2xl border bg-white px-4 text-left transition ${
-          open ? "border-sea-500 ring-4 ring-sea-100" : "border-sand-200 hover:border-sea-300"
+        className={`group flex h-16 w-full items-center gap-3 leaf-sm border bg-white px-4 text-left transition ${
+          open ? "border-sea-500 ring-4 ring-sea-100" : "border-sea-100 hover:border-sea-300"
         }`}
       >
-        <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-sea-50 text-lg text-sea-700">
+        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-sea-50 text-lg text-sea-700">
           <SelectedIcon />
         </span>
         <span className="min-w-0 flex-1">
@@ -127,7 +127,7 @@ export default function LocationPicker({ label, value, onChange, locale, t }: Pr
       </button>
 
       {open && (
-        <div className="absolute left-0 top-full z-40 mt-2 w-full min-w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-sand-200 bg-white shadow-lift animate-pop sm:w-[26rem]">
+        <div className="absolute left-0 top-full z-40 mt-2 w-full min-w-[min(22rem,calc(100vw-2rem))] overflow-hidden leaf-sm border border-sand-200 bg-white shadow-lift animate-pop sm:w-[26rem]">
           <div className="border-b border-sand-100 p-2">
             <label className="flex items-center gap-2 rounded-xl bg-sand-100 px-3">
               <SearchIcon className="shrink-0 text-ink/45" />

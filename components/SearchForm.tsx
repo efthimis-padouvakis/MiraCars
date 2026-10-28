@@ -144,12 +144,12 @@ export default function SearchForm({ locale, t, initial, variant = "bar", id: fo
             <div
               role="dialog"
               aria-label={calendar === "start" ? t.search.selectStart : t.search.selectEnd}
-              className="absolute left-1/2 top-full z-40 mt-2 w-[min(46rem,calc(100vw-1.5rem))] -translate-x-1/2 rounded-3xl border border-sand-200 bg-white p-4 shadow-lift animate-pop sm:p-5"
+              className="absolute left-1/2 top-full z-40 mt-2 w-[min(46rem,calc(100vw-1.5rem))] -translate-x-1/2 leaf border border-sand-200 bg-white p-4 shadow-lift animate-pop sm:p-5"
             >
               <div className="mb-4 flex items-center justify-between gap-3">
                 <p className="text-sm font-bold text-ink">{calendar === "start" ? t.search.selectStart : t.search.selectEnd}</p>
                 {days > 0 && (
-                  <span className="rounded-full bg-sun-100 px-3 py-1 text-xs font-bold text-sun-800">
+                  <span className="rounded-sm bg-sun-100 px-3 py-1 text-xs font-bold text-sun-800">
                     {days === 1 ? t.common.day : fill(t.common.days, { n: days })}
                   </span>
                 )}
@@ -164,7 +164,7 @@ export default function SearchForm({ locale, t, initial, variant = "bar", id: fo
                 onSelect={selectDate}
               />
               <div className="mt-4 flex justify-end border-t border-sand-100 pt-4">
-                <button type="button" onClick={closeCalendar} className="rounded-full bg-sea-800 px-6 py-2.5 text-sm font-bold text-white hover:bg-sea-700">
+                <button type="button" onClick={closeCalendar} className="font-display uppercase tracking-wide leaf-sm bg-sea-800 px-6 py-2.5 text-base font-bold text-white hover:bg-sea-700">
                   {t.search.done}
                 </button>
               </div>
@@ -175,7 +175,7 @@ export default function SearchForm({ locale, t, initial, variant = "bar", id: fo
         <button
           type="submit"
           disabled={pending || !start}
-          className={`flex h-16 items-center justify-center gap-2.5 rounded-2xl bg-sun-400 px-8 text-base font-extrabold text-sea-950 shadow-[0_10px_24px_-10px_rgb(207_155_47/0.8)] transition hover:bg-sun-300 active:scale-[0.99] disabled:opacity-70 ${
+          className={`font-display uppercase tracking-wide flex h-16 items-center justify-center gap-2.5 leaf-sm bg-sun-400 px-8 text-lg font-bold text-sea-950 shadow-[0_10px_24px_-10px_rgb(238_119_38/0.7)] transition hover:bg-sun-300 active:scale-[0.99] disabled:opacity-70 ${
             bar ? (twoLocations ? "@3xl:col-span-2 @6xl:col-span-1" : "@3xl:col-span-2 @5xl:col-span-1") : ""
           }`}
         >
@@ -243,7 +243,7 @@ function DateField({
 }) {
   return (
     <div
-      className={`flex h-16 min-w-0 items-stretch rounded-2xl border bg-white transition ${open ? "border-sea-500 ring-4 ring-sea-100" : "border-sand-200 hover:border-sea-300"}`}
+      className={`flex h-16 min-w-0 items-stretch leaf-sm border bg-white transition ${open ? "border-sea-500 ring-4 ring-sea-100" : "border-sea-100 hover:border-sea-300"}`}
     >
       <button type="button" onClick={onOpen} aria-expanded={open} aria-haspopup="dialog" aria-label={date ? `${dateLabel}: ${formatDate(date, intl, { dateStyle: "full" })}` : dateLabel} className="flex min-w-0 flex-1 items-center gap-3 pl-3 text-left sm:pl-4">
         <CalendarIcon className="hidden shrink-0 text-lg text-sea-600 @md:block" />
@@ -261,7 +261,7 @@ function DateField({
           </span>
         </span>
       </button>
-      <label className="relative flex shrink-0 items-center rounded-r-2xl border-l border-sand-100 pl-2.5 pr-7 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-inset has-[:focus-visible]:ring-sea-500 sm:pl-3">
+      <label className="relative flex shrink-0 items-center rounded-tr-[0.25rem] rounded-br-[0.875rem] border-l border-sand-100 pl-2.5 pr-7 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-inset has-[:focus-visible]:ring-sea-500 sm:pl-3">
         <span className="sr-only">{timeLabel}</span>
         <select value={time} onChange={(e) => onTime(e.target.value)} className="cursor-pointer appearance-none bg-transparent text-[15px] font-semibold tabular-nums text-ink outline-none">
           {TIMES.map((value) => (

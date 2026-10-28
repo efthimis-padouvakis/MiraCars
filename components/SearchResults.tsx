@@ -92,8 +92,8 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
   if (!query) {
     return (
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
-        <p className="mb-6 rounded-2xl bg-sun-50 px-5 py-4 font-semibold text-sun-800 ring-1 ring-sun-200">{t.results.invalid}</p>
-        <div className="rounded-[1.75rem] bg-white p-3 shadow-lift ring-1 ring-black/5 sm:p-4">
+        <p className="mb-6 leaf-sm bg-sun-50 px-5 py-4 font-semibold text-sun-800 ring-1 ring-sun-200">{t.results.invalid}</p>
+        <div className="leaf-lg bg-white p-3 shadow-lift ring-1 ring-black/5 sm:p-4">
           <SearchForm locale={locale} t={formText} />
         </div>
       </div>
@@ -154,7 +154,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
               type="button"
               aria-pressed={filters.minSeats === seats}
               onClick={() => setFilters((f) => ({ ...f, minSeats: seats }))}
-              className={`rounded-full border px-4 py-1.5 text-sm font-semibold transition ${
+              className={`leaf-sm border px-4 py-1.5 text-sm font-semibold transition ${
                 filters.minSeats === seats ? "border-sea-800 bg-sea-800 text-white" : "border-sand-300 bg-white text-ink hover:border-sea-300"
               }`}
             >
@@ -187,7 +187,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
     <>
       <section className="border-b border-sand-200 bg-sand-100/70">
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6">
-          <div className="flex flex-col gap-4 rounded-3xl bg-white p-4 shadow-soft ring-1 ring-sand-200 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+          <div className="flex flex-col gap-4 leaf bg-white p-4 shadow-soft ring-1 ring-sand-200 sm:flex-row sm:items-center sm:justify-between sm:p-5">
             <div className="flex min-w-0 flex-col gap-2 text-sm sm:flex-row sm:items-center sm:gap-6">
               <p className="flex min-w-0 items-center gap-2 font-bold text-ink">
                 <PinIcon className="shrink-0 text-base text-sea-600" />
@@ -205,7 +205,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
                 <CalendarIcon className="shrink-0 text-base text-sea-600" />
                 <span>
                   {formatNaive(query.start, intl)} → {formatNaive(query.end, intl)}
-                  <span className="ml-2 rounded-full bg-sun-100 px-2 py-0.5 text-xs font-bold text-sun-800">{days === 1 ? t.common.day : fill(t.common.days, { n: days })}</span>
+                  <span className="ml-2 rounded-sm bg-sun-100 px-2 py-0.5 text-xs font-bold text-sun-800">{days === 1 ? t.common.day : fill(t.common.days, { n: days })}</span>
                 </span>
               </p>
             </div>
@@ -213,13 +213,13 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
               type="button"
               onClick={() => setEditing((v) => !v)}
               aria-expanded={editing}
-              className="shrink-0 rounded-full border border-sand-300 px-5 py-2.5 text-sm font-bold text-ink transition hover:border-sea-300"
+              className="shrink-0 leaf-sm border border-sand-300 px-5 py-2.5 text-sm font-bold text-ink transition hover:border-sea-300"
             >
               {editing ? t.common.close : t.search.modify}
             </button>
           </div>
           {editing && (
-            <div className="mt-3 rounded-3xl bg-white p-3 shadow-lift ring-1 ring-sand-200 animate-pop sm:p-4">
+            <div className="mt-3 leaf bg-white p-3 shadow-lift ring-1 ring-sand-200 animate-pop sm:p-4">
               <SearchForm key={queryKey} locale={locale} t={formText} initial={query} />
             </div>
           )}
@@ -237,13 +237,13 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
                 </button>
               )}
             </div>
-            {isLoading ? <div className="h-96 animate-pulse rounded-3xl bg-sand-100" /> : cars.length > 0 && filterPanel}
+            {isLoading ? <div className="h-96 animate-pulse leaf bg-sand-100" /> : cars.length > 0 && filterPanel}
           </div>
         </aside>
 
         <div className="min-w-0">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 className="text-2xl font-extrabold tracking-tight text-ink" aria-live="polite">
+            <h2 className="text-3xl font-extrabold uppercase leading-[0.95] text-sea-800" aria-live="polite">
               {isLoading ? t.results.loading : loaded.status === "ok" ? fill(t.results.count, { n: visible.length }) : t.results.error}
             </h2>
             {!isLoading && cars.length > 0 && (
@@ -251,7 +251,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
                 <button
                   type="button"
                   onClick={() => setSheet(true)}
-                  className="inline-flex items-center gap-2 rounded-full border border-sand-300 bg-white px-4 py-2 text-sm font-bold text-ink lg:hidden"
+                  className="inline-flex items-center gap-2 leaf-sm border border-sand-300 bg-white px-4 py-2 text-sm font-bold text-ink lg:hidden"
                 >
                   <SlidersIcon /> {t.results.filters}
                   {activeCount > 0 && <span className="grid size-5 place-items-center rounded-full bg-sea-800 text-[11px] text-white">{activeCount}</span>}
@@ -298,7 +298,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
           {isLoading && (
             <ul className="mt-6 space-y-4" aria-busy="true">
               {[0, 1, 2, 3].map((i) => (
-                <li key={i} className="grid overflow-hidden rounded-3xl border border-sand-200 bg-white md:grid-cols-[250px_1fr_200px]">
+                <li key={i} className="grid overflow-hidden leaf border border-sand-200 bg-white md:grid-cols-[250px_1fr_200px]">
                   <div className="aspect-[16/9] animate-pulse bg-sand-100 md:aspect-auto md:h-48" />
                   <div className="space-y-3 p-5">
                     <div className="h-3 w-20 animate-pulse rounded bg-sand-200" />
@@ -308,7 +308,7 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
                   </div>
                   <div className="hidden p-5 md:block">
                     <div className="ml-auto h-7 w-24 animate-pulse rounded bg-sand-200" />
-                    <div className="mt-16 h-12 animate-pulse rounded-2xl bg-sand-100" />
+                    <div className="mt-16 h-12 animate-pulse leaf-sm bg-sand-100" />
                   </div>
                 </li>
               ))}
@@ -316,25 +316,25 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
           )}
 
           {!isLoading && loaded.status === "error" && (
-            <div className="mt-6 rounded-3xl border border-sand-200 bg-white p-10 text-center">
+            <div className="mt-6 leaf border border-sand-200 bg-white p-10 text-center">
               <p className="font-semibold text-ink/75">{t.results.error}</p>
-              <button type="button" onClick={() => setAttempt((n) => n + 1)} className="mt-5 inline-flex items-center gap-2 rounded-full bg-sea-800 px-6 py-3 text-sm font-bold text-white">
+              <button type="button" onClick={() => setAttempt((n) => n + 1)} className="font-display uppercase tracking-wide mt-5 inline-flex items-center gap-2 leaf-sm bg-sea-800 px-6 py-3 text-base font-bold text-white">
                 <RefreshIcon /> {t.common.retry}
               </button>
             </div>
           )}
 
           {!isLoading && loaded.status === "ok" && visible.length === 0 && (
-            <div className="mt-6 rounded-3xl border border-sand-200 bg-white p-10 text-center">
+            <div className="mt-6 leaf border border-sand-200 bg-white p-10 text-center">
               <p className="text-lg font-bold text-ink">{t.results.empty}</p>
               <p className="mx-auto mt-2 max-w-md text-ink/65">{t.results.emptyHelp}</p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 {activeCount > 0 && (
-                  <button type="button" onClick={() => setFilters(EMPTY)} className="rounded-full border border-sand-300 px-5 py-2.5 text-sm font-bold text-ink">
+                  <button type="button" onClick={() => setFilters(EMPTY)} className="leaf-sm border border-sand-300 px-5 py-2.5 text-sm font-bold text-ink">
                     {t.results.clear}
                   </button>
                 )}
-                <a href={whatsappLink()} className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-bold text-sea-950">
+                <a href={whatsappLink()} className="font-display uppercase tracking-wide inline-flex items-center gap-2 leaf-sm bg-whatsapp px-5 py-2.5 text-base font-bold text-sea-950">
                   <WhatsAppIcon /> WhatsApp
                 </a>
               </div>
@@ -372,10 +372,10 @@ export default function SearchResults({ locale, t, karpaduHref }: { locale: Loca
             </div>
             <div className="flex-1 overflow-y-auto overscroll-contain px-5 py-6">{filterPanel}</div>
             <div className="flex gap-3 border-t border-sand-200 bg-white px-5 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-              <button type="button" onClick={() => setFilters(EMPTY)} className="rounded-2xl border border-sand-300 px-5 py-3.5 text-sm font-bold text-ink">
+              <button type="button" onClick={() => setFilters(EMPTY)} className="leaf-sm border border-sand-300 px-5 py-3.5 text-sm font-bold text-ink">
                 {t.results.clear}
               </button>
-              <button type="button" onClick={() => setSheet(false)} className="flex-1 rounded-2xl bg-sun-400 py-3.5 text-sm font-extrabold text-sea-950">
+              <button type="button" onClick={() => setSheet(false)} className="font-display uppercase tracking-wide flex-1 leaf-sm bg-sun-400 py-3.5 text-base font-bold text-sea-950">
                 {fill(t.results.showCars, { n: visible.length })}
               </button>
             </div>

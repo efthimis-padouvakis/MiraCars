@@ -75,15 +75,15 @@ export default function MobileMenu({
               <Link
                 href={bookNow.href}
                 onClick={close}
-                className="mt-6 flex items-center justify-center rounded-2xl bg-sun-400 py-4 text-base font-extrabold text-sea-950 shadow-soft"
+                className="font-display uppercase tracking-wide mt-6 flex items-center justify-center leaf-sm bg-sun-400 py-4 text-lg font-bold text-sea-950 shadow-soft"
               >
                 {bookNow.label}
               </Link>
               <div className="mt-3 grid grid-cols-2 gap-3">
-                <a href={phoneHref} className="flex items-center justify-center gap-2 rounded-2xl border border-sand-300 bg-white py-3.5 text-sm font-semibold text-ink">
+                <a href={phoneHref} className="flex items-center justify-center gap-2 leaf-sm border border-sand-300 bg-white py-3.5 text-sm font-semibold text-ink">
                   <PhoneIcon className="text-sea-600" /> {phone}
                 </a>
-                <a href={whatsappHref} className="flex items-center justify-center gap-2 rounded-2xl bg-whatsapp py-3.5 text-sm font-bold text-sea-950">
+                <a href={whatsappHref} className="font-display uppercase tracking-wide flex items-center justify-center gap-2 leaf-sm bg-whatsapp py-3.5 text-base font-bold text-sea-950">
                   <WhatsAppIcon /> WhatsApp
                 </a>
               </div>

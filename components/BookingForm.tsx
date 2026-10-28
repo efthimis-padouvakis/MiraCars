@@ -134,11 +134,11 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
     return (
       <div className="mx-auto grid max-w-7xl gap-6 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-[1fr_400px]" aria-busy="true">
         <div className="space-y-4">
-          <div className="h-36 animate-pulse rounded-3xl bg-white ring-1 ring-sand-200" />
-          <div className="h-64 animate-pulse rounded-3xl bg-white ring-1 ring-sand-200" />
+          <div className="h-36 animate-pulse leaf bg-white ring-1 ring-sand-200" />
+          <div className="h-64 animate-pulse leaf bg-white ring-1 ring-sand-200" />
           <p className="text-center text-sm text-ink/50">{t.booking.loading}</p>
         </div>
-        <div className="hidden h-96 animate-pulse rounded-3xl bg-white ring-1 ring-sand-200 lg:block" />
+        <div className="hidden h-96 animate-pulse leaf bg-white ring-1 ring-sand-200 lg:block" />
       </div>
     );
   }
@@ -259,8 +259,8 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
             <ArrowLeftIcon /> {t.booking.backToResults}
           </Link>
 
-          <section className="grid grid-cols-[7.5rem_1fr] items-center gap-4 rounded-3xl border border-sand-200 bg-white p-4 sm:grid-cols-[11rem_1fr] sm:p-5">
-            <div className="relative aspect-[4/3] rounded-2xl bg-[radial-gradient(110%_90%_at_50%_100%,var(--color-sand-100),white_70%)]">
+          <section className="grid grid-cols-[7.5rem_1fr] items-center gap-4 leaf border border-sand-200 bg-white p-4 sm:grid-cols-[11rem_1fr] sm:p-5">
+            <div className="relative aspect-[4/3] leaf-sm bg-[radial-gradient(110%_90%_at_50%_100%,var(--color-sand-100),white_70%)]">
               {car.imageURL && <Image src={car.imageURL} alt={`${car.make} ${car.model}`} fill unoptimized sizes="176px" className="object-contain p-2" />}
             </div>
             <div className="min-w-0">
@@ -292,7 +292,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
                 return (
                   <label
                     key={option.code}
-                    className={`relative flex cursor-pointer flex-col rounded-2xl border-2 p-4 transition has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-sea-100 ${
+                    className={`relative flex cursor-pointer flex-col leaf-sm border-2 p-4 transition has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-sea-100 ${
                       active ? "border-sea-600 bg-sea-50/60" : "border-sand-200 hover:border-sand-300"
                     }`}
                   >
@@ -337,7 +337,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
                   return (
                     <label
                       key={extra.id}
-                      className={`flex cursor-pointer items-center gap-3 rounded-2xl border-2 p-3.5 transition has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-sea-100 ${
+                      className={`flex cursor-pointer items-center gap-3 leaf-sm border-2 p-3.5 transition has-[:focus-visible]:ring-4 has-[:focus-visible]:ring-sea-100 ${
                         checked ? "border-sea-600 bg-sea-50/60" : "border-sand-200 hover:border-sand-300"
                       }`}
                     >
@@ -347,14 +347,14 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
                         checked={checked}
                         onChange={(e) => setExtras((list) => (e.target.checked ? [...list, extra.id] : list.filter((id) => id !== extra.id)))}
                       />
-                      <span className={`grid size-10 shrink-0 place-items-center rounded-xl text-lg ${checked ? "bg-sea-600 text-white" : "bg-sand-100 text-sea-700"}`}>
+                      <span className={`grid size-10 shrink-0 place-items-center rounded-full text-lg ${checked ? "bg-sea-600 text-white" : "bg-sand-100 text-sea-700"}`}>
                         <Icon />
                       </span>
                       <span className="min-w-0 flex-1">
                         <span className="block text-[15px] font-semibold leading-snug text-ink">{t.car.extraNames[extra.id] ?? extra.name}</span>
-                        <span className="text-sm text-ink/60">{extra.price === 0 ? t.booking.included : money(extra.price)}</span>
+                        <span className={`text-sm ${extra.price === 0 ? "font-bold text-wave-600" : "text-ink/60"}`}>{extra.price === 0 ? t.booking.free : money(extra.price)}</span>
                       </span>
-                      <span className={`grid size-6 shrink-0 place-items-center rounded-lg border-2 ${checked ? "border-sea-600 bg-sea-600 text-white" : "border-sand-300"}`}>
+                      <span className={`grid size-6 shrink-0 place-items-center rounded-full border-2 ${checked ? "border-sea-600 bg-sea-600 text-white" : "border-sand-300"}`}>
                         {checked && <CheckIcon className="text-xs" />}
                       </span>
                     </label>
@@ -429,7 +429,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
                 <input className={`${input} border-sand-300`} value={driver.flight} onChange={(e) => setDriver({ ...driver, flight: e.target.value })} />
               </label>
             </div>
-            <label className="mt-6 flex cursor-pointer items-start gap-3 rounded-2xl bg-sand-50 p-4 text-sm text-ink/70 ring-1 ring-sand-200">
+            <label className="mt-6 flex cursor-pointer items-start gap-3 leaf-sm bg-sand-50 p-4 text-sm text-ink/70 ring-1 ring-sand-200">
               <input type="checkbox" aria-invalid={invalid("agree")} className="mt-0.5 size-5 shrink-0 accent-sea-700" checked={agree} onChange={(e) => setAgree(e.target.checked)} />
               <span>
                 <Rich
@@ -454,7 +454,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
         </div>
 
         <aside className="lg:row-span-2">
-          <div className="sticky top-24 space-y-5 rounded-3xl border border-sand-200 bg-white p-5 shadow-soft sm:p-6">
+          <div className="sticky top-24 space-y-5 leaf border border-sand-200 bg-white p-5 shadow-soft sm:p-6">
             <div>
               <h2 className="text-xs font-bold uppercase tracking-[0.12em] text-ink/50">{t.booking.yourTrip}</h2>
               <ol className="relative mt-4 space-y-5 text-sm before:absolute before:bottom-8 before:left-[7px] before:top-3 before:border-l-2 before:border-dashed before:border-sand-300">
@@ -483,7 +483,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
               <Row label={fill(t.booking.rental, { days: daysLabel })} value={money(car.totalPrice)} />
               {plan && <Row label={t.car.plans[plan.code] ?? plan.name} value={plan.price === 0 ? t.booking.included : money(plan.price)} />}
               {chosenExtras.map((e) => (
-                <Row key={e.id} label={t.car.extraNames[e.id] ?? e.name} value={e.price === 0 ? t.booking.included : money(e.price)} />
+                <Row key={e.id} label={t.car.extraNames[e.id] ?? e.name} value={e.price === 0 ? t.booking.free : money(e.price)} />
               ))}
               <div className="mt-3 flex items-baseline justify-between border-t border-sand-200 pt-4">
                 <span className="text-base font-bold text-ink">{t.common.total}</span>
@@ -524,7 +524,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
             <button
               type="submit"
               disabled={busy}
-              className="hidden w-full items-center justify-center gap-2 rounded-2xl bg-sun-400 py-4 text-base font-extrabold text-sea-950 shadow-[0_10px_24px_-10px_rgb(207_155_47/0.8)] transition hover:bg-sun-300 disabled:opacity-70 lg:flex"
+              className="font-display uppercase tracking-wide hidden w-full items-center justify-center gap-2 leaf-sm bg-sun-400 py-4 text-lg font-bold text-sea-950 shadow-[0_10px_24px_-10px_rgb(238_119_38/0.7)] transition hover:bg-sun-300 disabled:opacity-70 lg:flex"
             >
               {submitLabel}
             </button>
@@ -539,7 +539,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
               </p>
               <p className="text-xl font-extrabold tracking-tight text-ink tabular-nums">{money(total)}</p>
             </div>
-            <button type="submit" disabled={busy} className="rounded-2xl bg-sun-400 px-6 py-3.5 text-[15px] font-extrabold text-sea-950 disabled:opacity-70">
+            <button type="submit" disabled={busy} className="font-display uppercase tracking-wide leaf-sm bg-sun-400 px-6 py-3.5 text-lg font-bold text-sea-950 disabled:opacity-70">
               {submitLabel}
             </button>
           </div>
@@ -549,28 +549,28 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
       <dialog
         ref={handoffRef}
         aria-labelledby="handoff-title"
-        className="m-auto w-[min(28rem,calc(100vw-2rem))] rounded-3xl bg-white p-0 text-ink shadow-float backdrop:bg-sea-950/60 backdrop:backdrop-blur-sm open:animate-pop"
+        className="m-auto w-[min(28rem,calc(100vw-2rem))] leaf bg-white p-0 text-ink shadow-float backdrop:bg-sea-950/60 backdrop:backdrop-blur-sm open:animate-pop"
       >
         <div className="p-6 sm:p-7">
           <div className="flex items-start justify-between gap-4">
-            <span className="grid size-12 place-items-center rounded-2xl bg-whatsapp/15 text-2xl text-[#128c4b]">
+            <span className="grid size-12 place-items-center rounded-full bg-whatsapp/15 text-2xl text-[#128c4b]">
               <WhatsAppIcon />
             </span>
             <button type="button" onClick={() => handoffRef.current?.close()} aria-label={t.common.close} className="grid size-9 place-items-center rounded-full bg-sand-100 text-ink">
               <CloseIcon />
             </button>
           </div>
-          <h2 id="handoff-title" className="mt-5 text-2xl font-extrabold tracking-tight">
+          <h2 id="handoff-title" className="mt-5 text-3xl font-extrabold uppercase leading-[0.95]">
             {t.booking.handoffTitle}
           </h2>
           <p className="mt-2 leading-relaxed text-ink/65">{t.booking.handoffText}</p>
           <div className="mt-6 space-y-3">
-            <a href={whatsappLink(message)} target="_blank" rel="noopener" className="flex items-center justify-center gap-2 rounded-2xl bg-whatsapp py-3.5 font-bold text-sea-950">
+            <a href={whatsappLink(message)} target="_blank" rel="noopener" className="font-display uppercase tracking-wide flex items-center justify-center gap-2 leaf-sm bg-whatsapp py-3.5 font-bold text-sea-950">
               <WhatsAppIcon className="text-lg" /> {t.booking.sendWhatsapp}
             </a>
             <a
               href={`mailto:${COMPANY.email}?subject=${encodeURIComponent(`${COMPANY.name}: ${car.make} ${car.model}`)}&body=${encodeURIComponent(message)}`}
-              className="flex items-center justify-center gap-2 rounded-2xl border border-sand-300 py-3.5 font-bold text-ink"
+              className="flex items-center justify-center gap-2 leaf-sm border border-sand-300 py-3.5 font-bold text-ink"
             >
               <MailIcon /> {t.booking.sendEmail}
             </a>
@@ -583,7 +583,7 @@ export default function BookingForm({ locale, t, reservationsEnabled }: { locale
 
 function Section({ step, title, subtitle, children }: { step: number; title: string; subtitle?: string; children: React.ReactNode }) {
   return (
-    <section className="rounded-3xl border border-sand-200 bg-white p-5 sm:p-7">
+    <section className="leaf border border-sand-200 bg-white p-5 sm:p-7">
       <div className="flex items-start gap-3">
         <span className="grid size-8 shrink-0 place-items-center rounded-full bg-sea-800 text-sm font-bold text-sun-300">{step}</span>
         <div>
@@ -608,9 +608,9 @@ function Row({ label, value }: { label: string; value: string }) {
 function Notice({ text, href, cta }: { text: string; href: string; cta: string }) {
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
-      <div className="rounded-3xl border border-sand-200 bg-white p-10 text-center">
+      <div className="leaf border border-sand-200 bg-white p-10 text-center">
         <p className="font-semibold text-ink/75">{text}</p>
-        <Link href={href} className="mt-5 inline-block rounded-full bg-sea-800 px-6 py-3 text-sm font-bold text-white">
+        <Link href={href} className="font-display uppercase tracking-wide mt-5 inline-block leaf-sm bg-sea-800 px-6 py-3 text-base font-bold text-white">
           {cta}
         </Link>
       </div>

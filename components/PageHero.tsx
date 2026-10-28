@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { CreteOutline } from "@/components/CreteMap";
+import { SunDisc, Wave } from "@/components/Decor";
 import JsonLd from "@/components/JsonLd";
 import { ChevronRightIcon } from "@/components/icons";
 import { breadcrumbJsonLd } from "@/lib/seo";
@@ -52,21 +52,29 @@ export default function PageHero({
   aside?: ReactNode;
 }) {
   return (
-    <section className="relative border-b border-sand-200 bg-sand-100/70">
+    <section className="bg-summer relative">
       {/* Clip only the decoration, so dropdowns in children can overflow the hero */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <CreteOutline className="absolute -right-40 top-6 hidden w-[58rem] opacity-70 lg:block" />
+        <SunDisc className={`-right-24 -top-28 hidden size-[26rem] animate-sun-up opacity-90 ${aside ? "" : "lg:block"}`} />
       </div>
-      <div className={`relative mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 sm:pb-16 ${aside ? "lg:grid lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-12" : ""}`}>
+      <div className={`relative mx-auto max-w-7xl px-4 pb-6 pt-6 sm:px-6 sm:pb-8 ${aside ? "lg:grid lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-12" : ""}`}>
         <div>
           <Breadcrumbs crumbs={crumbs} />
-          {eyebrow && <p className="mt-8 text-xs font-bold uppercase tracking-[0.16em] text-sun-700">{eyebrow}</p>}
-          <h1 className={`${eyebrow ? "mt-3" : "mt-8"} max-w-3xl text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl`}>{title}</h1>
-          {lead && <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-ink/65">{lead}</p>}
+          {eyebrow && (
+            <p className="mt-8 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-sea-600">
+              <span aria-hidden="true" className="h-[3px] w-8 rounded-full bg-sun-400" />
+              {eyebrow}
+            </p>
+          )}
+          <h1 className={`${eyebrow ? "mt-3" : "mt-8"} max-w-3xl animate-lift text-balance font-display text-[2.6rem] font-extrabold uppercase leading-[0.95] text-sea-800 sm:text-6xl`}>
+            {title}
+          </h1>
+          {lead && <p className="mt-5 max-w-2xl animate-rise text-pretty text-lg leading-relaxed text-ink/70 [animation-delay:120ms]">{lead}</p>}
         </div>
         {aside && <div className="mt-10 lg:mt-8">{aside}</div>}
         {children && <div className={`relative z-20 ${aside ? "lg:col-span-2" : ""}`}>{children}</div>}
       </div>
+      <Wave className="text-white" />
     </section>
   );
 }

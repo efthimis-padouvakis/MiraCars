@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/contact">)
 }
 
 // Petlempouri 6, Heraklion.
-const OFFICE = projectToMap(35.3388, 25.1217);
+const OFFICE = projectToMap(COMPANY.geo.lat, COMPANY.geo.lng);
 
 export default async function ContactPage({ params }: PageProps<"/[lang]/contact">) {
   const locale = await localeFrom(params);
@@ -35,8 +35,8 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
       />
       <section className="mx-auto grid max-w-7xl gap-5 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_1.2fr]">
         <div className="space-y-4">
-          <a href={whatsappLink()} className="group flex items-center gap-4 rounded-3xl bg-sea-900 p-6 text-white transition hover:bg-sea-800 sm:p-7">
-            <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-whatsapp text-3xl text-white">
+          <a href={whatsappLink()} className="group flex items-center gap-4 leaf bg-sea-900 p-6 text-white transition hover:bg-sea-800 sm:p-7">
+            <span className="grid size-14 shrink-0 place-items-center rounded-full bg-whatsapp text-3xl text-white">
               <WhatsAppIcon />
             </span>
             <span className="flex-1">
@@ -80,7 +80,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
           )}
         </div>
 
-        <a href={COMPANY.mapUrl} target="_blank" rel="noopener" className="group flex flex-col overflow-hidden rounded-3xl border border-sand-200 bg-white transition hover:border-sea-300 hover:shadow-soft">
+        <a href={COMPANY.mapUrl} target="_blank" rel="noopener" className="group flex flex-col overflow-hidden leaf border border-sand-200 bg-white transition hover:border-sea-300 hover:shadow-soft">
           <div className="relative bg-sea-50/50 px-6 py-10 sm:px-10">
             <div className="relative">
               <CreteOutline className="w-full" />

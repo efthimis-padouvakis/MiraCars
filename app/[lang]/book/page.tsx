@@ -17,13 +17,13 @@ export default async function BookPage({ params }: PageProps<"/[lang]/book">) {
   const t = getDictionary(locale);
   return (
     <>
-      <section className="border-b border-sand-200 bg-sand-100/70">
+      <section className="border-b border-wave-100 bg-wave-50">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 sm:px-6 md:flex-row md:items-center md:justify-between">
-          <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">{t.meta.bookTitle}</h1>
+          <h1 className="font-display text-3xl font-extrabold uppercase leading-none text-sea-800 sm:text-4xl">{t.meta.bookTitle}</h1>
           <Steps steps={t.booking.steps} current={2} />
         </div>
       </section>
-      <Suspense fallback={<div className="mx-auto mt-8 h-64 max-w-7xl animate-pulse rounded-3xl bg-white" />}>
+      <Suspense fallback={<div className="mx-auto mt-8 h-64 max-w-7xl animate-pulse leaf bg-white" />}>
         <BookingForm
           locale={locale}
           t={{ booking: t.booking, car: t.car, common: t.common, search: t.search, results: t.results }}

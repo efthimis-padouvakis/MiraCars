@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CreteOutline } from "@/components/CreteMap";
+import { Wave } from "@/components/Decor";
 import { ArrowRightIcon, CardIcon } from "@/components/icons";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n/config";
@@ -10,10 +10,10 @@ export default function NoCardCallout({ locale, t, className = "" }: { locale: L
   return (
     <Link
       href={`/${locale}${NO_CARD_PATH}`}
-      className={`group relative isolate flex flex-col justify-between overflow-hidden rounded-3xl bg-sea-900 p-6 text-white transition hover:bg-sea-800 sm:p-8 ${className}`}
+      className={`group relative isolate flex flex-col justify-between overflow-hidden leaf bg-sea-900 p-6 text-white transition hover:bg-sea-800 sm:p-8 ${className}`}
     >
-      <CreteOutline tone="dark" className="pointer-events-none absolute -bottom-10 -right-16 -z-10 w-[30rem] opacity-50" />
-      <span className="grid size-12 place-items-center rounded-2xl bg-sun-400 text-2xl text-sea-950">
+      <Wave className="absolute inset-x-0 bottom-0 -z-10 text-sea-950/40" back="fill-wave/20" />
+      <span className="grid size-12 place-items-center rounded-full bg-sun-400 text-2xl text-sea-950">
         <CardIcon />
       </span>
       <span className="mt-6 block">

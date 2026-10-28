@@ -16,12 +16,12 @@ const NAMES: Record<string, Partial<Record<Locale, string>> & { en: string }> = 
 export default function BeyondCrete({ locale, t, creteLink = "crete" }: { locale: Locale; t: Dictionary; creteLink?: KarpaduPage }) {
   return (
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-      <div className="grid gap-8 rounded-[2rem] border border-sand-200 bg-white p-6 sm:p-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-14">
+      <div className="grid gap-8 leaf-lg border border-sand-200 bg-white p-6 sm:p-10 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:gap-14">
         <div>
-          <span className="grid size-12 place-items-center rounded-2xl bg-sea-50 text-2xl text-sea-700">
+          <span className="grid size-12 place-items-center rounded-full bg-sea-50 text-2xl text-sea-700">
             <CompassIcon />
           </span>
-          <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">{t.beyond.title}</h2>
+          <h2 className="mt-5 text-3xl font-extrabold uppercase leading-[0.95] text-sea-800 sm:text-4xl">{t.beyond.title}</h2>
           <p className="mt-3 max-w-xl leading-relaxed text-ink/65">
             <Rich
               text={t.beyond.text}
@@ -46,7 +46,7 @@ export default function BeyondCrete({ locale, t, creteLink = "crete" }: { locale
             <li key={page}>
               <a
                 href={karpaduHref(page, locale, "miracars-beyond")}
-                className="group flex items-center justify-between gap-2 rounded-2xl border border-sand-200 bg-sand-50 px-4 py-3.5 text-sm font-semibold text-ink transition hover:border-sea-300 hover:bg-sea-50"
+                className="group flex items-center justify-between gap-2 leaf-sm border border-sand-200 bg-sand-50 px-4 py-3.5 text-sm font-semibold text-ink transition hover:border-sea-300 hover:bg-sea-50"
               >
                 {NAMES[page][locale] ?? NAMES[page].en}
                 <ArrowRightIcon className="text-ink/30 transition group-hover:translate-x-0.5 group-hover:text-sea-600" />

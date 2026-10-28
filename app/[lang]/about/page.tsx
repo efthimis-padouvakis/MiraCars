@@ -46,13 +46,13 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-[radial-gradient(110%_90%_at_50%_100%,var(--color-sand-200),var(--color-sand-50)_75%)] ring-1 ring-sand-200">
+        <div className="relative aspect-[4/3] overflow-hidden leaf-lg bg-[radial-gradient(110%_90%_at_50%_100%,var(--color-sand-200),var(--color-sand-50)_75%)] ring-1 ring-sand-200">
           <Image src={fleet[0].image} alt={`${fleet[0].name} ${fleet[0].year}, ${t.meta.siteName}`} fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-contain p-8" />
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6">
-        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-[2rem] bg-sand-200 ring-1 ring-sand-200 lg:grid-cols-4">
+        <dl className="grid grid-cols-2 gap-px overflow-hidden leaf-lg bg-sand-200 ring-1 ring-sand-200 lg:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="bg-white p-6 sm:p-8">
               <dt className="text-sm font-semibold text-ink/55">{stat.label}</dt>
@@ -69,8 +69,8 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           {t.about.values.map((value, index) => {
             const Icon = VALUE_ICONS[index % VALUE_ICONS.length];
             return (
-              <div key={value.title} className="rounded-3xl border border-sand-200 bg-white p-7">
-                <span className="grid size-12 place-items-center rounded-2xl bg-sea-50 text-2xl text-sea-700">
+              <div key={value.title} className="leaf border border-sand-200 bg-white p-7">
+                <span className="grid size-12 place-items-center rounded-full bg-sea-50 text-2xl text-sea-700">
                   <Icon />
                 </span>
                 <h2 className="mt-5 text-xl font-bold text-ink">{value.title}</h2>
@@ -80,10 +80,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           })}
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
-          <Link href={`/${locale}#search`} className="rounded-full bg-sun-400 px-7 py-3.5 font-extrabold text-sea-950 transition hover:bg-sun-300">
+          <Link href={`/${locale}#search`} className="font-display uppercase tracking-wide leaf-sm bg-sun-400 px-7 py-3.5 font-bold text-sea-950 transition hover:bg-sun-300">
             {t.home.ctaButton}
           </Link>
-          <Link href={`/${locale}/contact`} className="rounded-full border border-sand-300 bg-white px-7 py-3.5 font-bold text-ink hover:border-sea-300">
+          <Link href={`/${locale}/contact`} className="leaf-sm border border-sand-300 bg-white px-7 py-3.5 font-bold text-ink hover:border-sea-300">
             {t.nav.contact}
           </Link>
         </div>

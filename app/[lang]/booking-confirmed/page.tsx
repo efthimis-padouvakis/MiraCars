@@ -18,12 +18,12 @@ export default async function BookingConfirmedPage({ params }: PageProps<"/[lang
   const t = getDictionary(locale);
   return (
     <>
-      <section className="border-b border-sand-200 bg-sand-100/70">
+      <section className="border-b border-wave-100 bg-wave-50">
         <div className="mx-auto flex max-w-3xl justify-center px-4 py-6 sm:px-6">
           <Steps steps={t.booking.steps} current={4} />
         </div>
       </section>
-      <Suspense fallback={<div className="mx-auto mt-12 h-96 max-w-3xl animate-pulse rounded-[2rem] bg-white" />}>
+      <Suspense fallback={<div className="mx-auto mt-12 h-96 max-w-3xl animate-pulse leaf-lg bg-white" />}>
         <BookingConfirmed
           locale={locale}
           t={t.confirmed}

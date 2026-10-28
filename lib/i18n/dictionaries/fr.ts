@@ -157,6 +157,7 @@ const fr: Dictionary = {
     protection: "Protection",
     protectionHelp: "Choisissez votre protection. La franchise est le montant maximum à votre charge en cas de dommage.",
     included: "Inclus",
+    free: "Gratuit",
     extras: "Options",
     driver: "Conducteur principal",
     firstName: "Prénom",

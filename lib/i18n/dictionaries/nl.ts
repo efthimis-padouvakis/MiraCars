@@ -157,6 +157,7 @@ const nl: Dictionary = {
     protection: "Dekking",
     protectionHelp: "Kies je dekking. Het eigen risico is het maximale bedrag dat je betaalt bij schade.",
     included: "Inbegrepen",
+    free: "Gratis",
     extras: "Extra's",
     driver: "Hoofdbestuurder",
     firstName: "Voornaam",

@@ -37,7 +37,7 @@ export default async function LocationsPage({ params }: PageProps<"/[lang]/locat
       />
 
       <section className="mx-auto max-w-7xl px-4 pt-12 sm:px-6">
-        <div className="rounded-[2rem] border border-sand-200 bg-white px-4 py-10 sm:px-10 sm:py-14">
+        <div className="leaf-lg border border-sand-200 bg-white px-4 py-10 sm:px-10 sm:py-14">
           <CreteMap locale={locale} t={t} className="mx-auto max-w-5xl" />
           <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-semibold text-ink/60">
             <li className="flex items-center gap-2">
@@ -51,7 +51,7 @@ export default async function LocationsPage({ params }: PageProps<"/[lang]/locat
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-        <h2 className="text-3xl font-extrabold tracking-tight text-ink">{t.locations.popular}</h2>
+        <h2 className="text-4xl font-extrabold uppercase leading-[0.95] text-sea-800">{t.locations.popular}</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {locationPages.map((page) => {
             const Icon = KIND_ICONS[page.kind];
@@ -59,9 +59,9 @@ export default async function LocationsPage({ params }: PageProps<"/[lang]/locat
               <Link
                 key={page.slug}
                 href={`/${locale}/locations/${page.slug}`}
-                className="group flex flex-col rounded-3xl border border-sand-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-sand-300 hover:shadow-lift"
+                className="group flex flex-col leaf border border-sand-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-sand-300 hover:shadow-lift"
               >
-                <span className="grid size-12 place-items-center rounded-2xl bg-sea-50 text-2xl text-sea-700 transition group-hover:bg-sea-800 group-hover:text-sun-300">
+                <span className="grid size-12 place-items-center rounded-full bg-sea-50 text-2xl text-sea-700 transition group-hover:bg-sea-800 group-hover:text-sun-300">
                   <Icon />
                 </span>
                 <h3 className="mt-5 text-lg font-bold text-ink">{fill(t.locations.rentIn, { place: page.copy[locale].name })}</h3>
@@ -74,14 +74,14 @@ export default async function LocationsPage({ params }: PageProps<"/[lang]/locat
           })}
         </div>
 
-        <h2 className="mt-20 text-3xl font-extrabold tracking-tight text-ink">{t.locations.allPoints}</h2>
+        <h2 className="mt-20 text-4xl font-extrabold uppercase leading-[0.95] text-sea-800">{t.locations.allPoints}</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {REGIONS.map((region) => {
             const list = stations
               .filter((s) => stationRegion(s) === region)
               .sort((a, b) => TYPE_ORDER[a.type] - TYPE_ORDER[b.type] || (a.names[locale] ?? a.names.en).localeCompare(b.names[locale] ?? b.names.en, locale));
             return (
-              <div key={region} className="rounded-3xl border border-sand-200 bg-white p-6">
+              <div key={region} className="leaf border border-sand-200 bg-white p-6">
                 <h3 className="flex items-baseline justify-between text-lg font-bold text-ink">
                   {regionName(region, locale)}
                   <span className="text-xs font-semibold text-ink/40">{list.length}</span>

@@ -1,3 +1,5 @@
+import { SunDisc } from "@/components/Decor";
+import SectionHeading from "@/components/SectionHeading";
 import { ArrowRightIcon, GoogleIcon, StarIcon } from "@/components/icons";
 import type { Locale } from "@/lib/i18n/config";
 import { fill, type Dictionary } from "@/lib/i18n";
@@ -34,7 +36,7 @@ export function GoogleRating({ locale, t, tone, className = "" }: { locale: Loca
       href={listing.url}
       target="_blank"
       rel="noopener"
-      className={`inline-flex items-center gap-2 rounded-full py-2 pl-2 pr-4 text-sm ring-1 transition ${tones[tone]} ${className}`}
+      className={`leaf-sm inline-flex items-center gap-2 py-2 pl-2 pr-4 text-sm ring-1 transition ${tones[tone]} ${className}`}
     >
       <span className="grid size-6 place-items-center rounded-full bg-white">
         <GoogleIcon className="text-sm" />
@@ -48,78 +50,76 @@ export function GoogleRating({ locale, t, tone, className = "" }: { locale: Loca
 
 export default function GoogleReviews({ locale, t }: { locale: Locale; t: ReviewStrings }) {
   const listing = GOOGLE_REVIEWS;
-  if (!listing || !reviews.length) return null;
+  if (!listing) return null;
   const rating = formatRating(locale, listing);
   return (
     <section className="py-16 lg:py-20">
-      <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 px-4 sm:px-6 md:flex-row md:items-end">
-        <div className="max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-sun-700">{t.reviews.eyebrow}</p>
-          <h2 className="mt-3 text-balance text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">{t.reviews.title}</h2>
-          <p className="mt-4 text-pretty text-lg leading-relaxed text-ink/65">{t.reviews.text}</p>
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-[1.3fr_1fr] md:items-center lg:gap-16">
+        <div>
+          <SectionHeading eyebrow={t.reviews.eyebrow} title={t.reviews.title} text={t.reviews.text} />
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href={listing.url}
+              target="_blank"
+              rel="noopener"
+              className="leaf-sm inline-flex items-center gap-2 border-2 border-sea-800 px-5 py-2 font-display text-base font-bold uppercase tracking-wide text-sea-800 transition hover:bg-sea-800 hover:text-white"
+            >
+              {t.reviews.readAll} <ArrowRightIcon />
+            </a>
+            <a href={listing.writeUrl} target="_blank" rel="noopener" className="inline-flex items-center gap-2 px-3 py-2.5 text-sm font-bold text-sea-700 transition hover:text-sea-900">
+              <StarIcon className="text-sun-500" /> {t.reviews.write}
+            </a>
+          </div>
         </div>
         <a
           href={listing.url}
           target="_blank"
           rel="noopener"
-          className="flex shrink-0 items-center gap-4 self-start rounded-3xl border border-sand-200 bg-white p-4 pr-6 transition hover:border-sea-300 hover:shadow-soft md:self-auto"
+          className="leaf-lg reveal relative isolate block overflow-hidden bg-sun-50 p-8 ring-1 ring-sun-200 transition hover:ring-sun-400 sm:p-10"
         >
-          <span className="grid size-12 place-items-center rounded-2xl bg-sand-50 text-2xl ring-1 ring-sand-200">
-            <GoogleIcon />
-          </span>
-          <span>
-            <span className="flex items-center gap-2">
-              <span className="text-3xl font-extrabold leading-none text-ink">{rating}</span>
-              <Stars value={listing.rating} label={fill(t.reviews.outOf, { rating })} className="text-lg" />
+          <SunDisc className="-right-14 -top-14 -z-10 size-44 opacity-40" />
+          <span className="flex items-center gap-3">
+            <span className="grid size-12 place-items-center rounded-full bg-white text-2xl shadow-soft">
+              <GoogleIcon />
             </span>
-            <span className="mt-1 block text-sm font-semibold text-ink/60">{fill(t.reviews.count, { n: listing.count })}</span>
+            <span className="font-display text-lg font-bold uppercase tracking-wide text-sea-800">Google</span>
+          </span>
+          <span className="mt-6 flex items-end gap-4">
+            <span className="font-display text-[5.5rem] font-extrabold leading-[0.8] text-sea-800">{rating}</span>
+            <span className="pb-1">
+              <Stars value={listing.rating} label={fill(t.reviews.outOf, { rating })} className="text-2xl" />
+              <span className="mt-2 block font-semibold text-ink/65">{fill(t.reviews.count, { n: listing.count })}</span>
+            </span>
           </span>
         </a>
       </div>
 
-      <ul className="no-scrollbar mx-auto mt-10 flex max-w-7xl snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:px-6 lg:grid lg:grid-cols-3 lg:overflow-visible">
-        {reviews.map((review) => (
-          <li key={review.author} className="w-[85%] shrink-0 snap-start sm:w-[45%] lg:w-auto">
-            <figure className="flex h-full flex-col rounded-3xl border border-sand-200 bg-white p-6 sm:p-7">
-              <div className="flex items-center justify-between">
-                <Stars value={5} label={fill(t.reviews.outOf, { rating: 5 })} />
-                <GoogleIcon className="text-lg" />
-              </div>
-              <blockquote lang="en" className="mt-4 flex-1 text-pretty leading-relaxed text-ink/75">
-                <p>&ldquo;{review.text}&rdquo;</p>
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3">
-                <span aria-hidden="true" className="grid size-10 shrink-0 place-items-center rounded-full bg-sea-800 font-extrabold text-sun-300">
-                  {review.author[0]}
-                </span>
-                <span>
-                  <span className="block font-bold text-ink">{review.author}</span>
-                  <span className="block text-sm text-ink/55">{t.reviews.source}</span>
-                </span>
-              </figcaption>
-            </figure>
-          </li>
-        ))}
-      </ul>
-
-      <div className="mx-auto mt-6 flex max-w-7xl flex-wrap gap-3 px-4 sm:px-6">
-        <a
-          href={listing.url}
-          target="_blank"
-          rel="noopener"
-          className="inline-flex items-center gap-2 rounded-full border border-sand-300 bg-white px-5 py-2.5 text-sm font-bold text-ink transition hover:border-sea-300"
-        >
-          {t.reviews.readAll} <ArrowRightIcon />
-        </a>
-        <a
-          href={listing.writeUrl}
-          target="_blank"
-          rel="noopener"
-          className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-sea-700 transition hover:text-sea-900"
-        >
-          <StarIcon className="text-sun-500" /> {t.reviews.write}
-        </a>
-      </div>
+      {reviews.length > 0 && (
+        <ul className="no-scrollbar mx-auto mt-10 flex max-w-7xl snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:px-6 lg:grid lg:grid-cols-3 lg:overflow-visible">
+          {reviews.map((review) => (
+            <li key={review.author} className="w-[85%] shrink-0 snap-start sm:w-[45%] lg:w-auto">
+              <figure className="flex h-full flex-col leaf border border-sand-200 bg-white p-6 sm:p-7">
+                <div className="flex items-center justify-between">
+                  <Stars value={5} label={fill(t.reviews.outOf, { rating: 5 })} />
+                  <GoogleIcon className="text-lg" />
+                </div>
+                <blockquote lang="en" className="mt-4 flex-1 text-pretty leading-relaxed text-ink/75">
+                  <p>&ldquo;{review.text}&rdquo;</p>
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-3">
+                  <span aria-hidden="true" className="grid size-10 shrink-0 place-items-center rounded-full bg-sea-800 font-extrabold text-sun-300">
+                    {review.author[0]}
+                  </span>
+                  <span>
+                    <span className="block font-bold text-ink">{review.author}</span>
+                    <span className="block text-sm text-ink/55">{t.reviews.source}</span>
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }

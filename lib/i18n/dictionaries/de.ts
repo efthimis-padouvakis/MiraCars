@@ -157,6 +157,7 @@ const de: Dictionary = {
     protection: "Versicherungsschutz",
     protectionHelp: "Wählen Sie Ihren Schutz. Die Selbstbeteiligung ist der Höchstbetrag, den Sie bei einem Schaden zahlen.",
     included: "Inklusive",
+    free: "Kostenlos",
     extras: "Extras",
     driver: "Hauptfahrer",
     firstName: "Vorname",

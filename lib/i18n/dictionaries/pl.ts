@@ -157,6 +157,7 @@ const pl: Dictionary = {
     protection: "Ochrona",
     protectionHelp: "Wybierz ochronę. Udział własny to maksymalna kwota, jaką zapłacisz w razie szkody.",
     included: "W cenie",
+    free: "Bezpłatnie",
     extras: "Dodatki",
     driver: "Główny kierowca",
     firstName: "Imię",

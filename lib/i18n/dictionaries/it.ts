@@ -157,6 +157,7 @@ const it: Dictionary = {
     protection: "Protezione",
     protectionHelp: "Scegli la copertura. La franchigia è l'importo massimo che paghi in caso di danni.",
     included: "Incluso",
+    free: "Gratis",
     extras: "Extra",
     driver: "Conducente principale",
     firstName: "Nome",

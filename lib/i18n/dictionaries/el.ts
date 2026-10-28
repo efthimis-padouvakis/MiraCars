@@ -157,6 +157,7 @@ const el: Dictionary = {
     protection: "Ασφαλιστική κάλυψη",
     protectionHelp: "Επιλέξτε κάλυψη. Η απαλλαγή είναι το μέγιστο ποσό που πληρώνετε σε περίπτωση ζημιάς.",
     included: "Περιλαμβάνεται",
+    free: "Δωρεάν",
     extras: "Extras",
     driver: "Κύριος οδηγός",
     firstName: "Όνομα",

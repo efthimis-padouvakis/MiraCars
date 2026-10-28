@@ -20,9 +20,9 @@ export default async function SearchPage({ params }: PageProps<"/[lang]/search">
       <h1 className="sr-only">{t.meta.searchTitle}</h1>
       <Suspense
         fallback={
-          <div className="border-b border-sand-200 bg-sand-100/70">
+          <div className="border-b border-wave-100 bg-wave-50">
             <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6">
-              <div className="h-[4.5rem] animate-pulse rounded-3xl bg-white" />
+              <div className="h-[4.5rem] animate-pulse leaf bg-white" />
             </div>
           </div>
         }

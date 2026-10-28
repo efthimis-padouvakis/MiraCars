@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BeyondCrete from "@/components/BeyondCrete";
-import CreteMap, { CreteOutline } from "@/components/CreteMap";
+import CreteMap from "@/components/CreteMap";
+import { Wave } from "@/components/Decor";
 import FaqList from "@/components/FaqList";
 import GoogleReviews from "@/components/GoogleReviews";
 import JsonLd from "@/components/JsonLd";
@@ -73,8 +74,8 @@ export default async function LocationPage({ params }: PageProps<"/[lang]/locati
   return (
     <>
       <JsonLd data={placeJsonLd} />
-      <section className="relative isolate overflow-hidden border-b border-sand-200 bg-sand-100/70">
-        <div className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 sm:pb-14">
+      <section className="bg-summer relative isolate overflow-x-clip">
+        <div className="mx-auto max-w-7xl px-4 pb-4 pt-6 sm:px-6">
           <Breadcrumbs
             crumbs={[
               { name: t.nav.home, href: `/${locale}` },
@@ -84,16 +85,19 @@ export default async function LocationPage({ params }: PageProps<"/[lang]/locati
           />
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-sun-700">
-                <Icon className="text-sm" /> {t.search.groups[page.kind]}
+              <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-sea-600">
+                <span aria-hidden="true" className="h-[3px] w-8 rounded-full bg-sun-400" />
+                <Icon className="text-sm text-sun-600" /> {t.search.groups[page.kind]}
               </p>
-              <h1 className="mt-3 text-balance text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl">{guide?.h1 ?? title}</h1>
-              <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-ink/65">{guide?.lead ?? copy.intro}</p>
+              <h1 className="mt-3 animate-lift text-balance font-display text-[2.4rem] font-extrabold uppercase leading-[0.95] text-sea-800 sm:text-6xl">
+                {guide?.h1 ?? title}
+              </h1>
+              <p className="mt-5 max-w-2xl animate-rise text-pretty text-lg leading-relaxed text-ink/70 [animation-delay:120ms]">{guide?.lead ?? copy.intro}</p>
               {guide && (
                 <ul className="mt-6 grid gap-2.5">
                   {guide.points.map((point) => (
                     <li key={point} className="flex items-start gap-3 font-semibold text-ink/80">
-                      <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-sea-600 text-xs text-white">
+                      <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-sun-400 text-xs text-sea-950">
                         <CheckIcon />
                       </span>
                       {point}
@@ -102,15 +106,16 @@ export default async function LocationPage({ params }: PageProps<"/[lang]/locati
                 </ul>
               )}
             </div>
-            <div className="rounded-[2rem] border border-sand-200 bg-white px-4 py-8 sm:px-8">
+            <div className="leaf-lg animate-rise bg-white/80 px-4 py-8 shadow-soft ring-1 ring-wave-100 [animation-delay:200ms] sm:px-8">
               <CreteMap locale={locale} t={t} highlight={page.stationId} labels="highlight" />
             </div>
           </div>
-          <div id="search" className="mt-10 scroll-mt-28 rounded-[1.75rem] bg-white p-3 shadow-lift ring-1 ring-black/5 sm:p-4">
-            <h2 className="px-2 pb-3 pt-1 text-base font-extrabold text-ink sm:text-lg">{fill(t.locations.searchIn, { place: copy.name })}</h2>
+          <div id="search" className="leaf-lg relative z-20 mt-10 scroll-mt-28 bg-white p-3 shadow-[0_28px_60px_-30px_rgb(31_68_121/0.55)] ring-1 ring-sea-100 sm:p-5">
+            <h2 className="px-2 pb-3 pt-1 font-display text-xl font-bold uppercase tracking-wide text-sea-800">{fill(t.locations.searchIn, { place: copy.name })}</h2>
             <SearchForm locale={locale} t={{ search: t.search, common: t.common }} initial={{ pickup: page.stationId }} />
           </div>
         </div>
+        <Wave className="mt-6 text-white" />
       </section>
 
       {guide && <GuideBody guide={guide} locale={locale} t={t} />}
@@ -120,12 +125,12 @@ export default async function LocationPage({ params }: PageProps<"/[lang]/locati
           <NoCardCallout locale={locale} t={t} />
         ) : (
           <div className="space-y-5">
-            <div className="rounded-3xl border border-sand-200 bg-white p-6 sm:p-8">
-              <h2 className="text-2xl font-extrabold tracking-tight text-ink">{fill(t.locations.why, { place: copy.name })}</h2>
+            <div className="leaf border border-sand-200 bg-white p-6 sm:p-8">
+              <h2 className="text-3xl font-extrabold uppercase leading-[0.95] text-sea-800">{fill(t.locations.why, { place: copy.name })}</h2>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {t.locations.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3 rounded-2xl bg-sand-50 p-4 text-ink/80 ring-1 ring-sand-200">
-                    <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-sea-600 text-xs text-white">
+                  <li key={bullet} className="flex items-start gap-3 leaf-sm bg-sand-50 p-4 text-ink/80 ring-1 ring-sand-200">
+                    <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-sun-400 text-xs text-sea-950">
                       <CheckIcon />
                     </span>
                     {bullet}
@@ -133,8 +138,8 @@ export default async function LocationPage({ params }: PageProps<"/[lang]/locati
                 ))}
               </ul>
             </div>
-            <div className="relative overflow-hidden rounded-3xl bg-sea-900 p-6 text-white sm:p-8">
-              <CreteOutline tone="dark" className="pointer-events-none absolute -bottom-10 -right-16 w-[30rem] opacity-50" />
+            <div className="relative overflow-hidden leaf bg-sea-900 p-6 text-white sm:p-8">
+              <Wave className="absolute inset-x-0 bottom-0 text-sea-950/40" back="fill-wave/20" />
               <p className="relative inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-sun-300">
                 <CompassIcon className="text-sm" /> {t.locations.tip}
               </p>
@@ -143,7 +148,7 @@ export default async function LocationPage({ params }: PageProps<"/[lang]/locati
             <NoCardCallout locale={locale} t={t} />
           </div>
         )}
-        <div className="rounded-3xl border border-sand-200 bg-white p-6 sm:p-8">
+        <div className="leaf border border-sand-200 bg-white p-6 sm:p-8">
           <h2 className="text-lg font-bold text-ink">{t.locations.others}</h2>
           <ul className="mt-4 divide-y divide-sand-100">
             {locationPages
@@ -174,18 +179,18 @@ function GuideBody({ guide, locale, t }: { guide: PlaceGuide; locale: Locale; t:
   return (
     <>
       <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6">
-        <div className="rounded-3xl border border-sand-200 bg-white p-6 sm:p-8 lg:max-w-4xl">
-          <h2 className="text-2xl font-extrabold tracking-tight text-ink">{guide.pickup.title}</h2>
+        <div className="leaf border border-sand-200 bg-white p-6 sm:p-8 lg:max-w-4xl">
+          <h2 className="text-3xl font-extrabold uppercase leading-[0.95] text-sea-800">{guide.pickup.title}</h2>
           <p className="mt-3 text-pretty text-lg leading-relaxed text-ink/70">{guide.pickup.text}</p>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6">
-        <h2 className="text-3xl font-extrabold tracking-tight text-ink">{fill(t.locations.nearbyTitle, place)}</h2>
+        <h2 className="text-4xl font-extrabold uppercase leading-[0.95] text-sea-800">{fill(t.locations.nearbyTitle, place)}</h2>
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {guide.nearby.map((spot) => (
-            <li key={spot.name} className="rounded-3xl border border-sand-200 bg-white p-6">
-              <p className="inline-flex items-center gap-1.5 rounded-full bg-sea-50 px-3 py-1 text-xs font-bold text-sea-700">
+            <li key={spot.name} className="leaf border border-sand-200 bg-white p-6">
+              <p className="inline-flex items-center gap-1.5 rounded-sm bg-sea-50 px-3 py-1 text-xs font-bold text-sea-700">
                 <ClockIcon /> {spot.time}
               </p>
               <h3 className="mt-4 text-lg font-bold text-ink">{spot.name}</h3>
@@ -196,10 +201,10 @@ function GuideBody({ guide, locale, t }: { guide: PlaceGuide; locale: Locale; t:
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6">
-        <h2 className="text-3xl font-extrabold tracking-tight text-ink">{fill(t.locations.tripsTitle, place)}</h2>
+        <h2 className="text-4xl font-extrabold uppercase leading-[0.95] text-sea-800">{fill(t.locations.tripsTitle, place)}</h2>
         <ul className="mt-6 grid gap-4 md:grid-cols-3">
           {guide.trips.map((trip) => (
-            <li key={trip.title} className="rounded-3xl bg-sand-100 p-6 sm:p-7">
+            <li key={trip.title} className="leaf bg-sand-100 p-6 sm:p-7">
               <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.12em] text-sun-700">
                 <RoadIcon /> {trip.time}
               </p>
@@ -211,11 +216,11 @@ function GuideBody({ guide, locale, t }: { guide: PlaceGuide; locale: Locale; t:
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6">
-        <h2 className="text-3xl font-extrabold tracking-tight text-ink">{fill(t.locations.tipsTitle, place)}</h2>
+        <h2 className="text-4xl font-extrabold uppercase leading-[0.95] text-sea-800">{fill(t.locations.tipsTitle, place)}</h2>
         <ul className="mt-6 grid gap-x-8 gap-y-6 md:grid-cols-2">
           {guide.tips.map((tip) => (
             <li key={tip.title} className="flex gap-4">
-              <span className="mt-1 grid size-9 shrink-0 place-items-center rounded-xl bg-sun-100 text-sun-700">
+              <span className="mt-1 grid size-9 shrink-0 place-items-center rounded-full bg-sun-100 text-sun-700">
                 <CompassIcon />
               </span>
               <span>
@@ -230,19 +235,19 @@ function GuideBody({ guide, locale, t }: { guide: PlaceGuide; locale: Locale; t:
       <GoogleReviews locale={locale} t={t} />
 
       <section className="mx-auto max-w-4xl px-4 sm:px-6">
-        <h2 className="text-3xl font-extrabold tracking-tight text-ink">{fill(t.locations.faqTitle, place)}</h2>
+        <h2 className="text-4xl font-extrabold uppercase leading-[0.95] text-sea-800">{fill(t.locations.faqTitle, place)}</h2>
         <div className="mt-6">
           <FaqList items={guide.faq} locale={locale} name="location-faq" />
         </div>
       </section>
 
       <section className="px-4 pt-14 sm:px-6">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 rounded-[2rem] bg-deep px-6 py-12 text-white sm:px-12 md:flex-row md:items-center">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 leaf-lg bg-deep px-6 py-12 text-white sm:px-12 md:flex-row md:items-center">
           <div>
-            <h2 className="text-3xl font-extrabold tracking-tight">{fill(t.locations.ctaTitle, place)}</h2>
+            <h2 className="text-4xl font-extrabold uppercase leading-[0.95]">{fill(t.locations.ctaTitle, place)}</h2>
             <p className="mt-3 max-w-lg text-white/70">{t.locations.ctaText}</p>
           </div>
-          <a href="#search" className="shrink-0 rounded-full bg-sun-400 px-8 py-4 text-base font-extrabold text-sea-950 transition hover:bg-sun-300">
+          <a href="#search" className="font-display uppercase tracking-wide shrink-0 leaf-sm bg-sun-400 px-8 py-4 text-lg font-bold text-sea-950 transition hover:bg-sun-300">
             {t.home.ctaButton}
           </a>
         </div>

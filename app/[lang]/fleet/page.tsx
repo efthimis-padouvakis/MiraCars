@@ -54,14 +54,14 @@ export default async function FleetPage({ params }: PageProps<"/[lang]/fleet">) 
           { name: t.nav.fleet, href: `/${locale}/fleet` },
         ]}
       >
-        <div id="search" className="mt-10 scroll-mt-28 rounded-[1.75rem] bg-white p-3 shadow-lift ring-1 ring-black/5 sm:p-4">
+        <div id="search" className="mt-10 scroll-mt-28 leaf-lg bg-white p-3 shadow-lift ring-1 ring-black/5 sm:p-4">
           <SearchForm locale={locale} t={{ search: t.search, common: t.common }} />
         </div>
       </PageHero>
 
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
         <FleetGrid cars={fleet} t={{ car: t.car, common: t.common, fleet: t.fleet, meta: t.meta }} allLabel={t.results.all} href="#search" />
-        <div className="mt-10 flex flex-col gap-4 rounded-3xl bg-sand-100 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div className="mt-10 flex flex-col gap-4 leaf bg-sand-100 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <ul className="grid gap-x-8 gap-y-2 text-sm font-semibold text-ink/80 sm:grid-cols-2">
             {t.home.trust.map((item) => (
               <li key={item} className="flex items-center gap-2">
